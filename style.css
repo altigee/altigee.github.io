@@ -19,6 +19,7 @@ p {
     color: #ddd;
     animation: a3 2s;
     position: relative;
+    padding: 0 0 10px;
 }
 .abc a {color: #ddd;}
 

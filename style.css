@@ -4,6 +4,7 @@ html, body {
 body {
     font-family: 'Didact Gothic', sans-serif;
     background: #ffdc0e;
+    background: #222;
     color: #222;
     margin: 0;
     padding: 0;
@@ -30,12 +31,15 @@ p {
     font-weight: 600;
     font-size: 36px;
     margin: 0;
-    padding: 0;
     animation: a1 3s;
+    color: #ffdc0e;
+    background: #222222f0;
+    border-radius: 50%;
+
 }
 .square {
     position: absolute;
-    border: 1px solid;
+    border: 1px solid #ffdc0c;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);

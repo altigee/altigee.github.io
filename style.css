@@ -58,3 +58,7 @@ p {
     from {top:-100px}
     to {top: 0;}
 }
+
+#particles-js {
+    height: 100%;
+}

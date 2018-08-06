@@ -1,3 +1,4 @@
+* { box-sizing: border-box;}
 html, body {
     height: 100%;
 }
@@ -12,39 +13,59 @@ body {
 p {
     margin: 0;
 }
-.abc {
-    text-align: center;
-    font-size: 14px;
-    background: #222;
-    color: #ddd;
-    animation: a3 2s;
-    position: relative;
-    padding: 0 0 10px;
+a, a:visited, a:active {
+    color: #ffdc0e;
+    text-decoration: none;
+    border-bottom: 1px solid;
 }
-.abc a {color: #ddd;}
+a:hover {
+    color: #222;
+    background: #ffdc0e;
+}
+.inverse {
+    color: #222;
+    background: #ffdc0e;
+    font-weight: 600;
+}
+.abc {
+    font-size: 14px;
+    color: #ffdc0e;
+    animation: a3 1s ease-out;
+    position: absolute;
+    padding: 60px;
+    bottom: 0;
+    width: 100%;
+}
+.we-are {
+    font-size:55px;
+}
+.impact {
+    font-size: 50px;
+    margin-bottom: 40px
+}
 
+.contacts {font-size: 20px;}
 .title {
     position: absolute;
-    top: 50%;
-    left: 50%;
+    top: 135px;
+    left: 140px;
     transform: translate(-50%, -50%);
     text-transform: lowercase;
     font-weight: 600;
-    font-size: 36px;
+    font-size: 45px;
     margin: 0;
     animation: a1 3s;
     color: #ffdc0e;
     background: #222222f0;
     border-radius: 50%;
-
 }
 .square {
     position: absolute;
     border: 1px solid #ffdc0c;
-    top: 50%;
-    left: 50%;
+    top: 140px;
+    left: 140px;
     transform: translate(-50%, -50%);
-    padding: 120px;
+    padding: 80px;
 }
 .s-2 {
     animation: a2 .8s;
@@ -60,10 +81,39 @@ p {
     to {transform: translate(-50%, -50%) rotate(2deg);}
 }
 @keyframes a3 {
-    from {top:-100px}
-    to {top: 0;}
+    from {bottom:-20px; opacity: .5;}
+    to {bottom: 0; opacity: 1;}
 }
 
 #particles-js {
     height: 100%;
+}
+
+@media(max-width: 700px) {
+    .abc {padding: 20px;}
+    .we-are {
+        font-size:50px;
+    }
+    .impact {
+        font-size: 40px;
+        margin-bottom: 30px
+    }
+    .contacts {font-size: 16px;}
+    .title, .square {left: 110px;top:120px;}
+}
+@media(max-width: 600px) {
+    .we-are {
+        font-size:40px;
+    }
+    .impact {
+        font-size: 30px;
+        margin-bottom: 30px
+    }
+    .contacts {font-size: 14px;}
+}
+@media(max-width: 460px) {
+    .contacts {
+        display: flex;
+        flex-direction: column;
+    }
 }

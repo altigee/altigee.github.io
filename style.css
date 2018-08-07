@@ -4,7 +4,6 @@ html, body {
 }
 body {
     font-family: 'Didact Gothic', sans-serif;
-    background: #ffdc0e;
     background: #222;
     color: #222;
     margin: 0;
@@ -59,6 +58,15 @@ a:hover {
     background: #222222f0;
     border-radius: 50%;
 }
+.is-looking {
+    position: absolute;
+    color: #fff;
+    font-size: 40px;
+    top: 105px;
+    left: 230px;
+    background: #222;
+    padding: 5px;
+}
 .square {
     position: absolute;
     border: 1px solid #ffdc0c;
@@ -71,6 +79,15 @@ a:hover {
     animation: a2 .8s;
     transform: translate(-50%, -50%) rotate(2deg);
 }
+
+.positions-wrap {
+    position: absolute;
+    top: 240px;
+    left: 20px;
+    font-size: 50px;
+    width: 100%;
+}
+.position {margin-bottom: 30px;}
 
 @keyframes a1 {
     from {opacity:.3}

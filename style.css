@@ -12,7 +12,7 @@ body {
 p {
     margin: 0;
 }
-a, a:visited, a:active {
+a {
     color: #ffdc0e;
     text-decoration: none;
     border-bottom: 1px solid;
@@ -104,7 +104,7 @@ footer {
     font-size: 40px;
     padding-bottom: 50px;
 }
-.position {margin-bottom: 30px;}
+.position {margin-bottom: 30px; animation: a3 2s;}
 
 @keyframes a1 {
     from {opacity:.3}

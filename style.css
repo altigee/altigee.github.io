@@ -1,4 +1,4 @@
-* { box-sizing: border-box;}
+* { box-sizing: border-box; margin: 0; padding: 0;}
 html, body {
     height: 100%;
 }
@@ -21,42 +21,63 @@ a:hover {
     color: #222;
     background: #ffdc0e;
 }
+header {
+    height: 250px;
+    position: relative;
+    flex-shrink: 0;
+}
+main {
+    flex-grow: 1;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    flex-shrink: 0;
+}
+footer {
+    height: 70px;
+    padding-left: 40px;
+    flex-shrink: 0;
+}
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+    width: 100vw;
+    height: 100vh;
+    color: #ffdc0e;
+}
 .inverse {
     color: #222;
     background: #ffdc0e;
     font-weight: 600;
 }
-.abc {
-    font-size: 14px;
-    color: #ffdc0e;
-    animation: a3 1s ease-out;
-    position: absolute;
-    padding: 60px;
-    bottom: 0;
-    width: 100%;
-}
 .we-are {
     font-size:55px;
+    margin-bottom: 20px;
+    animation: a3 2s;
 }
 .impact {
     font-size: 50px;
-    margin-bottom: 40px
+    margin-bottom: 40px;
+    animation: a3 2.6s;
 }
 
 .contacts {font-size: 20px;}
 .title {
     position: absolute;
-    top: 135px;
-    left: 140px;
-    transform: translate(-50%, -50%);
+    top: 108px;
+    left: 65px;
     text-transform: lowercase;
     font-weight: 600;
     font-size: 45px;
     margin: 0;
-    animation: a1 3s;
     color: #ffdc0e;
     background: #222222f0;
     border-radius: 50%;
+    animation: a1 3s;
 }
 .is-looking {
     position: absolute;
@@ -70,22 +91,18 @@ a:hover {
 .square {
     position: absolute;
     border: 1px solid #ffdc0c;
-    top: 140px;
-    left: 140px;
-    transform: translate(-50%, -50%);
+    top: 60px;
+    left: 50px;
     padding: 80px;
 }
 .s-2 {
     animation: a2 .8s;
-    transform: translate(-50%, -50%) rotate(2deg);
+    transform: rotate(2deg);
 }
-
-.positions-wrap {
-    position: absolute;
-    top: 240px;
-    left: 20px;
-    font-size: 50px;
-    width: 100%;
+.positions {
+    list-style: none;
+    font-size: 40px;
+    padding-bottom: 50px;
 }
 .position {margin-bottom: 30px;}
 
@@ -94,43 +111,26 @@ a:hover {
     to {opacity: 1;}
 }
 @keyframes a2 {
-    from {transform: translate(-50%, -50%) rotate(0deg);}
-    to {transform: translate(-50%, -50%) rotate(2deg);}
+    from {transform: rotate(0deg);}
+    to {transform: rotate(2deg);}
 }
 @keyframes a3 {
-    from {bottom:-20px; opacity: .5;}
-    to {bottom: 0; opacity: 1;}
+    from {transform: translateY(-20px); opacity: .5;}
+    to {transform: translateY(0px); opacity: 1;}
 }
 
 #particles-js {
+    width: 100%;
     height: 100%;
+    position: absolute;
+    top: 0;
+    z-index: -1;
 }
 
-@media(max-width: 700px) {
-    .abc {padding: 20px;}
-    .we-are {
-        font-size:50px;
-    }
-    .impact {
-        font-size: 40px;
-        margin-bottom: 30px
-    }
-    .contacts {font-size: 16px;}
-    .title, .square {left: 110px;top:120px;}
-}
-@media(max-width: 600px) {
-    .we-are {
-        font-size:40px;
-    }
-    .impact {
-        font-size: 30px;
-        margin-bottom: 30px
-    }
-    .contacts {font-size: 14px;}
-}
-@media(max-width: 460px) {
-    .contacts {
-        display: flex;
-        flex-direction: column;
-    }
+@media (max-width: 700px) {
+    .we-are { font-size: 45px;}
+    .impact { font-size: 30px;}
+    .contacts { font-size: 16px;display: flex;flex-direction: column;}
+    .title {left: 55px;}
+    .square {left: 40px;}
 }

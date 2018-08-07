@@ -99,6 +99,15 @@ footer {
     animation: a2 .8s;
     transform: rotate(2deg);
 }
+.open-pos {
+    font-size: 40px;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-bottom: 40px;
+}
+.open-pos span {
+    padding: 5px 10px;
+}
 .positions {
     list-style: none;
     font-size: 40px;

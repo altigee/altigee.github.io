@@ -8,8 +8,8 @@ body {background: #030322;}
     text-decoration: none;
     opacity: .8;
     position: absolute;
-    bottom: 30px;
-    left: 200px;
+    bottom: 50px;
+    left: 70px;
     border-bottom: 1px solid transparent;
     animation: move-1 3s cubic-bezier(1, 0.03, 1, 0.89);
 }
@@ -22,11 +22,11 @@ body {background: #030322;}
 }
 img {
     transition: all 2s ease-in;
-    width: 400px;
+    width: 240px;
     position: absolute;
     top: 50%;
-    margin-top: -200px;
-    left: 200px;
+    margin-top: -120px;
+    left: 70px;
     animation: move-2 .5s ease-in;
 }
 @keyframes move-2 {

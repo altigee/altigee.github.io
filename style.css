@@ -1,24 +1,37 @@
 * { box-sizing: border-box; margin: 0; padding: 0;}
 html, body {height: 100%;}
-body {background: #030322;}
-.email {
+body {
     font-family: 'Montserrat', sans-serif;
+    background: #030322;
+}
+a, a:hover, a:visited {
+    color: inherit;
+}
+.social {
     color: #fff;
-    letter-spacing: 2px;
     text-decoration: none;
     opacity: .8;
     position: absolute;
     bottom: 50px;
     left: 70px;
     border-bottom: 1px solid transparent;
-    animation: move-1 3s cubic-bezier(1, 0.03, 1, 0.89);
+    animation: move-1 1s cubic-bezier(1, 0.03, 1, 0.89);
+    display: flex;
+    font-size: 12px;
 }
+.social a {margin-right: 16px;}
 @keyframes move-1 {
     0% {opacity: 0;}
 }
-.email:hover {
-    border-bottom-color: #fff;
-    opacity: 1;
+.wip {
+    position: absolute;
+    top: calc(50% + 40px);
+    left: 70px;
+    font-weight: 300;
+    color: #ffffff63;
+    font-size: 10px;
+    letter-spacing: 1px;
+    max-width: 65%;
 }
 img {
     transition: all 2s ease-in;
@@ -27,8 +40,4 @@ img {
     top: 50%;
     margin-top: -120px;
     left: 70px;
-    animation: move-2 .5s ease-in;
-}
-@keyframes move-2 {
-    0% {margin-left: -2000px;}
 }

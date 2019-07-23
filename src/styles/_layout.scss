@@ -1,0 +1,144 @@
+// @import '_flexboxgrid.scss';
+
+// LAYOUT COMPONENTS
+.container {
+  max-width: 992px;
+  padding: 0 40px;
+  margin: 0 auto;
+}
+
+// FLEX aligns
+@mixin valigned {
+  display: flex;
+  align-items: center;
+}
+
+.valigned {
+  @include valigned
+}
+
+@mixin haligned {
+  display: flex;
+  justify-content: center;
+}
+
+@mixin centered {
+  @include valigned;
+  justify-content: center;
+}
+
+@mixin space-between {
+  @include valigned;
+  justify-content: space-between;
+}
+
+.space-between {
+  @include space-between;
+}
+
+.grow {
+  flex-grow: 1;
+}
+
+// TEXT aligns
+.ta-right {
+  text-align: right;
+}
+
+// RWD
+$breakpoints: ('xs': (max-width: 480px), // small phones
+  'smr': (max-width: 600px), // tablet portrait (nexus 7)
+  'sm': (max-width: 768px), // tablet portrait (ipad air)
+  'md': (min-width: 769px) and (max-width: 991px), // tablet landscape
+  'lg': (min-width: 992px), // small desktops
+  'xl': (min-width: 1200px), // larger desktops
+  'lg-d': (max-width: 991.98px),
+  'xl-d': (max-width: 1199.98px),
+);
+
+@mixin respond-to($name) {
+
+  // If the key exists in the map
+  @if map-has-key($breakpoints, $name) {
+    @media #{inspect(map-get($breakpoints, $name))} {
+      @content;
+    }
+  }
+
+  // If the key doesn't exist in the map
+  @else {
+    @warn 'no value could be retrieved of `#{$breakpoint}` from `$breakpoints`.';
+  }
+}
+
+@mixin rwd($min: 0, $max: 9999) {
+  @media (min-width: $min+'px') and (max-width: $max+'px') {
+    @content;
+  }
+}
+
+.hide {
+  display: none;
+}
+
+.lg-hide {
+  @include respond-to('lg') {
+    display: none;
+  }
+}
+
+.lg-show {
+  @include respond-to('lg') {
+    display: initial;
+  }
+}
+
+// OVERFLOWS
+.crop-wrapper {
+  overflow: hidden;
+  position: relative;
+}
+
+.crop-content {
+  overflow-x: auto;
+  height: 100%;
+}
+
+// UTILITY spacing classes
+$spaceamounts: (auto, 0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 60, 75, 100); // Adjust this to include the pixel amounts you need.
+$sides: (all, top, bottom, left, right);
+
+@each $space in $spaceamounts {
+  @each $side in $sides {
+    @if $side=='all' {
+      .m-#{$space} {
+        margin: #{$space}#{if($space=='auto', '', 'px')} !important;
+      }
+
+      .p-#{$space} {
+        padding: #{$space}#{if($space=='auto', '', 'px')} !important;
+      }
+    }
+
+    @else {
+      .m#{str-slice($side, 0, 1)}-#{$space} {
+        margin-#{$side}: #{$space}#{if($space=='auto', '', 'px')} !important;
+      }
+
+      .p#{str-slice($side, 0, 1)}-#{$space} {
+        padding-#{$side}: #{$space}#{if($space=='auto', '', 'px')} !important;
+      }
+    }
+  }
+}
+
+// BACKDROP
+@mixin backdrop {
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba($dark-blue, 0.9);
+  height: 100vh;
+  z-index: 1;
+}

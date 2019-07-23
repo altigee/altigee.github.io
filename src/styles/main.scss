@@ -1,0 +1,23 @@
+@import '_core.scss';
+
+@import '_menu.scss';
+@import '_home-page.scss';
+
+body {
+  background: $dark-blue;
+  color: $white;
+}
+
+.main_logo {
+  height: 24px;
+}
+
+// FOOTER
+footer {
+  @include body-caption;
+  text-align: right;
+
+  .hr-patt {
+    min-width: 150px;
+  }
+}

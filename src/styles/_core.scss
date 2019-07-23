@@ -1,0 +1,68 @@
+@import '_reset.scss';
+@import '_typography.scss';
+@import '_theme.scss';
+@import '_layout.scss';
+
+.hr-numbered {
+  width: 120px;
+  display: flex;
+  align-items: center;
+  @extend caption;
+  color: $red;
+
+  @mixin line {
+    content: "";
+    border-top: 1px solid $red;
+    width: 72px;
+    display: inline-block;
+  }
+
+  &.left {
+    &::before {
+      @include line;
+      margin-right: 40px;
+    }
+  }
+
+  &.right {
+    margin-left: auto;
+
+    &::after {
+      @include line;
+      margin-left: 40px;
+    }
+  }
+}
+
+
+
+.hr-patt {
+  height: 4px;
+  background-origin: content-box;
+  background-repeat: no-repeat;
+
+  &-1 {
+    background-image: url('../images/patterns/patt_1.svg');
+  }
+
+  &-2 {
+    background-image: url('../images/patterns/patt_2.svg');
+  }
+
+  &-3 {
+    background-image: url('../images/patterns/patt_3.svg');
+  }
+
+  &.right {
+    background-position-x: 100%;
+  }
+}
+
+// BUTTONS
+button {
+  cursor: pointer;
+}
+
+button>* {
+  pointer-events: none;
+}

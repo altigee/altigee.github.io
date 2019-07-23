@@ -1,0 +1,170 @@
+@import '_layout.scss';
+@import '_theme.scss';
+
+// EXPORTED FROM ZEPLIN
+@mixin display-4 {
+  font-family: Montserrat;
+  font-size: 72px;
+  font-weight: 900;
+  line-height: 1;
+  letter-spacing: 10.8px;
+}
+
+@mixin display-3 {
+  font-family: Montserrat;
+  font-size: 56px;
+  font-weight: 900;
+  line-height: 1;
+  letter-spacing: 8.4px;
+}
+
+@mixin display-2 {
+  font-family: Montserrat;
+  font-size: 48px;
+  font-weight: 900;
+  line-height: 1;
+  letter-spacing: 7.2px;
+}
+
+@mixin display-1 {
+  font-family: Montserrat;
+  font-size: 32px;
+  font-weight: 900;
+  line-height: 1;
+  letter-spacing: 4.8px;
+}
+
+@mixin display-0 {
+  font-family: Montserrat;
+  font-size: 24px;
+  font-weight: 900;
+  letter-spacing: 0.6px;
+}
+
+@mixin subheading {
+  font-family: Montserrat;
+  font-size: 16px;
+  font-weight: 900;
+  line-height: 1.5;
+  letter-spacing: 0.4px;
+}
+
+@mixin body-1 {
+  font-family: Montserrat;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.71;
+}
+
+@mixin body-2-excessive {
+  font-family: Orbitron;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.71;
+  letter-spacing: 2.1px;
+}
+
+@mixin listheading {
+  font-family: Orbitron;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.71;
+  letter-spacing: 1.4px;
+}
+
+@mixin display-link {
+  font-family: Montserrat;
+  font-size: 12px;
+  font-weight: bold;
+  line-height: 2;
+}
+
+@mixin body-caption {
+  font-family: Montserrat;
+  font-size: 10px;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+@mixin caption {
+  font-family: Orbitron;
+  font-size: 10px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.6;
+  letter-spacing: 0.5px;
+}
+
+// END EXPORTED FROM ZEPLIN
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  @include body-1;
+}
+
+h3 {
+  @include display-2;
+  text-transform: uppercase;
+  color: $red;
+}
+
+h4 {
+  @include display-1;
+  text-transform: uppercase;
+  color: $red;
+
+  .outline {
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 1px $red;
+  }
+}
+
+.subheading {
+  @include subheading;
+  text-transform: uppercase;
+}
+
+.listheading {
+  @include listheading;
+  text-transform: uppercase;
+  color: $red;
+}
+
+.body-caption {
+  @include body-caption;
+  color: $white;
+}
+
+.caption {
+  @include caption;
+}
+
+.page-section-heading {
+  @include display-1;
+
+  @include respond-to('lg') {
+    @include display-3;
+  }
+}
+
+
+// LEARN MORE LINK
+// TODO: move out
+.display-link {
+  @include display-link;
+  text-transform: uppercase;
+  color: $red;
+  text-decoration: none;
+
+  &:hover {
+    color: darken($color: $red, $amount: 15);
+  }
+
+  &:active {
+    color: darken($color: $red, $amount: 30);
+  }
+}

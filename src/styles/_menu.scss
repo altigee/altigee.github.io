@@ -1,0 +1,80 @@
+@import '_core.scss';
+
+// MAIN NAVIGATION
+.main-navigation {
+  @mixin menu-btn {
+    height: 24px;
+    background: none;
+    border: none;
+  }
+
+  // MOBILE NAV
+  .menu-toggle-btn {
+    @include menu-btn;
+
+    @include respond-to('lg') {
+      display: none;
+    }
+
+    svg {
+      cursor: pointer;
+      transition: transform 0.3s linear;
+    }
+
+    &:hover {
+      svg {
+        transform: scale(1.1)
+      }
+    }
+  }
+
+  .menu-close-btn {
+    display: none;
+  }
+
+  // DESCTOP NAV
+  .menu-list {
+    display: flex;
+
+    @include respond-to('md') {
+      display: none;
+    }
+
+    a {
+      color: $white;
+      text-decoration: none;
+    }
+
+    li+li {
+      margin-left: 32px;
+    }
+  }
+
+  &.opened {
+    @include backdrop;
+    position: fixed;
+    padding: 40px;
+
+    .menu-toggle-btn {
+      display: none;
+    }
+
+    .menu-close-btn {
+      @include menu-btn;
+      display: block;
+      position: absolute;
+      right: 40px;
+    }
+
+    .menu-list {
+      display: block;
+
+      li {
+        margin: 0;
+        @include subheading;
+      }
+    }
+  }
+}
+
+// OPENED IN MOBILE

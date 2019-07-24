@@ -3,13 +3,12 @@
  * Turn on/off build features
  */
 
-var settings = {
+const settings = {
   clean: true,
   html: true,
   scripts: true,
   polyfills: false,
   styles: true,
-  svgs: true,
   assets: true,
   images: true,
   reload: true
@@ -20,7 +19,7 @@ var settings = {
  * Paths to project folders
  */
 
-var paths = {
+const paths = {
   input: 'src/',
   output: 'dist/',
   html: {
@@ -41,10 +40,6 @@ var paths = {
     input: 'src/images/**/*',
     output: 'dist/images'
   },
-  svgs: {
-    input: 'src/svg/**/*.svg',
-    output: 'dist/svg/'
-  },
   assets: {
     input: 'src/assets/**/*',
     output: 'dist/assets/'
@@ -57,7 +52,7 @@ var paths = {
  * Template for banner to add to file headers
  */
 
-var banner = {
+const banner = {
   full: '/*!\n' +
     ' * <%= package.name %> v<%= package.version %>\n' +
     ' * <%= package.description %>\n' +
@@ -79,7 +74,7 @@ var banner = {
  */
 
 // General
-var {
+const {
   gulp,
   src,
   dest,
@@ -87,41 +82,40 @@ var {
   series,
   parallel
 } = require('gulp');
-var del = require('del');
-var flatmap = require('gulp-flatmap');
-var lazypipe = require('lazypipe');
-var rename = require('gulp-rename');
-var header = require('gulp-header');
-var size = require('gulp-size');
-var htmlmin = require('gulp-htmlmin');
-var htmlPartial = require('gulp-html-partial');
-var package = require('./package.json');
+const del = require('del');
+const flatmap = require('gulp-flatmap');
+const lazypipe = require('lazypipe');
+const rename = require('gulp-rename');
+const header = require('gulp-header');
+const size = require('gulp-size');
+const htmlmin = require('gulp-htmlmin');
+const htmlPartial = require('gulp-html-partial');
+const package = require('./package.json');
 
 // Scripts
-var jshint = require('gulp-jshint');
-var stylish = require('jshint-stylish');
-var concat = require('gulp-concat');
-var uglify = require('gulp-terser');
-var optimizejs = require('gulp-optimize-js');
+const stylish = require('jshint-stylish');
+const eslint = require('gulp-eslint');
+const concat = require('gulp-concat');
+const uglify = require('gulp-terser');
+const optimizejs = require('gulp-optimize-js');
 
 // Styles
-var sass = require('gulp-sass');
-var prefix = require('gulp-autoprefixer');
-var minify = require('gulp-cssnano');
+const sass = require('gulp-sass');
+const prefix = require('gulp-autoprefixer');
+const minify = require('gulp-cssnano');
 
-// SVGs
-var svgmin = require('gulp-svgmin');
+// Images
+const imagemin = require('gulp-imagemin');
 
 // BrowserSync
-var browserSync = require('browser-sync');
-
+const browserSync = require('browser-sync');
 
 /**
  * Gulp Tasks
  */
 
 // Remove pre-existing content from output folders
-var cleanDist = function (done) {
+const cleanDist = function (done) {
 
   // Make sure this feature is activated before running
   if (!settings.clean) return done();
@@ -137,7 +131,7 @@ var cleanDist = function (done) {
 };
 
 // Repeated JavaScript tasks
-var jsTasks = lazypipe()
+const jsTasks = lazypipe()
   .pipe(header, banner.full, {
     package: package
   })
@@ -154,7 +148,7 @@ var jsTasks = lazypipe()
   .pipe(dest, paths.scripts.output);
 
 // Lint, minify, and concatenate scripts
-var buildScripts = function (done) {
+const buildScripts = function (done) {
 
   // Make sure this feature is activated before running
   if (!settings.scripts) return done();
@@ -166,8 +160,8 @@ var buildScripts = function (done) {
       // If the file is a directory
       if (file.isDirectory()) {
 
-        // Setup a suffix variable
-        var suffix = '';
+        // Setup a suffix constiable
+        const suffix = '';
 
         // If separate polyfill files enabled
         if (settings.polyfills) {
@@ -200,20 +194,21 @@ var buildScripts = function (done) {
 };
 
 // Lint scripts
-var lintScripts = function (done) {
+const lintScripts = function (done) {
 
   // Make sure this feature is activated before running
   if (!settings.scripts) return done();
 
   // Lint scripts
   return src(paths.scripts.input)
-    .pipe(jshint())
-    .pipe(jshint.reporter('jshint-stylish'));
-
+    .pipe(eslint({
+      fix: true
+    }))
+    .pipe(eslint.format())
 };
 
 // HTML
-var buildHtml = function (done) {
+const buildHtml = function (done) {
   if (!settings.html) return done();
 
   return src(paths.html.input)
@@ -230,7 +225,7 @@ var buildHtml = function (done) {
 }
 
 // Process, lint, and minify Sass files
-var buildStyles = function (done) {
+const buildStyles = function (done) {
 
   // Make sure this feature is activated before running
   if (!settings.styles) return done();
@@ -267,32 +262,27 @@ var buildStyles = function (done) {
 
 };
 
-// Optimize SVG files
-var buildSVGs = function (done) {
-
-  // Make sure this feature is activated before running
-  if (!settings.svgs) return done();
-
-  // Optimize SVG files
-  return src(paths.svgs.input)
-    .pipe(svgmin())
+// IMAGES
+const buildImages = function (done) {
+  return src(paths.images.input)
     .pipe(size({
-      title: 'SVG'
+      title: 'Images'
     }))
-    .pipe(dest(paths.svgs.output));
-
-};
+    .pipe(imagemin())
+    .pipe(size({
+      title: 'Images (min)'
+    }))
+    .pipe(dest(paths.images.output));
+}
 
 // Copy static asset files into output folder
-var copyAssets = function (done) {
+const copyAssets = function (done) {
 
   // Make sure this feature is activated before running
   if (!settings.assets) return done();
 
   // custom domain CNAME
   src('CNAME').pipe(dest('dist/'));
-
-  src(paths.images.input).pipe(dest(paths.images.output));
 
   // Copy static files
   return src(paths.assets.input)
@@ -304,7 +294,7 @@ var copyAssets = function (done) {
 };
 
 // Watch for changes to the src directory
-var startServer = function (done) {
+const startServer = function (done) {
 
   // Make sure this feature is activated before running
   if (!settings.reload) return done();
@@ -324,14 +314,14 @@ var startServer = function (done) {
 };
 
 // Reload the browser when files change
-var reloadBrowser = function (done) {
+const reloadBrowser = function (done) {
   if (!settings.reload) return done();
   browserSync.reload();
   done();
 };
 
 // Watch for changes
-var watchSource = function (done) {
+const watchSource = function (done) {
   watch(paths.input, series(exports.default, reloadBrowser));
   done();
 };
@@ -350,7 +340,7 @@ exports.default = series(
     buildScripts,
     lintScripts,
     buildStyles,
-    buildSVGs,
+    buildImages,
     copyAssets
   )
 );

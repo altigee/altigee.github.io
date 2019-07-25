@@ -111,7 +111,8 @@ $breakpoints: ('xs': (max-width: 480px), // small phones
 
 .crop-content {
   @extend .hide-scrollbar;
-  overflow-x: auto;
+  overflow-x: scroll;
+  -webkit-overflow-scrolling: touch;
   height: 100%;
 }
 

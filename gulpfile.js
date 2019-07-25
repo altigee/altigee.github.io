@@ -93,7 +93,6 @@ const htmlPartial = require('gulp-html-partial');
 const package = require('./package.json');
 
 // Scripts
-const stylish = require('jshint-stylish');
 const eslint = require('gulp-eslint');
 const concat = require('gulp-concat');
 const uglify = require('gulp-terser');

@@ -10,7 +10,7 @@
   "scripts": {
     "start": "npm run watch",
     "watch": "gulp watch",
-    "build": "gulp",
+    "build": "NODE_ENV=production gulp",
     "deploy": "gh-pages -d dist -b dist"
   },
   "devDependencies": {
@@ -26,6 +26,7 @@
     "gulp-header": "2.0.5",
     "gulp-html-partial": "^1.0.1",
     "gulp-htmlmin": "^5.0.1",
+    "gulp-if": "^3.0.0",
     "gulp-imagemin": "^6.0.0",
     "gulp-optimize-js": "1.1.0",
     "gulp-postcss": "^8.0.0",

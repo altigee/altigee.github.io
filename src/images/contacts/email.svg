@@ -1,10 +1,6 @@
 <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-<mask id="path-1-inside-1" fill="white">
-<path fill-rule="evenodd" clip-rule="evenodd" d="M28 8H4V24H28V8ZM3 7V25H29V7H3Z"/>
-</mask>
-<path fill-rule="evenodd" clip-rule="evenodd" d="M28 8H4V24H28V8ZM3 7V25H29V7H3Z" fill="white"/>
-<path d="M4 8V7H3V8H4ZM28 8H29V7H28V8ZM4 24H3V25H4V24ZM28 24V25H29V24H28ZM3 7V6H2V7H3ZM3 25H2V26H3V25ZM29 25V26H30V25H29ZM29 7H30V6H29V7ZM4 9H28V7H4V9ZM5 24V8H3V24H5ZM28 23H4V25H28V23ZM27 8V24H29V8H27ZM3 8H29V6H3V8ZM4 25V7H2V25H4ZM29 24H3V26H29V24ZM28 7V25H30V7H28Z" fill="white" mask="url(#path-1-inside-1)"/>
-<path fill-rule="evenodd" clip-rule="evenodd" d="M16 16.8623L4.31034 7.60797L3.68964 8.39202L16 18.1377L28.3103 8.39202L27.6896 7.60797L16 16.8623Z" fill="white"/>
-<rect x="6" y="18" width="3" height="1" fill="white"/>
-<rect x="6" y="21" width="5" height="1" fill="white"/>
+<path d="M28.5 24.5H3.5V7.5H28.5V24.5Z" stroke="white"/>
+<path d="M3.83277 7.77817L16.1109 17.5L28.1187 7.77817" stroke="white"/>
+<path d="M6 18H9" stroke="white"/>
+<path d="M6 21H11" stroke="white"/>
 </svg>

@@ -2,7 +2,6 @@
  * Settings
  * Turn on/off build features
  */
-
 const settings = {
   clean: true,
   html: true,
@@ -14,11 +13,9 @@ const settings = {
   reload: true
 };
 
-
 /**
  * Paths to project folders
  */
-
 const paths = {
   input: 'src/',
   output: 'dist/',
@@ -51,7 +48,6 @@ const paths = {
 /**
  * Template for banner to add to file headers
  */
-
 const banner = {
   full: '/*!\n' +
     ' * <%= package.name %> v<%= package.version %>\n' +
@@ -74,8 +70,8 @@ const banner = {
  */
 
 // General
+const package = require('./package.json');
 const {
-  gulp,
   src,
   dest,
   watch,
@@ -88,9 +84,11 @@ const lazypipe = require('lazypipe');
 const rename = require('gulp-rename');
 const header = require('gulp-header');
 const size = require('gulp-size');
+const gif = require('gulp-if');
+
+// HTML
 const htmlmin = require('gulp-htmlmin');
 const htmlPartial = require('gulp-html-partial');
-const package = require('./package.json');
 
 // Scripts
 const eslint = require('gulp-eslint');
@@ -108,6 +106,9 @@ const imagemin = require('gulp-imagemin');
 
 // BrowserSync
 const browserSync = require('browser-sync');
+
+
+const isProd = process.env.NODE_ENV === 'production';
 
 /**
  * Gulp Tasks
@@ -160,7 +161,7 @@ const buildScripts = function (done) {
       if (file.isDirectory()) {
 
         // Setup a suffix constiable
-        const suffix = '';
+        let suffix = '';
 
         // If separate polyfill files enabled
         if (settings.polyfills) {
@@ -262,15 +263,15 @@ const buildStyles = function (done) {
 };
 
 // IMAGES
-const buildImages = function (done) {
+const buildImages = function () {
   return src(paths.images.input)
     .pipe(size({
       title: 'Images'
     }))
-    .pipe(imagemin())
-    .pipe(size({
+    .pipe(gif(isProd, imagemin()))
+    .pipe(gif(isProd, size({
       title: 'Images (min)'
-    }))
+    })))
     .pipe(dest(paths.images.output));
 }
 

@@ -1,0 +1,40 @@
+@import '_core.scss';
+
+// CONTACTS
+.contacts-section {
+  .contacts-sections {
+    @include respond-to('lg') {
+      @include valigned;
+    }
+  }
+
+  .contacts-primary {
+    @include respond-to('lg') {
+      margin-right: 100px;
+    }
+  }
+
+  a {
+    color: $white;
+  }
+
+  li {
+    @include valigned;
+
+    svg {
+      margin-right: 20px;
+      color: $red;
+      stroke: $red;
+    }
+  }
+
+  li+li {
+    margin-top: 40px;
+  }
+
+  .caption {
+    @include respond-to('lg') {
+      @include body-2-excessive;
+    }
+  }
+}

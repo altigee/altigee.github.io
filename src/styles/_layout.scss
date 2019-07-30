@@ -53,6 +53,10 @@
   flex-grow: 1;
 }
 
+.shrink {
+  flex-shrink: 1;
+}
+
 // TEXT aligns
 .ta-right {
   text-align: right;
@@ -83,6 +87,7 @@ $breakpoints: ('xs': (max-width: 480px), // small phones
 );
 
 @mixin respond-to($name) {
+
   // If the key exists in the map
   @if map-has-key($breakpoints, $name) {
     @media #{inspect(map-get($breakpoints, $name))} {
@@ -176,12 +181,26 @@ $sides: (all, top, bottom, left, right);
 }
 
 // BACKDROP
-@mixin backdrop {
+@mixin stretch-overlay {
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
-  z-index: 1;
+  right: 0;
+}
+
+@mixin backdrop {
+  @include stretch-overlay;
   height: 100vh;
   background: rgba($dark-blue, 0.9);
+  z-index: 1;
+}
+
+@mixin back-image($url) {
+  @include stretch-overlay;
+  position: absolute;
+  background-image: url($url);
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: -1;
 }

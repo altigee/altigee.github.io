@@ -303,6 +303,9 @@ const startServer = function (done) {
   browserSync.init({
     open: false,
     notify: false,
+    reloadThrottle: 300,
+    reloadDelay: 500,
+    timestamps: true,
     server: {
       baseDir: paths.reload
     }

@@ -1,0 +1,145 @@
+@import '_core.scss';
+
+.page-about {
+
+  // TOP
+  .top-section {
+    position: relative;
+
+    .about-bg {
+      @include stretch-overlay;
+      position: absolute;
+      background-image: url('../images/backgrounds/about.jpg');
+      background-repeat: no-repeat;
+      background-size: cover;
+      z-index: -1;
+      opacity: 0.3;
+    }
+  }
+
+  .about-text {
+    width: 230px;
+    box-sizing: content-box;
+    margin: 0 0 auto auto;
+  }
+
+  //  MAP
+  .map-section {
+    position: relative;
+
+    .map-bg {
+      width: 100%;
+    }
+
+    .location-spots {
+      position: relative;
+      top: 0;
+    }
+
+    .location-spot {
+      position: absolute;
+      border-radius: 50%;
+      height: 5px;
+      width: 5px;
+      background: $white;
+      opacity: 0.5;
+
+      &.location-ca {
+        left: 5%;
+        top: 27%;
+      }
+
+      &.location-ny {
+        left: 24%;
+        top: 24%;
+      }
+
+      &.location-ua {
+        left: 59%;
+        top: 21%;
+      }
+
+      &.location-bk {
+        left: 89%;
+        top: 47%;
+      }
+
+      &.active {
+        width: 11px;
+        height: 11px;
+        background: $red;
+        opacity: 1;
+
+        &:after {
+          content: "";
+          display: block;
+          position: absolute;
+          left: 5px;
+          width: 1px;
+          height: 110px;
+          background: $red;
+        }
+      }
+    }
+
+    .location-descriptions {
+      @include space-between;
+      position: absolute;
+      top: 0;
+      width: 100%;
+    }
+
+    .location-description.active {
+      margin-top: -70px;
+      border: 1px solid $red;
+    }
+  }
+
+  // LVIV - dev center
+  .development-center-section {
+    position: relative;
+
+    .top-section {
+      position: relative;
+    }
+
+    .lviv-bg {
+      @include stretch-overlay;
+      position: absolute;
+      background-image: url('../images/backgrounds/lviv.jpg');
+      background-repeat: no-repeat;
+      background-size: cover;
+      z-index: -1;
+      opacity: 0.2;
+    }
+
+    .pitch-facts {
+      li {
+        @include valigned;
+      }
+    }
+
+    .facts {
+      list-style-type: square;
+
+      li+li {
+        margin-top: 16px;
+      }
+    }
+  }
+
+  // OUR TEAM
+  .team-section {
+
+    table.contacts {
+      td:first-child {
+        padding-right: 20px;
+        color: $red;
+      }
+    }
+
+    .team-member+.team-member {
+      margin-top: 45px;
+    }
+  }
+}

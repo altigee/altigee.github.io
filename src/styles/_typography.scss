@@ -118,11 +118,6 @@ h4 {
   color: $red;
 }
 
-.outline {
-  -webkit-text-fill-color: transparent;
-  -webkit-text-stroke: 1px $red;
-}
-
 .subheading {
   @include subheading;
   text-transform: uppercase;
@@ -156,6 +151,10 @@ h4 {
   }
 }
 
+.display-0 {
+  @include display-0;
+}
+
 
 // LEARN MORE LINK
 // TODO: move out
@@ -172,4 +171,13 @@ h4 {
   &:active {
     color: darken($color: $red, $amount: 30);
   }
+}
+
+.text-upper {
+  text-transform: uppercase;
+}
+
+.outline {
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 1px $red;
 }

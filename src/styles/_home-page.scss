@@ -6,16 +6,16 @@
 
     .team-bg {
       position: absolute;
-      background-image: url('/images/backgrounds/team.png');
-      background-size: 643px 976px;
-      background-position-x: -92px;
-      background-position-y: -263px;
       top: 0;
+      right: 0;
       bottom: 0;
       left: 0;
-      right: 0;
       z-index: -1;
       opacity: 0.25;
+      background-image: url('/images/backgrounds/team.png');
+      background-position-x: -92px;
+      background-position-y: -263px;
+      background-size: 643px 976px;
     }
 
     .header {
@@ -26,16 +26,16 @@
       @include respond-to('lg') {
         h3 {
           @include display-4;
-          text-align: right;
           max-width: 510px;
           margin-bottom: 20px;
+          text-align: right;
         }
 
         .subheading {
           @include display-0;
-          text-align: right;
           max-width: 510px;
           padding-right: 15px;
+          text-align: right;
         }
       }
     }
@@ -58,8 +58,8 @@
   // ABOUT altigee
   .about-section {
     .about-text {
-      width: 230px;
       box-sizing: content-box;
+      width: 230px;
       margin: 0 0 auto auto;
     }
   }
@@ -96,7 +96,7 @@
       }
     }
 
-    .offer-technologies-category+.offer-technologies-category {
+    .offer-technologies-category + .offer-technologies-category {
       margin-top: 40px;
     }
 
@@ -112,15 +112,15 @@
     li {
       @include body-caption;
       flex: 1 0 48px;
-      text-align: center;
       max-width: 60px;
+      text-align: center;
 
       img {
         margin-bottom: 4px;
       }
     }
 
-    li+li {
+    li + li {
       margin-left: 30px;
     }
   }
@@ -136,7 +136,7 @@
       max-width: 360px;
     }
 
-    li+li {
+    li + li {
       @include respond-to('lg') {
         margin-left: 115px;
       }

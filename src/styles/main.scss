@@ -2,14 +2,24 @@
 
 @import '_menu.scss';
 @import '_home-page.scss';
+@import '_case-page.scss';
 
 body {
-  background: $dark-blue;
   color: $white;
+  background: $dark-blue;
+}
+
+.body-white {
+  color: $black;
+  background: $white;
 }
 
 .main_logo {
   height: 24px;
+}
+
+.main_logo-small {
+  height: 16px;
 }
 
 // FOOTER

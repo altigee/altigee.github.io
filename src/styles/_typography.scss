@@ -116,11 +116,11 @@ h4 {
   @include display-1;
   text-transform: uppercase;
   color: $red;
+}
 
-  .outline {
-    -webkit-text-fill-color: transparent;
-    -webkit-text-stroke: 1px $red;
-  }
+.outline {
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 1px $red;
 }
 
 .subheading {
@@ -131,6 +131,11 @@ h4 {
 .listheading {
   @include listheading;
   text-transform: uppercase;
+  color: $red;
+}
+
+.listheading-regular {
+  @include listheading;
   color: $red;
 }
 
@@ -156,9 +161,9 @@ h4 {
 // TODO: move out
 .display-link {
   @include display-link;
+  text-decoration: none;
   text-transform: uppercase;
   color: $red;
-  text-decoration: none;
 
   &:hover {
     color: darken($color: $red, $amount: 15);

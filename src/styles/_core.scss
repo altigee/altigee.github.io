@@ -4,17 +4,17 @@
 @import '_layout.scss';
 
 .hr-numbered {
-  width: 120px;
+  @extend caption;
   display: flex;
   align-items: center;
-  @extend caption;
+  width: 120px;
   color: $red;
 
   @mixin line {
-    content: "";
-    border-top: 1px solid $red;
-    width: 72px;
+    content: '';
     display: inline-block;
+    width: 72px;
+    border-top: 1px solid $red;
   }
 
   &.left {
@@ -34,12 +34,10 @@
   }
 }
 
-
-
 .hr-patt {
   height: 4px;
-  background-origin: content-box;
   background-repeat: no-repeat;
+  background-origin: content-box;
 
   &-1 {
     background-image: url('../images/patterns/patt_1.svg');
@@ -53,9 +51,21 @@
     background-image: url('../images/patterns/patt_3.svg');
   }
 
+  &-4 {
+    background-image: url('../images/patterns/patt_4.svg');
+  }
+
+  &-5 {
+    background-image: url('../images/patterns/patt_5.svg');
+  }
+
   &.right {
     background-position-x: 100%;
   }
+}
+
+.rectangle {
+  background-image: url('../images/patterns/rectangle.svg');
 }
 
 // BUTTONS
@@ -63,6 +73,6 @@ button {
   cursor: pointer;
 }
 
-button>* {
+button > * {
   pointer-events: none;
 }

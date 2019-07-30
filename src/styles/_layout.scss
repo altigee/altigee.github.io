@@ -3,8 +3,8 @@
 // LAYOUT COMPONENTS
 .container {
   max-width: 992px;
-  padding: 0 40px;
   margin: 0 auto;
+  padding: 0 40px;
 }
 
 // FLEX aligns
@@ -14,7 +14,7 @@
 }
 
 .valigned {
-  @include valigned
+  @include valigned;
 }
 
 @mixin haligned {
@@ -36,6 +36,19 @@
   @include space-between;
 }
 
+@mixin flex {
+  display: flex;
+}
+
+.flex {
+  @include flex;
+}
+
+.flex-column {
+  @include flex;
+  flex-direction: column;
+}
+
 .grow {
   flex-grow: 1;
 }
@@ -43,6 +56,19 @@
 // TEXT aligns
 .ta-right {
   text-align: right;
+}
+
+// List-Style
+.ul-red-square {
+  box-sizing: border-box;
+  padding-left: 12px;
+  list-style-image: url('../images/services/square-red.svg');
+
+  li {
+    padding-bottom: 15px;
+    padding-left: 10px;
+    line-height: 24px;
+  }
 }
 
 // RWD
@@ -57,7 +83,6 @@ $breakpoints: ('xs': (max-width: 480px), // small phones
 );
 
 @mixin respond-to($name) {
-
   // If the key exists in the map
   @if map-has-key($breakpoints, $name) {
     @media #{inspect(map-get($breakpoints, $name))} {
@@ -93,10 +118,16 @@ $breakpoints: ('xs': (max-width: 480px), // small phones
   }
 }
 
+.smr-hide {
+  @include respond-to('smr') {
+    display: none;
+  }
+}
+
 // OVERFLOWS
 .crop-wrapper {
-  overflow: hidden;
   position: relative;
+  overflow: hidden;
 }
 
 .crop-content {
@@ -135,10 +166,10 @@ $sides: (all, top, bottom, left, right);
 // BACKDROP
 @mixin backdrop {
   top: 0;
+  right: 0;
   bottom: 0;
   left: 0;
-  right: 0;
-  background: rgba($dark-blue, 0.9);
-  height: 100vh;
   z-index: 1;
+  height: 100vh;
+  background: rgba($dark-blue, 0.9);
 }

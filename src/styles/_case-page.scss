@@ -1,0 +1,282 @@
+@import '_core.scss';
+
+.case-page {
+  .top-section {
+    position: relative;
+
+    .header {
+      @include space-between;
+    }
+
+    .contracts-bg {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: -1;
+      opacity: 0.45;
+      background-image: url('../images/backgrounds/contracts-bg.jpg');
+      background-repeat: no-repeat;
+      background-position-x: 100%;
+      background-size: contain;
+    }
+
+    .project {
+      .kountable-logo {
+        height: 48px;
+        background-image: url('../images/case/kountable.jpg');
+        background-repeat: no-repeat;
+        background-size: contain;
+      }
+
+
+      .project-caption {
+        @include display-0;
+        line-height: 32px;
+        text-transform: uppercase;
+      }
+    }
+
+
+    .align-fs {
+      display: flex;
+      align-items: flex-start;
+    }
+
+    .technology-smr {
+      @include respond-to('smr') {
+        display: grid;
+        width: 225px;
+
+        grid-gap: 25px;
+        grid-template-columns: repeat(auto-fill, 100px);
+      }
+      @include rwd(601, 9999) {
+        display: none;
+      }
+    }
+
+    .technology-big {
+      @include rwd(601, 1365) {
+        display: grid;
+        width: 510px;
+        max-width: 1365px;
+
+        grid-gap: 0;
+        grid-template-columns: repeat(auto-fill, 170px);
+      }
+    }
+
+    .lh-32 {
+      line-height: 32px;
+    }
+
+    .team {
+      display: grid;
+
+      grid-template-columns: repeat(auto-fill, 84px);
+      grid-gap: 14px;
+
+      .person {
+        height: 84px;
+        background-repeat: no-repeat;
+        background-size: contain;
+      }
+
+      .okyriienko {
+        background-image: url('../images/backgrounds/team/okyriienko.jpg');
+      }
+
+      .nmarchuk {
+        background-image: url('../images/backgrounds/team/nmarchuk.jpg');
+      }
+
+      .mtitov {
+        background-image: url('../images/backgrounds/team/mtitov.jpg');
+      }
+
+      .mpetrushenko {
+        background-image: url('../images/backgrounds/team/mpetrushenko.jpg');
+      }
+
+      .vsokol {
+        background-image: url('../images/backgrounds/team/vsokol.jpg');
+      }
+
+      .mholyk {
+        background-image: url('../images/backgrounds/team/mholyk.jpg');
+      }
+
+      .tkharuk {
+        background-image: url('../images/backgrounds/team/tkharuk.jpg');
+      }
+
+      .nsokil {
+        background-image: url('../images/backgrounds/team/nsokil.jpg');
+      }
+
+      .vtomkiv {
+        background-image: url('../images/backgrounds/team/vtomkiv.jpg');
+      }
+    }
+  }
+
+  // how it was
+  .how-it-was {
+    .item {
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+
+    .begin {
+      height: 144px;
+      background-image: url('../images/case/begin.jpg');
+    }
+
+    .ds {
+      height: 144px;
+      background-image: url('../images/case/ds.jpg');
+    }
+
+    .insights {
+      height: 144px;
+      background-image: url('../images/case/insights.jpg');
+    }
+
+    .rescue {
+      height: 144px;
+      background-image: url('../images/case/rescue.jpg');
+    }
+
+    .mobile {
+      height: 144px;
+      background-image: url('../images/case/mobile.jpg');
+    }
+  }
+
+  // what we built
+  .we-built {
+    &-bg {
+      position: relative;
+      z-index: -1;
+      height: 236px;
+      background-image: url('../images/backgrounds/we-built.png');
+      background-repeat: no-repeat;
+      background-position: center;
+
+      .we-built-caption {
+        width: 280px;
+        margin: 0 auto;
+        margin-top: 120px;
+      }
+    }
+
+    .we-built-img {
+      position: relative;
+      max-width: 480px;
+      height: 570px;
+      margin: 0 auto;
+      text-align: right;
+      ;
+
+      .img1 {
+        position: absolute;
+        top: 20px;
+        right: 0;
+      }
+
+      .img2 {
+        position: absolute;
+        top: 275px;
+        left: 0;
+        z-index: -1;
+      }
+
+      .img3 {
+        position: absolute;
+        top: 250px;
+        right: 0;
+      }
+    }
+  }
+
+  // 5 - business impact
+  .bi {
+    .bi-description {
+      @include body-2-excessive;
+    }
+
+    .bi-col-1 {
+      @include display-0;
+      flex-basis: 90px;
+      line-height: 32px;
+      text-transform: uppercase;
+    }
+
+    .bi-col-2 {
+      flex: 1;
+    }
+  }
+
+  // 6 - value we delivered
+  .value {
+    .listheading {
+      min-width: 45px;
+    }
+  }
+
+  // 7 - client feedback
+  .feedback-wrapper {
+    .feedback {
+      max-width: 992px;
+      margin: 0 auto;
+
+      .feedback-item {
+        flex-basis: 300px;
+        min-width: 235px;
+        margin-right: 20px;
+
+        .item {
+          background-repeat: no-repeat;
+          background-size: contain;
+        }
+
+        .kolesnikov {
+          height: 184px;
+          background-image: url('../images/case/feedback/kolesnikov.jpg');
+        }
+
+        .whaley {
+          height: 184px;
+          background-image: url('../images/case/feedback/whaley.jpg');
+        }
+
+        &-name {
+          max-width: 184px;
+          margin-top: 20px;
+          margin-bottom: 10px;
+          ;
+        }
+      }
+    }
+
+    .summary {
+      max-width: 360px;
+      border-top: 1px solid $red;
+    }
+  }
+
+
+  // CONTACTS
+  .contacts-section {
+    li {
+      @include valigned;
+      margin-bottom: 40px;
+
+      img {
+        margin-right: 20px;
+      }
+    }
+  }
+}

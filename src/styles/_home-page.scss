@@ -96,7 +96,7 @@
       }
     }
 
-    .offer-technologies-category + .offer-technologies-category {
+    .offer-technologies-category+.offer-technologies-category {
       margin-top: 40px;
     }
 
@@ -152,18 +152,6 @@
     li {
       flex: 1 0 176px;
       margin-right: 60px;
-    }
-  }
-
-  // CONTACTS
-  .contacts-section {
-    li {
-      @include valigned;
-      margin-bottom: 40px;
-
-      img {
-        margin-right: 20px;
-      }
     }
   }
 }

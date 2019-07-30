@@ -125,13 +125,25 @@ $breakpoints: ('xs': (max-width: 480px), // small phones
 }
 
 // OVERFLOWS
+// NO-SCROLL
+.hide-scrollbar {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
 .crop-wrapper {
   position: relative;
   overflow: hidden;
 }
 
 .crop-content {
-  overflow-x: auto;
+  @extend .hide-scrollbar;
+  overflow-x: scroll;
+  -webkit-overflow-scrolling: touch;
   height: 100%;
 }
 

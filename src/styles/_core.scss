@@ -38,6 +38,7 @@
   height: 4px;
   background-repeat: no-repeat;
   background-origin: content-box;
+  border-top: 1px solid blue;
 
   &-1 {
     min-width: 118px;
@@ -62,6 +63,22 @@
 
   &.right {
     background-position-x: 100%;
+  }
+}
+
+.hr-patt-img {
+  fill: $white;
+
+  &.red {
+    fill: $red;
+  }
+
+  &.black {
+    fill: $black;
+  }
+
+  &.dark-blue {
+    fill: $dark-blue;
   }
 }
 

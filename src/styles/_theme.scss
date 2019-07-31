@@ -1,16 +1,37 @@
-$white: #fff;
+// COLORS
+$white: #ffffff;
 $dark-blue: #030322;
-$red: #FF0033;
+$red: #ff0033;
 $black: #000000;
 
+// COLOR classes (text + svg)
 .white {
   color: $white;
+
+  fill: $white;
 }
 
 .dark-blue {
   color: $dark-blue;
+
+  fill: $dark-blue;
 }
 
 .red {
   color: $red;
+
+  fill: $red;
+}
+
+.black {
+  color: $black;
+
+  fill: $black;
+}
+
+
+// BACKGROUNDS
+.white-bg {
+  color: $black;
+  background: $white;
 }

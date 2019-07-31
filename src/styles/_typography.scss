@@ -155,7 +155,7 @@ h4 {
 }
 
 .page-section-heading {
-  @include display-1;
+  @extend h4;
 
   @include respond-to('lg') {
     @include display-3;

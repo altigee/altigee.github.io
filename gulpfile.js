@@ -89,6 +89,7 @@ const gif = require('gulp-if');
 // HTML
 const htmlmin = require('gulp-htmlmin');
 const htmlPartial = require('gulp-html-partial');
+const embedSvg = require('gulp-embed-svg');
 
 // Scripts
 const eslint = require('gulp-eslint');
@@ -214,6 +215,9 @@ const buildHtml = function (done) {
   return src(paths.html.input)
     .pipe(htmlPartial({
       basePath: paths.html.partials
+    }))
+    .pipe(embedSvg({
+      root: 'src/images'
     }))
     .pipe(htmlmin({
       collapseWhitespace: true

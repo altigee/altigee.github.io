@@ -1,11 +1,4 @@
-// @import '_flexboxgrid.scss';
-
-// LAYOUT COMPONENTS
-.container {
-  max-width: 992px;
-  margin: 0 auto;
-  padding: 0 40px;
-}
+@import '_flexboxgrid.scss';
 
 // FLEX aligns
 @mixin valigned {
@@ -87,7 +80,6 @@ $breakpoints: ('xs': (max-width: 480px), // small phones
 );
 
 @mixin respond-to($name) {
-
   // If the key exists in the map
   @if map-has-key($breakpoints, $name) {
     @media #{inspect(map-get($breakpoints, $name))} {
@@ -104,6 +96,13 @@ $breakpoints: ('xs': (max-width: 480px), // small phones
 @mixin rwd($min: 0, $max: 9999) {
   @media (min-width: $min+'px') and (max-width: $max+'px') {
     @content;
+  }
+}
+
+.container {
+  @include respond-to('xs') {
+    padding-right: 40px;
+    padding-left: 40px;
   }
 }
 
@@ -148,8 +147,9 @@ $breakpoints: ('xs': (max-width: 480px), // small phones
 .crop-content {
   @extend .hide-scrollbar;
   overflow-x: scroll;
-  -webkit-overflow-scrolling: touch;
   height: 100%;
+
+  -webkit-overflow-scrolling: touch;
 }
 
 // UTILITY spacing classes
@@ -184,23 +184,25 @@ $sides: (all, top, bottom, left, right);
 @mixin stretch-overlay {
   top: 0;
   right: 0;
+  right: 0;
   bottom: 0;
   left: 0;
-  right: 0;
 }
 
 @mixin backdrop {
   @include stretch-overlay;
+  z-index: 1;
   height: 100vh;
   background: rgba($dark-blue, 0.9);
-  z-index: 1;
 }
 
 @mixin back-image($url) {
   @include stretch-overlay;
   position: absolute;
+  z-index: -1;
+  opacity: 0.3;
   background-image: url($url);
   background-repeat: no-repeat;
+  background-position: 50% 50%;
   background-size: cover;
-  z-index: -1;
 }

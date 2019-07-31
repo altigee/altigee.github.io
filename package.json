@@ -36,5 +36,8 @@
     "gulp-sourcemaps": "^2.6.5",
     "gulp-terser": "1.1.7",
     "lazypipe": "1.0.1"
+  },
+  "dependencies": {
+    "bootstrap": "^4.3.1"
   }
 }

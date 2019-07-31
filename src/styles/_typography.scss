@@ -143,6 +143,17 @@ h4 {
   @include caption;
 }
 
+.page-heading {
+  @include display-2;
+  text-transform: uppercase;
+  color: $red;
+
+  @include respond-to('lg') {
+    @include display-4;
+    text-align: right;
+  }
+}
+
 .page-section-heading {
   @include display-1;
 

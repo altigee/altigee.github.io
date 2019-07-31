@@ -4,7 +4,7 @@
 <partial src="./partials/_head.html" />
 
 <body class="page-about">
-  <section class="top-section mb-45">
+  <section class="top-section mb-30">
     <div class="about-bg"></div>
 
     <!-- HEADER -->
@@ -12,24 +12,41 @@
 
     <!-- SLOGAN -->
     <div class="hr-numbered left">1</div>
-    <h3 class="container mt-30 mb-45">
-      who
-      <div class="outline">we are</div>
-    </h3>
-    <div class="hr-patt-2 hr-patt container pb-75 right"></div>
+    <div class="container">
+      <h3 class="page-heading col-lg-11 mt-30 mb-45">
+        who <div class="outline">we are</div>
+      </h3>
+    </div>
+
+    <div class="hr-patt-2 hr-patt d-lg-none container pb-75 right"></div>
+    <div class="d-none d-lg-block container pb-35">
+      <div class="row offset-5 mb-50">
+        <p class="col-6 mb-10">
+          Whether you’re a startup or a mature company looking for a solution or product development,
+          we are here to help you get the best of it.
+        </p>
+        <p class="col-6 offset-2">
+          Web or mobile app development, PoC, application re-engineering, cloud migration —
+          you name it. We’ll help you out with all of them.
+        </p>
+      </div>
+      <div class="hr-patt-2 hr-patt"></div>
+    </div>
   </section>
 
-  <div class="container about-text mb-50">
-    <p class="mb-10">
-      Whether you’re a startup or a mature company looking for a solution or product development,
-      we are here to help you get the best of it.
-    </p>
-    <p>
-      Web or mobile app development, PoC, application re-engineering, cloud migration —
-      you name it. We’ll help you out with all of them.
-    </p>
+  <div class="d-lg-none container">
+    <div class="row offset-4 mb-50">
+      <p class="mb-10">
+        Whether you’re a startup or a mature company looking for a solution or product development,
+        we are here to help you get the best of it.
+      </p>
+      <p>
+        Web or mobile app development, PoC, application re-engineering, cloud migration —
+        you name it. We’ll help you out with all of them.
+      </p>
+    </div>
+    <div class="hr-patt-2 hr-patt mb-75"></div>
   </div>
-  <div class="hr-patt-2 hr-patt container mb-75"></div>
 
   <div class="hr-numbered right">2</div>
   <h5 class="display-0 container text-upper red mb-35">
@@ -68,7 +85,7 @@
 
       <div class="container pt-45 pb-45">
         <h4 class="page-section-heading mb-15">Lviv</h4>
-        <ul class="pitch-facts">
+        <ul class="pitch-facts offset-3">
           <li>
             <span class="display-0 text-upper outline red mr-15">21k</span>
             <span>skilled tech professionals</span>
@@ -82,7 +99,7 @@
     </div>
 
     <div class="container">
-      <ul class="facts pl-15">
+      <ul class="ul-red-square pl-15">
         <li>Some of the best universities in Eastern Europe with strong tech degree programs </li>
         <li>Hosting IT specialists from other regions of Ukraine</li>
         <li>The beauty of an old Austrian city but much more affordable</li>
@@ -95,59 +112,69 @@
 
   <div class="hr-numbered left">3</div>
   <section class="team-section container pt-45 pb-45">
-    <h4 class="page-section-heading mb-45 ta-right">Our team</h4>
+    <h4 class="page-section-heading mb-45 ta-right">
+      <span class="outline">Let's</span> talk
+    </h4>
 
     <ul class="team-members">
       <li class="team-member">
-        <img width="132" src="../images/team/mtitov.jpg" alt="max titov">
+        <img src="../images/team/mtitov.jpg" alt="max titov">
 
-        <div class="listheading text-upper white">Max Titov</div>
-        <div class="red mb-15">CEO & Co-founder</div>
+        <div class="member-info">
+          <div class="name-pos">
+            <div class="listheading text-upper white">Max Titov</div>
+            <div class="red mb-15">CEO & Co-founder</div>
+          </div>
 
-        <table class="contacts">
-          <tr>
-            <td>email</td>
-            <td>max@altigee.com</td>
-          </tr>
-          <tr>
-            <td>phone</td>
-            <td>+38 (068) 500 43 15</td>
-          </tr>
-          <tr>
-            <td>linkedin</td>
-            <td><a href="">maxtitov</a></td>
-          </tr>
-          <tr>
-            <td>telegram</td>
-            <td><a href="">t.me/maksymtitov</a></td>
-          </tr>
-        </table>
+          <table class="contacts">
+            <tr>
+              <td>email</td>
+              <td>max@altigee.com</td>
+            </tr>
+            <tr>
+              <td>phone</td>
+              <td>+38 (068) 500 43 15</td>
+            </tr>
+            <tr>
+              <td>linkedin</td>
+              <td><a href="">maxtitov</a></td>
+            </tr>
+            <tr>
+              <td>telegram</td>
+              <td><a href="">t.me/maksymtitov</a></td>
+            </tr>
+          </table>
+        </div>
       </li>
 
       <li class="team-member">
-        <img width="132" src="../images/team/dkondratovich.jpg" alt="dima kondratovych">
+        <img src="../images/team/dkondratovich.jpg" alt="dima kondratovych">
 
-        <div class="listheading text-upper white">Dima Kondratovych</div>
-        <div class="red mb-15">CTO & Co-founder</div>
+        <div class="member-info">
+          <div class="name-pos">
+            <div class="listheading text-upper white">Dima Kondratovych</div>
+            <div class="red mb-15">CTO & Co-founder</div>
+          </div>
 
-        <table class="contacts">
-          <tr>
-            <td>email</td>
-            <td>dima@altigee.com</td>
-          </tr>
-          <tr>
-            <td>phone</td>
-            <td>+38 (068) 846 90 44</td>
-          </tr>
-          <tr>
-            <td>linkedin</td>
-            <td><a href="">dkondratovych</a></td>
-          </tr>
-          <tr>
-            <td>telegram</td>
-            <td><a href="">t.me/dkondratovych</a></td>
-          </tr>
-        </table>
+          <table class="contacts">
+            <tr>
+              <td>email</td>
+              <td>dima@altigee.com</td>
+            </tr>
+            <tr>
+              <td>phone</td>
+              <td>+38 (068) 846 90 44</td>
+            </tr>
+            <tr>
+              <td>linkedin</td>
+              <td><a href="">dkondratovych</a></td>
+            </tr>
+            <tr>
+              <td>telegram</td>
+              <td><a href="">t.me/dkondratovych</a></td>
+            </tr>
+          </table>
+        </div>
       </li>
     </ul>
   </section>

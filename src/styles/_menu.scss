@@ -4,8 +4,8 @@
 .main-navigation {
   @mixin menu-btn {
     height: 24px;
-    background: none;
     border: none;
+    background: none;
   }
 
   // MOBILE NAV
@@ -23,7 +23,7 @@
 
     &:hover {
       svg {
-        transform: scale(1.1)
+        transform: scale(1.1);
       }
     }
   }
@@ -41,11 +41,10 @@
     }
 
     a {
-      color: $white;
       text-decoration: none;
     }
 
-    li+li {
+    li + li {
       margin-left: 32px;
     }
   }
@@ -61,17 +60,17 @@
 
     .menu-close-btn {
       @include menu-btn;
-      display: block;
       position: absolute;
       right: 40px;
+      display: block;
     }
 
     .menu-list {
       display: block;
 
       li {
-        margin: 0;
         @include subheading;
+        margin: 0;
       }
     }
   }

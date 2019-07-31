@@ -1,26 +1,13 @@
 @import '_core.scss';
 
 .page-about {
-
   // TOP
   .top-section {
     position: relative;
 
     .about-bg {
-      @include stretch-overlay;
-      position: absolute;
-      background-image: url('../images/backgrounds/about.jpg');
-      background-repeat: no-repeat;
-      background-size: cover;
-      z-index: -1;
-      opacity: 0.3;
+      @include back-image('../images/backgrounds/about.jpg');
     }
-  }
-
-  .about-text {
-    width: 230px;
-    box-sizing: content-box;
-    margin: 0 0 auto auto;
   }
 
   //  MAP
@@ -38,43 +25,43 @@
 
     .location-spot {
       position: absolute;
-      border-radius: 50%;
-      height: 5px;
       width: 5px;
-      background: $white;
+      height: 5px;
       opacity: 0.5;
+      border-radius: 50%;
+      background: $white;
 
       &.location-ca {
-        left: 5%;
-        top: 27%;
+        top: 40%;
+        left: 2%;
       }
 
       &.location-ny {
-        left: 24%;
-        top: 24%;
+        top: 34%;
+        left: 20%;
       }
 
       &.location-ua {
-        left: 59%;
-        top: 21%;
+        top: 25%;
+        left: 53%;
       }
 
       &.location-bk {
-        left: 89%;
-        top: 47%;
+        top: 64%;
+        left: 81%;
       }
 
       &.active {
         width: 11px;
         height: 11px;
-        background: $red;
         opacity: 1;
+        background: $red;
 
         &:after {
-          content: "";
-          display: block;
+          content: '';
           position: absolute;
           left: 5px;
+          display: block;
           width: 1px;
           height: 110px;
           background: $red;
@@ -90,7 +77,6 @@
     }
 
     .location-description.active {
-      margin-top: -70px;
       border: 1px solid $red;
     }
   }
@@ -104,13 +90,7 @@
     }
 
     .lviv-bg {
-      @include stretch-overlay;
-      position: absolute;
-      background-image: url('../images/backgrounds/lviv.jpg');
-      background-repeat: no-repeat;
-      background-size: cover;
-      z-index: -1;
-      opacity: 0.2;
+      @include back-image('../images/backgrounds/lviv.jpg');
     }
 
     .pitch-facts {
@@ -118,19 +98,10 @@
         @include valigned;
       }
     }
-
-    .facts {
-      list-style-type: square;
-
-      li+li {
-        margin-top: 16px;
-      }
-    }
   }
 
   // OUR TEAM
   .team-section {
-
     table.contacts {
       td:first-child {
         padding-right: 20px;
@@ -138,8 +109,37 @@
       }
     }
 
-    .team-member+.team-member {
-      margin-top: 45px;
+    .team-members {
+      @include respond-to('lg') {
+        display: flex;
+        justify-content: space-between;
+      }
+    }
+
+    .team-member {
+      margin-bottom: 46px;
+
+      @include respond-to('lg') {
+        display: inline-flex;
+      }
+
+      img {
+        width: 132px;
+
+        @include respond-to('lg') {
+          width: 176px;
+          height: 176px;
+          margin-right: 48px;
+        }
+      }
+
+      .member-info {
+        @include respond-to('lg') {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+        }
+      }
     }
   }
 }

@@ -1,11 +1,42 @@
 @import '_core.scss';
 
 .case-page {
+  @include respond-to('lg') {
+    .container {
+      max-width: 1200px;
+      padding-left: 80px;
+    }
+  }
+
+  .hr-right {
+    padding-right: 220px;
+  }
+
+  .hr-left {
+    padding-left: 220px;
+  }
+
   .top-section {
     position: relative;
 
     .header {
       @include space-between;
+    }
+
+    .case-hr-lg {
+      width: 40%;
+    }
+
+    .case-lg {
+      @include respond-to('lg') {
+        @include space-between;
+        align-items: baseline;
+        width: 45%;
+
+        h3 {
+          @include display-4;
+        }
+      }
     }
 
     .contracts-bg {
@@ -20,110 +51,173 @@
       background-repeat: no-repeat;
       background-position-x: 100%;
       background-size: contain;
+
+      @include respond-to('lg') {
+        top: -40px;
+        opacity: 0.7;
+        background-image: url('../images/backgrounds/contracts-bg-desktop.jpg');
+        background-size: 1194px 688px;
+      }
     }
 
     .project {
-      .kountable-logo {
-        height: 48px;
-        background-image: url('../images/case/kountable.jpg');
-        background-repeat: no-repeat;
-        background-size: contain;
-      }
+      .project-wrapper {
+        @include respond-to('lg') {
+          width: 45%;
+        }
 
+        .project-caption {
+          @include display-0;
+          line-height: 32px;
+          text-transform: uppercase;
+        }
 
-      .project-caption {
-        @include display-0;
-        line-height: 32px;
-        text-transform: uppercase;
+        .kountable-logo-wrapper {
+          @include respond-to('lg') {
+            display: flex;
+            margin-bottom: 45px;
+
+            .kountable-logo {
+              margin-right: 70px;
+            }
+          }
+
+          .body {
+            max-width: 500px;
+          }
+
+          .kountable-logo {
+            min-width: 84px;
+            height: 48px;
+            background-image: url('../images/case/kountable.jpg');
+            background-repeat: no-repeat;
+            background-size: contain;
+          }
+        }
       }
     }
 
+    .list-icon-wrapper {
+      padding-top: 50px;
 
-    .align-fs {
-      display: flex;
-      align-items: flex-start;
-    }
+      .list-icon {
+        @include respond-to('lg') {
+          display: flex;
+          flex-wrap: wrap;
 
-    .technology-smr {
-      @include respond-to('smr') {
+          .partnership,
+          .location {
+            order: -1;
+            width: 225px;
+          }
+
+          .dedicated {
+            width: 500px;
+            margin-bottom: 0;
+          }
+        }
+
+        .dedicated .space-between {
+          width: 100%;
+        }
+
+        .align-fs {
+          display: flex;
+          align-items: flex-start;
+        }
+
+        .technology-smr {
+          @include respond-to('smr') {
+            display: grid;
+            width: 225px;
+
+            grid-gap: 25px;
+            grid-template-columns: repeat(auto-fill, 100px);
+          }
+          @include rwd(601, 9999) {
+            display: none;
+          }
+        }
+
+        .technology-big {
+          @include rwd(601, 9999) {
+            display: grid;
+            width: 450px;
+            max-width: 1365px;
+
+            grid-gap: 0;
+            grid-template-columns: repeat(auto-fill, 150px);
+          }
+        }
+
+        .lh-32 {
+          line-height: 32px;
+        }
+      }
+
+      .team {
         display: grid;
-        width: 225px;
 
-        grid-gap: 25px;
-        grid-template-columns: repeat(auto-fill, 100px);
-      }
-      @include rwd(601, 9999) {
-        display: none;
-      }
-    }
+        @include respond-to('lg') {
+          max-width: 990px;
+          margin-left: 52px;
+        }
 
-    .technology-big {
-      @include rwd(601, 1365) {
-        display: grid;
-        width: 510px;
-        max-width: 1365px;
+        grid-template-columns: repeat(auto-fill, 84px);
+        grid-gap: 14px;
 
-        grid-gap: 0;
-        grid-template-columns: repeat(auto-fill, 170px);
-      }
-    }
+        .person {
+          height: 84px;
+          background-repeat: no-repeat;
+          background-size: contain;
+        }
 
-    .lh-32 {
-      line-height: 32px;
-    }
+        .okyriienko {
+          background-image: url('../images/backgrounds/team/okyriienko.jpg');
+        }
 
-    .team {
-      display: grid;
+        .nmarchuk {
+          background-image: url('../images/backgrounds/team/nmarchuk.jpg');
+        }
 
-      grid-template-columns: repeat(auto-fill, 84px);
-      grid-gap: 14px;
+        .mtitov {
+          background-image: url('../images/backgrounds/team/mtitov.jpg');
+        }
 
-      .person {
-        height: 84px;
-        background-repeat: no-repeat;
-        background-size: contain;
-      }
+        .mpetrushenko {
+          background-image: url('../images/backgrounds/team/mpetrushenko.jpg');
+        }
 
-      .okyriienko {
-        background-image: url('../images/backgrounds/team/okyriienko.jpg');
-      }
+        .vsokol {
+          background-image: url('../images/backgrounds/team/vsokol.jpg');
+        }
 
-      .nmarchuk {
-        background-image: url('../images/backgrounds/team/nmarchuk.jpg');
-      }
+        .mholyk {
+          background-image: url('../images/backgrounds/team/mholyk.jpg');
+        }
 
-      .mtitov {
-        background-image: url('../images/backgrounds/team/mtitov.jpg');
-      }
+        .tkharuk {
+          background-image: url('../images/backgrounds/team/tkharuk.jpg');
+        }
 
-      .mpetrushenko {
-        background-image: url('../images/backgrounds/team/mpetrushenko.jpg');
-      }
+        .nsokil {
+          background-image: url('../images/backgrounds/team/nsokil.jpg');
+        }
 
-      .vsokol {
-        background-image: url('../images/backgrounds/team/vsokol.jpg');
-      }
-
-      .mholyk {
-        background-image: url('../images/backgrounds/team/mholyk.jpg');
-      }
-
-      .tkharuk {
-        background-image: url('../images/backgrounds/team/tkharuk.jpg');
-      }
-
-      .nsokil {
-        background-image: url('../images/backgrounds/team/nsokil.jpg');
-      }
-
-      .vtomkiv {
-        background-image: url('../images/backgrounds/team/vtomkiv.jpg');
+        .vtomkiv {
+          background-image: url('../images/backgrounds/team/vtomkiv.jpg');
+        }
       }
     }
   }
 
   // how it was
   .how-it-was {
+    .margin-15 {
+      margin-top: 15px;
+      margin-bottom: 15px;
+    }
+
     .item {
       background-repeat: no-repeat;
       background-size: contain;
@@ -155,20 +249,132 @@
     }
   }
 
-  // what we built
+  .how-it-was-lg {
+    @include respond-to('lg') {
+      padding-left: 150px;
+
+      .caption {
+        @include space-between;
+        align-items: flex-end;
+        width: 465px;
+        margin-bottom: 50px;
+        text-align: right;
+
+        h4 {
+          @include display-3;
+          width: 320px;
+
+          span {
+            display: block;
+          }
+        }
+      }
+
+      & > ul > li {
+        display: flex;
+
+        .item {
+          flex-basis: 320px;
+        }
+
+        .margin-15 {
+          margin-top: 0;
+          margin-bottom: 0;
+
+          img {
+            padding-right: 25px;
+          }
+        }
+
+        .ul-red-square {
+          padding-left: 100px;
+
+          li {
+            width: 350px;
+          }
+        }
+      }
+    }
+  }
+
+  // 3 - what we built
   .we-built {
+    position: relative;
+
+    @include respond-to('lg') {
+      margin-top: 80px;
+
+      .hr-built-desktop {
+        position: absolute;
+        right: 100px;
+        bottom: -100px;
+        padding-left: 200px;
+      }
+
+      .hr-built-desktop2 {
+        position: absolute;
+        right: 0;
+        bottom: -600px;
+        padding-right: 100px;
+      }
+    }
+
     &-bg {
-      position: relative;
       z-index: -1;
       height: 236px;
       background-image: url('../images/backgrounds/we-built.png');
       background-repeat: no-repeat;
       background-position: center;
 
+      @include respond-to('lg') {
+        height: 250px;
+        background-image: url('../images/backgrounds/we-built-desktop.jpg');
+        background-position: right;
+        background-size: 746px 464px;
+      }
+
       .we-built-caption {
         width: 280px;
         margin: 0 auto;
         margin-top: 120px;
+        text-align: right;
+
+        @include respond-to('lg') {
+          @include display-3;
+          width: 400px;
+          margin: 20px 0 0 80px;
+        }
+      }
+    }
+
+    .we-built-list {
+      @include respond-to('lg') {
+        margin-left: 350px;
+      }
+    }
+
+    .we-built-img-desktop {
+      position: relative;
+
+      .img1 {
+        position: absolute;
+        top: 130px;
+        left: 70px;
+        z-index: 1;
+      }
+
+      .img2 {
+        position: absolute;
+        top: -30px;
+        left: 0;
+        z-index: -1;
+      }
+
+      .img3 {
+        position: absolute;
+        top: 220px;
+        left: 560px;
+        z-index: 2;
       }
     }
 
@@ -178,7 +384,6 @@
       height: 570px;
       margin: 0 auto;
       text-align: right;
-      ;
 
       .img1 {
         position: absolute;
@@ -201,26 +406,105 @@
     }
   }
 
-  // 5 - business impact
+  // 4 - business impact
   .bi {
+    margin-top: 75px;
+    margin-bottom: 75px;
+
     .bi-description {
       @include body-2-excessive;
+
+      &-mob {
+        display: block;
+      }
     }
 
     .bi-col-1 {
       @include display-0;
       flex-basis: 90px;
       line-height: 32px;
+      text-align: right;
       text-transform: uppercase;
     }
 
     .bi-col-2 {
       flex: 1;
     }
+
+    & {
+      @include respond-to('lg') {
+        margin-top: 700px;
+
+        .container {
+          padding-left: 40px;
+        }
+
+        .bi-lg {
+          width: calc(40% + 16px); //16px = 40px* 40%
+
+          h4,
+          .outline {
+            @include display-3;
+          }
+
+          .h4 {
+            margin-left: -48px;
+          }
+        }
+
+        .bi-description {
+          margin-left: 90px;
+
+          &-mob {
+            display: inline;
+          }
+        }
+
+        .bi-list {
+          display: flex;
+          flex-direction: row;
+          margin-bottom: 50px;
+
+          & > div {
+            display: flex;
+            flex-direction: column;
+            margin-left: 90px;
+          }
+
+          .bi-col-1 {
+            @include display-1;
+            flex-basis: 45px;
+            text-align: left;
+          }
+        }
+
+        .hr-9 {
+          margin-left: 630px;
+          padding-right: 250px;
+        }
+      }
+    }
   }
 
   // 6 - value we delivered
   .value {
+    @include respond-to('lg') {
+      .value-caption {
+        @include display-3;
+        width: 470px;
+        text-align: right;
+
+        .first {
+          display: block;
+        }
+      }
+
+      .value-list {
+        max-width: 400px;
+        margin-left: 550px;
+      }
+    }
+
     .listheading {
       min-width: 45px;
     }
@@ -236,6 +520,7 @@
         flex-basis: 300px;
         min-width: 235px;
         margin-right: 20px;
+        margin-left: 40px;
 
         .item {
           background-repeat: no-repeat;
@@ -256,7 +541,6 @@
           max-width: 184px;
           margin-top: 20px;
           margin-bottom: 10px;
-          ;
         }
       }
     }
@@ -265,8 +549,56 @@
       max-width: 360px;
       border-top: 1px solid $red;
     }
-  }
 
+    .hr-summary {
+      width: 45%;
+      text-align: right;
+    }
+
+    & {
+      @include respond-to('lg') {
+        .container {
+          padding-left: 40px;
+        }
+
+        .feedback-lg {
+          width: calc(40% + 16px);
+          margin-bottom: 60px;
+
+          h4,
+          span {
+            @include display-3;
+          }
+        }
+
+        .feedback {
+          .feedback-item {
+            min-width: 465px;
+            margin-left: 0;
+
+            .feedback-item-desktop {
+              display: flex;
+              flex-basis: 465px;
+            }
+
+            .item {
+              width: 184px;
+              margin-right: 36px;
+            }
+
+            &-name span {
+              display: block;
+              color: $white;
+            }
+          }
+        }
+
+        .summary {
+          margin: 70px 0 0 65px;
+        }
+      }
+    }
+  }
 
   // CONTACTS
   .contacts-section {

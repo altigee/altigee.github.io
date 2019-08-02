@@ -34,14 +34,42 @@
   }
 }
 
+.hr-numbered-small {
+  @extend caption;
+  display: flex;
+  align-items: flex-start;
+  width: 110px;
+  color: $red;
+
+  @mixin line-small {
+    content: '';
+    display: inline-block;
+    width: 16px;
+    margin-top: 25px;
+    border-top: 1px solid $red;
+  }
+
+  &.small-line {
+    &::before {
+      @include line-small;
+      margin-left: 55px;
+    }
+  }
+}
+
 .hr-patt {
   height: 4px;
   background-repeat: no-repeat;
   background-origin: content-box;
 
   &-1 {
-    background-image: url('../images/patterns/patt_1.svg');
     min-width: 118px;
+    background-image: url('../images/patterns/patt_1.svg');
+  }
+
+  &-1-white {
+    min-width: 118px;
+    background-image: url('../images/patterns/patt_1-white.svg');
   }
 
   &-2 {
@@ -56,17 +84,37 @@
     background-image: url('../images/patterns/patt_4.svg');
   }
 
+  &-4-black {
+    background-image: url('../images/patterns/patt_4-black.svg');
+  }
+
   &-5 {
     background-image: url('../images/patterns/patt_5.svg');
+  }
+
+  &-6 {
+    background-image: url('../images/patterns/patt_6.svg');
+  }
+
+  &-6-black {
+    background-image: url('../images/patterns/patt_6-black.svg');
+  }
+
+  &-7 {
+    background-image: url('../images/patterns/patt_7.svg');
+  }
+
+  &-8 {
+    background-image: url('../images/patterns/patt_8.svg');
+  }
+
+  &-9 {
+    background-image: url('../images/patterns/patt_9.svg');
   }
 
   &.right {
     background-position-x: 100%;
   }
-}
-
-.rectangle {
-  background-image: url('../images/patterns/rectangle.svg');
 }
 
 // BUTTONS

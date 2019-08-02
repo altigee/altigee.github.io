@@ -1,0 +1,5 @@
+@import '_core.scss';
+
+.header {
+  @include space-between;
+}

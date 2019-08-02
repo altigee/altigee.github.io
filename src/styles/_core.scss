@@ -61,15 +61,11 @@
   height: 4px;
   background-repeat: no-repeat;
   background-origin: content-box;
+  border-top: 1px solid blue;
 
   &-1 {
     min-width: 118px;
     background-image: url('../images/patterns/patt_1.svg');
-  }
-
-  &-1-white {
-    min-width: 118px;
-    background-image: url('../images/patterns/patt_1-white.svg');
   }
 
   &-2 {
@@ -117,6 +113,26 @@
   }
 }
 
+.hr-patt-img {
+  fill: $white;
+
+  &.red {
+    fill: $red;
+  }
+
+  &.black {
+    fill: $black;
+  }
+
+  &.dark-blue {
+    fill: $dark-blue;
+  }
+}
+
+.rectangle {
+  background-image: url('../images/patterns/rectangle.svg');
+}
+
 // BUTTONS
 button {
   cursor: pointer;
@@ -124,4 +140,14 @@ button {
 
 button > * {
   pointer-events: none;
+}
+
+// ANCHORS
+a {
+  color: $white;
+
+  &:hover,
+  &:focus {
+    color: darken($white, 20);
+  }
 }

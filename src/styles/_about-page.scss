@@ -1,0 +1,145 @@
+@import '_core.scss';
+
+.page-about {
+  // TOP
+  .top-section {
+    position: relative;
+
+    .about-bg {
+      @include back-image('../images/backgrounds/about.jpg');
+    }
+  }
+
+  //  MAP
+  .map-section {
+    position: relative;
+
+    .map-bg {
+      width: 100%;
+    }
+
+    .location-spots {
+      position: relative;
+      top: 0;
+    }
+
+    .location-spot {
+      position: absolute;
+      width: 5px;
+      height: 5px;
+      opacity: 0.5;
+      border-radius: 50%;
+      background: $white;
+
+      &.location-ca {
+        top: 40%;
+        left: 2%;
+      }
+
+      &.location-ny {
+        top: 34%;
+        left: 20%;
+      }
+
+      &.location-ua {
+        top: 25%;
+        left: 53%;
+      }
+
+      &.location-bk {
+        top: 64%;
+        left: 81%;
+      }
+
+      &.active {
+        width: 11px;
+        height: 11px;
+        opacity: 1;
+        background: $red;
+
+        &:after {
+          content: '';
+          position: absolute;
+          left: 5px;
+          display: block;
+          width: 1px;
+          height: 110px;
+          background: $red;
+        }
+      }
+    }
+
+    .location-descriptions {
+      @include space-between;
+      position: absolute;
+      top: 0;
+      width: 100%;
+    }
+
+    .location-description.active {
+      border: 1px solid $red;
+    }
+  }
+
+  // LVIV - dev center
+  .development-center-section {
+    position: relative;
+
+    .top-section {
+      position: relative;
+    }
+
+    .lviv-bg {
+      @include back-image('../images/backgrounds/lviv.jpg');
+    }
+
+    .pitch-facts {
+      li {
+        @include valigned;
+      }
+    }
+  }
+
+  // OUR TEAM
+  .team-section {
+    table.contacts {
+      td:first-child {
+        padding-right: 20px;
+        color: $red;
+      }
+    }
+
+    .team-members {
+      @include respond-to('lg') {
+        display: flex;
+        justify-content: space-between;
+      }
+    }
+
+    .team-member {
+      margin-bottom: 46px;
+
+      @include respond-to('lg') {
+        display: inline-flex;
+      }
+
+      img {
+        width: 132px;
+
+        @include respond-to('lg') {
+          width: 176px;
+          height: 176px;
+          margin-right: 48px;
+        }
+      }
+
+      .member-info {
+        @include respond-to('lg') {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+        }
+      }
+    }
+  }
+}

@@ -18,10 +18,6 @@
       background-size: 643px 976px;
     }
 
-    .header {
-      @include space-between;
-    }
-
     .slogan {
       @include respond-to('lg') {
         h3 {

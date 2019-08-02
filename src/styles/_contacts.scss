@@ -14,21 +14,16 @@
     }
   }
 
-  a {
-    color: $white;
-  }
-
   li {
     @include valigned;
 
     svg {
       margin-right: 20px;
-      color: $red;
       stroke: $red;
     }
   }
 
-  li+li {
+  li + li {
     margin-top: 40px;
   }
 

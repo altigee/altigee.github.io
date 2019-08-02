@@ -118,11 +118,6 @@ h4 {
   color: $red;
 }
 
-.outline {
-  -webkit-text-fill-color: transparent;
-  -webkit-text-stroke: 1px $red;
-}
-
 .subheading {
   @include subheading;
   text-transform: uppercase;
@@ -148,12 +143,27 @@ h4 {
   @include caption;
 }
 
+.page-heading {
+  @include display-2;
+  text-transform: uppercase;
+  color: $red;
+
+  @include respond-to('lg') {
+    @include display-4;
+    text-align: right;
+  }
+}
+
 .page-section-heading {
-  @include display-1;
+  @extend h4;
 
   @include respond-to('lg') {
     @include display-3;
   }
+}
+
+.display-0 {
+  @include display-0;
 }
 
 
@@ -172,4 +182,13 @@ h4 {
   &:active {
     color: darken($color: $red, $amount: 30);
   }
+}
+
+.text-upper {
+  text-transform: uppercase;
+}
+
+.outline {
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 1px $red;
 }

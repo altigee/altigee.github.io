@@ -1,10 +1,70 @@
-// @import '_flexboxgrid.scss';
+@import '_flexboxgrid.scss';
 
-// LAYOUT COMPONENTS
+// RWD
+$breakpoints: ('xs': (max-width: 480px), // small phones
+  'smr': (max-width: 600px), // tablet portrait (nexus 7)
+  'sm': (max-width: 768px), // tablet portrait (ipad air)
+  'md': (min-width: 769px) and (max-width: 991px), // tablet landscape
+  'lg': (min-width: 992px), // small desktops
+  'xl': (min-width: 1200px), // larger desktops
+  'lg-d': (max-width: 991.98px),
+  'xl-d': (max-width: 1199.98px),
+);
+
+@mixin respond-to($name) {
+  // If the key exists in the map
+  @if map-has-key($breakpoints, $name) {
+    @media #{inspect(map-get($breakpoints, $name))} {
+      @content;
+    }
+  }
+
+  // If the key doesn't exist in the map
+  @else {
+    @warn 'no value could be retrieved of `#{$breakpoint}` from `$breakpoints`.';
+  }
+}
+
+@mixin rwd($min: 0, $max: 9999) {
+  @media (min-width: $min+'px') and (max-width: $max+'px') {
+    @content;
+  }
+}
+
+// UTILITY spacing classes
+$spaceamounts: (auto, 0, 5, 8, 10, 15, 16, 20, 24, 25, 30, 32, 35, 40, 45, 48, 50, 60, 75, 100); // Adjust this to include the pixel amounts you need.
+$sides: (all, top, bottom, left, right);
+
+@each $space in $spaceamounts {
+  @each $side in $sides {
+    @if $side=='all' {
+      .m-#{$space} {
+        margin: #{$space}#{if($space=='auto', '', 'px')} !important;
+      }
+
+      .p-#{$space} {
+        padding: #{$space}#{if($space=='auto', '', 'px')} !important;
+      }
+    }
+
+    @else {
+      .m#{str-slice($side, 0, 1)}-#{$space} {
+        margin-#{$side}: #{$space}#{if($space=='auto', '', 'px')} !important;
+      }
+
+      .p#{str-slice($side, 0, 1)}-#{$space} {
+        padding-#{$side}: #{$space}#{if($space=='auto', '', 'px')} !important;
+      }
+    }
+  }
+}
+
+// CONTAINER
 .container {
-  max-width: 992px;
-  margin: 0 auto;
-  padding: 0 40px;
+  @include respond-to('xs') {
+    padding-right: 40px;
+    padding-left: 40px;
+  }
 }
 
 // FLEX aligns
@@ -53,6 +113,14 @@
   flex-grow: 1;
 }
 
+.shrink {
+  flex-shrink: 1;
+}
+
+.no-shrink {
+  flex-shrink: 0;
+}
+
 // TEXT aligns
 .ta-right {
   text-align: right;
@@ -68,37 +136,6 @@
     padding-bottom: 15px;
     padding-left: 10px;
     line-height: 24px;
-  }
-}
-
-// RWD
-$breakpoints: ('xs': (max-width: 480px), // small phones
-  'smr': (max-width: 600px), // tablet portrait (nexus 7)
-  'sm': (max-width: 768px), // tablet portrait (ipad air)
-  'md': (min-width: 769px) and (max-width: 991px), // tablet landscape
-  'lg': (min-width: 992px), // small desktops
-  'xl': (min-width: 1200px), // larger desktops
-  'lg-d': (max-width: 991.98px),
-  'xl-d': (max-width: 1199.98px),
-);
-
-@mixin respond-to($name) {
-  // If the key exists in the map
-  @if map-has-key($breakpoints, $name) {
-    @media #{inspect(map-get($breakpoints, $name))} {
-      @content;
-    }
-  }
-
-  // If the key doesn't exist in the map
-  @else {
-    @warn 'no value could be retrieved of `#{$breakpoint}` from `$breakpoints`.';
-  }
-}
-
-@mixin rwd($min: 0, $max: 9999) {
-  @media (min-width: $min+'px') and (max-width: $max+'px') {
-    @content;
   }
 }
 
@@ -148,41 +185,65 @@ $breakpoints: ('xs': (max-width: 480px), // small phones
   -webkit-overflow-scrolling: touch;
 }
 
-// UTILITY spacing classes
-$spaceamounts: (auto, 0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 60, 75, 100); // Adjust this to include the pixel amounts you need.
-$sides: (all, top, bottom, left, right);
-
-@each $space in $spaceamounts {
-  @each $side in $sides {
-    @if $side=='all' {
-      .m-#{$space} {
-        margin: #{$space}#{if($space=='auto', '', 'px')} !important;
-      }
-
-      .p-#{$space} {
-        padding: #{$space}#{if($space=='auto', '', 'px')} !important;
-      }
-    }
-
-    @else {
-      .m#{str-slice($side, 0, 1)}-#{$space} {
-        margin-#{$side}: #{$space}#{if($space=='auto', '', 'px')} !important;
-      }
-
-      .p#{str-slice($side, 0, 1)}-#{$space} {
-        padding-#{$side}: #{$space}#{if($space=='auto', '', 'px')} !important;
-      }
-    }
-  }
-}
-
-// BACKDROP
-@mixin backdrop {
+// BACKDROP, IMAGE background
+@mixin stretch-overlay {
   top: 0;
+  right: 0;
   right: 0;
   bottom: 0;
   left: 0;
+}
+
+@mixin backdrop {
+  @include stretch-overlay;
   z-index: 1;
   height: 100vh;
   background: rgba($dark-blue, 0.9);
+}
+
+@mixin back-image($url, $opacity: 1) {
+  @include stretch-overlay;
+  position: absolute;
+  z-index: -1;
+  opacity: $opacity;
+  background-image: url($url);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
+
+  object-fit: cover;
+}
+
+
+// GENERIC BLOCK STYLES
+.page-section {
+  padding: 48px 0;
+
+  .page-section-heading {
+    padding-bottom: 48px;
+  }
+
+  .hr-numbered {
+    padding-bottom: 40px;
+  }
+
+  &.container {
+    @extend .container;
+  }
+}
+
+.section-with-bg {
+  position: relative;
+}
+
+.section-under-bg {
+  padding-top: 32px;
+}
+
+.hr-patt-img {
+  .page-section &,
+  .section-with-bg &,
+  .section-under-bg & {
+    padding-bottom: 48px;
+  }
 }

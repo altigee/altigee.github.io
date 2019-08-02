@@ -59,9 +59,9 @@
 
 .hr-patt {
   height: 4px;
+  border-top: 1px solid blue;
   background-repeat: no-repeat;
   background-origin: content-box;
-  border-top: 1px solid blue;
 
   &-1 {
     min-width: 118px;
@@ -127,10 +127,6 @@
   &.dark-blue {
     fill: $dark-blue;
   }
-}
-
-.rectangle {
-  background-image: url('../images/patterns/rectangle.svg');
 }
 
 // BUTTONS

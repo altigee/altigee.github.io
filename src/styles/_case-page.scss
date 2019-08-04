@@ -47,7 +47,7 @@
       @include respond-to('lg') {
         top: -40px;
         opacity: 0.7;
-        background-image: url('../images/backgrounds/contracts-bg-desktop.png');
+        background-image: url('../images/backgrounds/contracts-bg-desktop.jpg');
         background-size: 1194px 688px;
       }
     }
@@ -559,6 +559,7 @@
         .feedback {
           .feedback-item {
             min-width: 465px;
+            margin-right: 80px;
             margin-left: 0;
 
             .feedback-item-desktop {

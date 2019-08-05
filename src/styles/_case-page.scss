@@ -11,10 +11,6 @@
   .top-section {
     position: relative;
 
-    .header {
-      @include space-between;
-    }
-
     .case-hr-lg {
       width: 40%;
     }

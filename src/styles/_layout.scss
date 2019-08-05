@@ -189,16 +189,15 @@ $sides: (all, top, bottom, left, right);
 @mixin stretch-overlay {
   top: 0;
   right: 0;
-  right: 0;
   bottom: 0;
   left: 0;
 }
 
-@mixin backdrop {
+@mixin backdrop($bg: rgba($dark-blue, 0.9)) {
   @include stretch-overlay;
   z-index: 1;
   height: 100vh;
-  background: rgba($dark-blue, 0.9);
+  background: $bg;
 }
 
 @mixin back-image($url, $opacity: 1) {
@@ -245,5 +244,9 @@ $sides: (all, top, bottom, left, right);
   .section-with-bg &,
   .section-under-bg & {
     padding-bottom: 48px;
+  }
+
+  .main-navigation & {
+    padding-bottom: 0;
   }
 }

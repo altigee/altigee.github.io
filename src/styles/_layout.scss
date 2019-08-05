@@ -32,7 +32,7 @@ $breakpoints: ('xs': (max-width: 480px), // small phones
 }
 
 // UTILITY spacing classes
-$spaceamounts: (auto, 0, 5, 8, 10, 15, 16, 20, 24, 25, 30, 32, 35, 40, 45, 48, 50, 60, 75, 100); // Adjust this to include the pixel amounts you need.
+$spaceamounts: (auto, 0, 8, 16, 24, 32, 48, 80, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 60, 75, 100); // Adjust this to include the pixel amounts you need.
 $sides: (all, top, bottom, left, right);
 
 @each $space in $spaceamounts {
@@ -189,16 +189,15 @@ $sides: (all, top, bottom, left, right);
 @mixin stretch-overlay {
   top: 0;
   right: 0;
-  right: 0;
   bottom: 0;
   left: 0;
 }
 
-@mixin backdrop {
+@mixin backdrop($bg: rgba($dark-blue, 0.9)) {
   @include stretch-overlay;
   z-index: 1;
   height: 100vh;
-  background: rgba($dark-blue, 0.9);
+  background: $bg;
 }
 
 @mixin back-image($url, $opacity: 1) {
@@ -224,7 +223,7 @@ $sides: (all, top, bottom, left, right);
   }
 
   .hr-numbered {
-    padding-bottom: 40px;
+    padding-bottom: 32px;
   }
 
   &.container {
@@ -245,5 +244,9 @@ $sides: (all, top, bottom, left, right);
   .section-with-bg &,
   .section-under-bg & {
     padding-bottom: 48px;
+  }
+
+  .main-navigation & {
+    padding-bottom: 0;
   }
 }

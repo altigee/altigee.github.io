@@ -1,13 +1,6 @@
 @import '_core.scss';
 
 .case-page {
-  @include respond-to('lg') {
-    .container {
-      max-width: 1200px;
-      padding-left: 80px;
-    }
-  }
-
   .top-section {
     position: relative;
 
@@ -45,10 +38,10 @@
       background-size: contain;
 
       @include respond-to('lg') {
-        top: -40px;
+        top: -20px;
         opacity: 0.7;
         background-image: url('../images/backgrounds/contracts-bg-desktop.jpg');
-        background-size: 1194px 688px;
+        background-size: 1366px 688px;
       }
     }
 
@@ -416,15 +409,13 @@
     & {
       @include respond-to('lg') {
         .container {
-          padding-left: 40px;
-
           .pl-650 {
             padding-left: 650px;
           }
         }
 
         .bi-lg {
-          width: calc(40% + 16px); //16px = 40px* 40%
+          width: calc(45% + 16px); //16px = 40px* 40%
 
           .outline {
             padding-top: 30px;
@@ -466,6 +457,9 @@
             text-align: left;
           }
         }
+      }
+      @include respond-to('xl') {
+        margin-left: -48px;
       }
     }
   }
@@ -542,18 +536,18 @@
 
     & {
       @include respond-to('lg') {
-        .container {
-          padding-left: 40px;
-        }
-
         .feedback-lg {
-          width: calc(40% + 16px);
+          width: calc(45% + 16px);
           margin-bottom: 60px;
 
           h4,
           span {
             @include display-3;
           }
+        }
+
+        .crop-wrapper {
+          max-width: 1140px;
         }
 
         .feedback {
@@ -580,12 +574,17 @@
         }
 
         .summary {
-          margin: 70px 0 0 65px;
+          margin: 70px 0;
           padding-bottom: 60px;
 
           img {
             min-width: 40px;
           }
+        }
+      }
+      @include respond-to('xl') {
+        .feedback-lg {
+          margin-left: -48px;
         }
       }
     }

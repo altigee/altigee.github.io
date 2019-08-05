@@ -10,16 +10,9 @@
   .slogan {
     @include respond-to('lg') {
       h3 {
-        @include display-4;
+        @include h1-d;
         max-width: 510px;
         margin-bottom: 20px;
-        text-align: right;
-      }
-
-      .subheading {
-        @include display-0;
-        max-width: 510px;
-        padding-right: 15px;
         text-align: right;
       }
     }
@@ -58,7 +51,7 @@
       min-width: 184px;
       margin-right: 60px;
 
-      .listheading {
+      .subtitle-1 {
         margin-bottom: 16px;
       }
     }
@@ -84,9 +77,8 @@
       margin-top: 40px;
     }
 
-    .listheading {
+    .subtitle-2 {
       margin-bottom: 8px;
-      text-transform: none;
     }
 
     ul {
@@ -94,13 +86,13 @@
     }
 
     li {
-      @include body-caption;
+      @include caption-1;
       flex: 1 0 48px;
       max-width: 60px;
       text-align: center;
 
       img {
-        margin-bottom: 4px;
+        height: 48px;
       }
     }
 
@@ -136,6 +128,21 @@
     li {
       flex: 1 0 176px;
       margin-right: 60px;
+    }
+  }
+
+  .display-link {
+    @include button-1;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: $red;
+
+    &:hover {
+      color: darken($color: $red, $amount: 15);
+    }
+
+    &:active {
+      color: darken($color: $red, $amount: 30);
     }
   }
 }

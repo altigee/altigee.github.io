@@ -19,6 +19,7 @@
 
     svg {
       margin-right: 20px;
+
       stroke: $red;
     }
   }
@@ -27,9 +28,9 @@
     margin-top: 40px;
   }
 
-  .caption {
+  .caption-1 {
     @include respond-to('lg') {
-      @include body-2-excessive;
+      @include subtitle-2;
     }
   }
 }

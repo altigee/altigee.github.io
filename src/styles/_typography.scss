@@ -2,7 +2,7 @@
 @import '_theme.scss';
 
 // EXPORTED FROM ZEPLIN
-@mixin display-4 {
+@mixin h1-d {
   font-family: Montserrat;
   font-size: 72px;
   font-weight: 900;
@@ -10,7 +10,7 @@
   letter-spacing: 10.8px;
 }
 
-@mixin display-3 {
+@mixin h2-d {
   font-family: Montserrat;
   font-size: 56px;
   font-weight: 900;
@@ -18,7 +18,7 @@
   letter-spacing: 8.4px;
 }
 
-@mixin display-2 {
+@mixin h1-m {
   font-family: Montserrat;
   font-size: 48px;
   font-weight: 900;
@@ -26,7 +26,7 @@
   letter-spacing: 7.2px;
 }
 
-@mixin display-1 {
+@mixin h2-m {
   font-family: Montserrat;
   font-size: 32px;
   font-weight: 900;
@@ -34,14 +34,14 @@
   letter-spacing: 4.8px;
 }
 
-@mixin display-0 {
+@mixin h3-d {
   font-family: Montserrat;
   font-size: 24px;
   font-weight: 900;
   letter-spacing: 0.6px;
 }
 
-@mixin subheading {
+@mixin h3-m {
   font-family: Montserrat;
   font-size: 16px;
   font-weight: 900;
@@ -56,7 +56,7 @@
   line-height: 1.71;
 }
 
-@mixin body-2-excessive {
+@mixin subtitle-2 {
   font-family: Orbitron;
   font-size: 14px;
   font-weight: 500;
@@ -64,7 +64,7 @@
   letter-spacing: 2.1px;
 }
 
-@mixin listheading {
+@mixin subtitle-1 {
   font-family: Orbitron;
   font-size: 14px;
   font-weight: 500;
@@ -72,118 +72,87 @@
   letter-spacing: 1.4px;
 }
 
-@mixin display-link {
+@mixin button-1 {
   font-family: Montserrat;
   font-size: 12px;
   font-weight: bold;
   line-height: 2;
 }
 
-@mixin body-caption {
-  font-family: Montserrat;
-  font-size: 10px;
-  font-weight: 500;
-  line-height: 1.2;
-}
-
-@mixin caption {
+@mixin caption-1 {
   font-family: Orbitron;
   font-size: 10px;
   font-weight: 500;
-  font-style: normal;
-  font-stretch: normal;
   line-height: 1.6;
   letter-spacing: 0.5px;
 }
 
 // END EXPORTED FROM ZEPLIN
-* {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
 
-body {
-  @include body-1;
-}
-
-h3 {
-  @include display-2;
-  text-transform: uppercase;
-  color: $red;
-}
-
-h4 {
-  @include display-1;
-  text-transform: uppercase;
-  color: $red;
-}
-
-.subheading {
-  @include subheading;
-  text-transform: uppercase;
-}
-
-.listheading {
-  @include listheading;
-  text-transform: uppercase;
-  color: $red;
-}
-
-.listheading-regular {
-  @include listheading;
-  color: $red;
-}
-
-.body-caption {
-  @include body-caption;
-  color: $white;
-}
-
-.caption {
-  @include caption;
-}
-
-.page-heading {
-  @include display-2;
+// Typography hierarchy
+h1 {
+  @include h1-m;
   text-transform: uppercase;
   color: $red;
 
   @include respond-to('lg') {
-    @include display-4;
+    @include h1-d;
     text-align: right;
   }
 }
 
-.page-section-heading {
-  @extend h4;
-
-  @include respond-to('lg') {
-    @include display-3;
-  }
-}
-
-.display-0 {
-  @include display-0;
-}
-
-
-// LEARN MORE LINK
-// TODO: move out
-.display-link {
-  @include display-link;
-  text-decoration: none;
+h2 {
+  @include h2-m;
   text-transform: uppercase;
   color: $red;
 
-  &:hover {
-    color: darken($color: $red, $amount: 15);
-  }
-
-  &:active {
-    color: darken($color: $red, $amount: 30);
+  @include respond-to('lg') {
+    @include h2-d;
   }
 }
 
+h3 {
+  @include h3-m;
+  text-transform: uppercase;
+
+  @include respond-to('lg') {
+    @include h3-d;
+  }
+}
+
+.h3-d {
+  @include h3-d;
+}
+
+.subtitle-1 {
+  @include subtitle-1;
+  text-transform: uppercase;
+  color: $red;
+}
+
+.subtitle-2 {
+  @include subtitle-2;
+  color: $red;
+}
+
+.body-1 {
+  @include body-1;
+}
+
+.caption-1 {
+  @include caption-1;
+}
+
+.button-1 {
+  @include button-1;
+}
+
+// BODY
+body {
+  @include body-1;
+}
+
+// UTILITY font classes
 .text-upper {
   text-transform: uppercase;
 }
@@ -191,4 +160,10 @@ h4 {
 .outline {
   -webkit-text-fill-color: transparent;
   -webkit-text-stroke: 1px $red;
+}
+
+// Antialising
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }

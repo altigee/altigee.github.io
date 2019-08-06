@@ -5,35 +5,6 @@
     @include back-image($url: '../images/backgrounds/project-based.jpg');
   }
 
-  .phases-list {
-    .phase-item + .phase-item {
-      margin-top: 16px;
-    }
-
-    .phase-title {
-      margin-bottom: 8px;
-    }
-
-    .phase-description {
-      padding-bottom: 16px;
-    }
-
-    .phase-line {
-      position: relative;
-
-      &:after {
-        content: '';
-        position: absolute;
-        width: 1px;
-        height: 100%;
-        margin-top: 4px;
-        margin-left: 4px;
-        opacity: 0.2;
-        background: $dark-blue;
-      }
-    }
-  }
-
   .benefits-list {
     li + li {
       margin-top: 32px;

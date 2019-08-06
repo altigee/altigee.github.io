@@ -91,3 +91,33 @@ a {
     color: darken($white, 20);
   }
 }
+
+// PHASES
+.phases-list {
+  .phase-item + .phase-item {
+    margin-top: 16px;
+  }
+
+  .phase-title {
+    margin-bottom: 8px;
+  }
+
+  .phase-description {
+    padding-bottom: 16px;
+  }
+
+  .phase-line {
+    position: relative;
+
+    &:after {
+      content: '';
+      position: absolute;
+      width: 1px;
+      height: 100%;
+      margin-top: 4px;
+      margin-left: 4px;
+      opacity: 0.2;
+      background: $dark-blue;
+    }
+  }
+}

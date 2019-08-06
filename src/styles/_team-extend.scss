@@ -1,0 +1,13 @@
+@import '_core.scss';
+
+.page-team-extend {
+  .extend-bg {
+    @include back-image($url: '../images/backgrounds/team-extend.jpg', $opacity: 0.3);
+  }
+
+  .benefits-list {
+    li + li {
+      margin-top: 32px;
+    }
+  }
+}

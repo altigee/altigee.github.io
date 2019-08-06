@@ -8,7 +8,6 @@
       @include respond-to('lg') {
         @include space-between;
         align-items: baseline;
-        width: 45%;
         max-width: 500px;
 
         h3 {
@@ -18,11 +17,8 @@
     }
 
     .contracts-bg {
+      @include stretch-overlay;
       position: absolute;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
       z-index: -1;
       opacity: 0.45;
       background-image: url('../images/backgrounds/contracts-bg.jpg');
@@ -38,41 +34,31 @@
       }
     }
 
-    .project {
-      .project-wrapper {
-        .project-caption {
-          @include h3-d;
-          line-height: 32px;
-          text-transform: uppercase;
-        }
-
-        .kountable-logo-wrapper {
-          @include respond-to('lg') {
-            display: flex;
-            margin-bottom: 48px;
-
-            .kountable-logo {
-              margin-right: 70px;
-            }
-          }
+    .project-wrapper {
+      .kountable-logo-wrapper {
+        @include respond-to('lg') {
+          display: flex;
+          margin-bottom: 48px;
 
           .kountable-logo {
-            min-width: 84px;
-            height: 48px;
-            background-image: url('../images/case/kountable.jpg');
-            background-repeat: no-repeat;
-            background-size: contain;
+            margin-right: 70px;
           }
         }
 
-        & {
-          @include respond-to('lg') {
-            width: 45%;
+        .kountable-logo {
+          min-width: 84px;
+          height: 48px;
+          background-image: url('../images/case/kountable.jpg');
+          background-repeat: no-repeat;
+          background-size: contain;
+        }
+      }
 
-            .project-caption {
-              @include display-0;
-              width: 80%;
-            }
+      & {
+        @include respond-to('lg') {
+          .project-caption {
+            @include h3-d;
+            width: 80%;
           }
         }
       }
@@ -113,12 +99,9 @@
           grid-gap: 25px;
           grid-template-columns: repeat(auto-fill, 100px);
         }
-            display: grid;
-            width: 225px;
-
-            grid-gap: 25px;
-            grid-template-columns: repeat(auto-fill, 100px);
-          }
+        @include rwd(601, 9999) {
+          display: none;
+        }
       }
 
       .technology-big {
@@ -131,22 +114,22 @@
           grid-template-columns: repeat(auto-fill, 150px);
         }
       }
-
-      .lh-32 {
-        line-height: 32px;
-      }
     }
 
     .team {
       display: grid;
 
-      @include respond-to('lg') {
-        max-width: 990px;
-        margin-left: 52px;
-      }
-
       grid-template-columns: repeat(auto-fill, 84px);
-      grid-gap: 24px;
+      grid-gap: 14px;
+
+      & {
+        @include respond-to('lg') {
+          max-width: 990px;
+          margin-left: 52px;
+
+          grid-gap: 25px;
+        }
+      }
 
       .person {
         height: 84px;
@@ -155,39 +138,39 @@
       }
 
       .okyriienko {
-        background-image: url('../images/backgrounds/team/okyriienko.jpg');
+        background-image: url('../images/team/small/okyriienko.jpg');
       }
 
       .nmarchuk {
-        background-image: url('../images/backgrounds/team/nmarchuk.jpg');
+        background-image: url('../images/team/small/nmarchuk.jpg');
       }
 
       .mtitov {
-        background-image: url('../images/backgrounds/team/mtitov.jpg');
+        background-image: url('../images/team/small/mtitov.jpg');
       }
 
       .mpetrushenko {
-        background-image: url('../images/backgrounds/team/mpetrushenko.jpg');
+        background-image: url('../images/team/small/mpetrushenko.jpg');
       }
 
       .vsokol {
-        background-image: url('../images/backgrounds/team/vsokol.jpg');
+        background-image: url('../images/team/small/vsokol.jpg');
       }
 
       .mholyk {
-        background-image: url('../images/backgrounds/team/mholyk.jpg');
+        background-image: url('../images/team/small/mholyk.jpg');
       }
 
       .tkharuk {
-        background-image: url('../images/backgrounds/team/tkharuk.jpg');
+        background-image: url('../images/team/small/tkharuk.jpg');
       }
 
       .nsokil {
-        background-image: url('../images/backgrounds/team/nsokil.jpg');
+        background-image: url('../images/team/small/nsokil.jpg');
       }
 
       .vtomkiv {
-        background-image: url('../images/backgrounds/team/vtomkiv.jpg');
+        background-image: url('../images/team/small/vtomkiv.jpg');
       }
     }
   }
@@ -200,33 +183,29 @@
     }
 
     .item {
+      height: 144px;
       background-repeat: no-repeat;
       background-position-x: 100%;
       background-size: contain;
     }
 
     .begin {
-      height: 144px;
       background-image: url('../images/case/begin.jpg');
     }
 
     .ds {
-      height: 144px;
       background-image: url('../images/case/ds.jpg');
     }
 
     .insights {
-      height: 144px;
       background-image: url('../images/case/insights.jpg');
     }
 
     .rescue {
-      height: 144px;
       background-image: url('../images/case/rescue.jpg');
     }
 
     .mobile {
-      height: 144px;
       background-image: url('../images/case/mobile.jpg');
     }
   }
@@ -236,12 +215,12 @@
       .caption {
         @include space-between;
         align-items: flex-end;
-        margin-bottom: 48px;
+        margin-top: 32px;
         text-align: right;
 
-        h4 {
+        h2 {
           @include h2-d;
-          width: 320px;
+          margin-right: 110px;
 
           span {
             display: block;
@@ -255,10 +234,6 @@
 
       & > ul > li {
         display: flex;
-
-        .item {
-          flex-basis: 45%;
-        }
 
         .margin-16 {
           margin-top: 0;
@@ -293,35 +268,35 @@
     &-bg {
       z-index: -1;
       height: 236px;
-      background-image: url('../images/backgrounds/we-built.png');
+      background-image: url('../images/backgrounds/we-built.jpg');
       background-repeat: no-repeat;
       background-position: center;
+      background-size: 360px 236px;
 
       @include respond-to('lg') {
-        height: 250px;
+        height: 300px;
         background-image: url('../images/backgrounds/we-built-desktop.jpg');
         background-position: right;
         background-size: 746px 464px;
       }
+    }
 
-      .we-built-caption {
-        width: 280px;
-        margin: 0 auto;
-        margin-top: 120px;
-        text-align: right;
+    .we-built-caption {
+      width: 280px;
+      margin: 0 auto;
+      margin-top: 132px;
+      text-align: right;
 
-        @include respond-to('lg') {
-          @include h2-d;
-          width: 400px;
-          margin: 20px 0 0 80px;
-        }
+      @include respond-to('lg') {
+        @include h2-d;
+        width: 45%;
+        margin: 32px 0 0 0;
       }
     }
 
     .we-built-list {
       @include respond-to('lg') {
         .hr-patt-img {
-          width: 45%;
           margin-right: 100px;
         }
       }
@@ -409,7 +384,6 @@
         }
 
         .bi-lg {
-          width: 45%;
           margin-left: -48px;
 
           .outline {
@@ -423,7 +397,7 @@
         }
 
         .bi-description {
-          margin-left: 90px;
+          margin-left: 96px;
 
           &-mob {
             display: inline;
@@ -435,11 +409,10 @@
           flex-direction: row;
           margin-bottom: 50px;
 
-
           & > div {
             display: flex;
             flex-direction: column;
-            margin-left: 90px;
+            margin: 0 48px;
           }
 
           .bi-col-1 {
@@ -460,7 +433,6 @@
     @include respond-to('lg') {
       .value-caption {
         @include h2-d;
-        width: 470px;
         text-align: right;
 
         .first {
@@ -492,17 +464,16 @@
         margin-left: 40px;
 
         .item {
+          height: 184px;
           background-repeat: no-repeat;
           background-size: contain;
         }
 
         .kolesnikov {
-          height: 184px;
           background-image: url('../images/case/feedback/kolesnikov.jpg');
         }
 
         .whaley {
-          height: 184px;
           background-image: url('../images/case/feedback/whaley.jpg');
         }
 
@@ -520,14 +491,9 @@
       border-top: 1px solid $red;
     }
 
-    .hr-summary {
-      width: 45%;
-    }
-
     & {
       @include respond-to('lg') {
         .feedback-lg {
-          width: calc(45% + 16px);
           margin-bottom: 60px;
 
           h4,
@@ -548,7 +514,6 @@
 
             .feedback-item-desktop {
               display: flex;
-              flex-basis: 465px;
             }
 
             .item {
@@ -565,7 +530,7 @@
 
         .summary {
           margin: 70px 0;
-          padding-bottom: 60px;
+          padding-bottom: 64px;
 
           img {
             min-width: 40px;
@@ -589,6 +554,12 @@
       img {
         margin-right: 20px;
       }
+    }
+  }
+
+  .width-45 {
+    @include respond-to('lg') {
+      width: 45%;
     }
   }
 }

@@ -1,18 +1,15 @@
 @import '_core.scss';
 
 .case-page {
-  .top-section {
+  .section-with-bg {
     position: relative;
-
-    .case-hr-lg {
-      width: 40%;
-    }
 
     .case-lg {
       @include respond-to('lg') {
         @include space-between;
         align-items: baseline;
         width: 45%;
+        max-width: 500px;
 
         h3 {
           @include display-4;
@@ -43,28 +40,21 @@
 
     .project {
       .project-wrapper {
-        @include respond-to('lg') {
-          width: 45%;
-        }
-
         .project-caption {
-          @include display-0;
-          line-height: 32px;
+          @include subheading;
+          width: 250px;
+          margin-bottom: 48px;
           text-transform: uppercase;
         }
 
         .kountable-logo-wrapper {
           @include respond-to('lg') {
             display: flex;
-            margin-bottom: 45px;
+            margin-bottom: 48px;
 
             .kountable-logo {
               margin-right: 70px;
             }
-          }
-
-          .body {
-            max-width: 500px;
           }
 
           .kountable-logo {
@@ -75,132 +65,141 @@
             background-size: contain;
           }
         }
+
+        & {
+          @include respond-to('lg') {
+            width: 45%;
+
+            .project-caption {
+              @include display-0;
+              width: 80%;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .list-icon-wrapper {
+    .list-icon {
+      @include respond-to('lg') {
+        display: flex;
+        flex-wrap: wrap;
+
+        .partnership,
+        .location {
+          order: -1;
+          width: 225px;
+        }
+
+        .dedicated {
+          width: 500px;
+          margin-bottom: 0;
+        }
+      }
+
+      .hr-patt-img {
+        padding-bottom: 8px;
+      }
+
+      .dedicated .space-between {
+        width: 100%;
+      }
+
+      .technology-smr {
+        @include respond-to('smr') {
+          display: grid;
+          width: 225px;
+
+          grid-gap: 25px;
+          grid-template-columns: repeat(auto-fill, 100px);
+        }
+        @include rwd(601, 9999) {
+          display: none;
+        }
+      }
+
+      .technology-big {
+        @include rwd(601, 9999) {
+          display: grid;
+          width: 450px;
+          max-width: 1365px;
+
+          grid-gap: 0;
+          grid-template-columns: repeat(auto-fill, 150px);
+        }
+      }
+
+      .lh-32 {
+        line-height: 32px;
       }
     }
 
-    .list-icon-wrapper {
-      padding-top: 50px;
+    .team {
+      display: grid;
 
-      .list-icon {
-        @include respond-to('lg') {
-          display: flex;
-          flex-wrap: wrap;
-
-          .partnership,
-          .location {
-            order: -1;
-            width: 225px;
-          }
-
-          .dedicated {
-            width: 500px;
-            margin-bottom: 0;
-          }
-        }
-
-        .dedicated .space-between {
-          width: 100%;
-        }
-
-        .align-fs {
-          display: flex;
-          align-items: flex-start;
-        }
-
-        .technology-smr {
-          @include respond-to('smr') {
-            display: grid;
-            width: 225px;
-
-            grid-gap: 25px;
-            grid-template-columns: repeat(auto-fill, 100px);
-          }
-          @include rwd(601, 9999) {
-            display: none;
-          }
-        }
-
-        .technology-big {
-          @include rwd(601, 9999) {
-            display: grid;
-            width: 450px;
-            max-width: 1365px;
-
-            grid-gap: 0;
-            grid-template-columns: repeat(auto-fill, 150px);
-          }
-        }
-
-        .lh-32 {
-          line-height: 32px;
-        }
+      @include respond-to('lg') {
+        max-width: 990px;
+        margin-left: 52px;
       }
 
-      .team {
-        display: grid;
+      grid-template-columns: repeat(auto-fill, 84px);
+      grid-gap: 24px;
 
-        @include respond-to('lg') {
-          max-width: 990px;
-          margin-left: 52px;
-        }
+      .person {
+        height: 84px;
+        background-repeat: no-repeat;
+        background-size: contain;
+      }
 
-        grid-template-columns: repeat(auto-fill, 84px);
-        grid-gap: 14px;
+      .okyriienko {
+        background-image: url('../images/backgrounds/team/okyriienko.jpg');
+      }
 
-        .person {
-          height: 84px;
-          background-repeat: no-repeat;
-          background-size: contain;
-        }
+      .nmarchuk {
+        background-image: url('../images/backgrounds/team/nmarchuk.jpg');
+      }
 
-        .okyriienko {
-          background-image: url('../images/backgrounds/team/okyriienko.jpg');
-        }
+      .mtitov {
+        background-image: url('../images/backgrounds/team/mtitov.jpg');
+      }
 
-        .nmarchuk {
-          background-image: url('../images/backgrounds/team/nmarchuk.jpg');
-        }
+      .mpetrushenko {
+        background-image: url('../images/backgrounds/team/mpetrushenko.jpg');
+      }
 
-        .mtitov {
-          background-image: url('../images/backgrounds/team/mtitov.jpg');
-        }
+      .vsokol {
+        background-image: url('../images/backgrounds/team/vsokol.jpg');
+      }
 
-        .mpetrushenko {
-          background-image: url('../images/backgrounds/team/mpetrushenko.jpg');
-        }
+      .mholyk {
+        background-image: url('../images/backgrounds/team/mholyk.jpg');
+      }
 
-        .vsokol {
-          background-image: url('../images/backgrounds/team/vsokol.jpg');
-        }
+      .tkharuk {
+        background-image: url('../images/backgrounds/team/tkharuk.jpg');
+      }
 
-        .mholyk {
-          background-image: url('../images/backgrounds/team/mholyk.jpg');
-        }
+      .nsokil {
+        background-image: url('../images/backgrounds/team/nsokil.jpg');
+      }
 
-        .tkharuk {
-          background-image: url('../images/backgrounds/team/tkharuk.jpg');
-        }
-
-        .nsokil {
-          background-image: url('../images/backgrounds/team/nsokil.jpg');
-        }
-
-        .vtomkiv {
-          background-image: url('../images/backgrounds/team/vtomkiv.jpg');
-        }
+      .vtomkiv {
+        background-image: url('../images/backgrounds/team/vtomkiv.jpg');
       }
     }
   }
 
   // how it was
   .how-it-was {
-    .margin-15 {
-      margin-top: 15px;
-      margin-bottom: 15px;
+    .margin-16 {
+      margin-top: 16px;
+      margin-bottom: 16px;
     }
 
     .item {
       background-repeat: no-repeat;
+      background-position-x: 100%;
       background-size: contain;
     }
 
@@ -232,22 +231,25 @@
 
   .how-it-was-lg {
     @include respond-to('lg') {
-      padding-left: 150px;
-
       .caption {
         @include space-between;
         align-items: flex-end;
-        width: 465px;
-        margin-bottom: 50px;
+        margin-bottom: 48px;
         text-align: right;
 
         h4 {
           @include display-3;
-          width: 320px;
+          width: 45%;
+          max-width: 500px;
+          margin-right: 120px;
 
           span {
             display: block;
           }
+        }
+
+        .hr-patt-img {
+          margin-right: auto;
         }
       }
 
@@ -255,10 +257,10 @@
         display: flex;
 
         .item {
-          flex-basis: 320px;
+          flex-basis: 45%;
         }
 
-        .margin-15 {
+        .margin-16 {
           margin-top: 0;
           margin-bottom: 0;
 
@@ -268,7 +270,7 @@
         }
 
         .ul-red-square {
-          padding-left: 100px;
+          padding-left: 80px;
 
           li {
             width: 350px;
@@ -280,13 +282,11 @@
 
   // 3 - what we built
   .we-built {
-    position: relative;
-
     @include respond-to('lg') {
-      margin-top: 80px;
+      padding-top: 80px;
 
-      .pt-500 {
-        padding-top: 500px;
+      .pt-400 {
+        padding-top: 400px;
       }
     }
 
@@ -312,15 +312,18 @@
 
         @include respond-to('lg') {
           @include display-3;
-          width: 400px;
-          margin: 20px 0 0 80px;
+          width: 45%;
+          margin: 20px 0 0 0;
         }
       }
     }
 
     .we-built-list {
       @include respond-to('lg') {
-        margin-left: 350px;
+        .hr-patt-img {
+          width: 45%;
+          margin-right: 100px;
+        }
       }
     }
 
@@ -379,9 +382,6 @@
 
   // 4 - business impact
   .bi {
-    margin-top: 75px;
-    margin-bottom: 75px;
-
     .bi-description {
       @include body-2-excessive;
 
@@ -404,14 +404,13 @@
 
     & {
       @include respond-to('lg') {
-        .container {
-          .pl-650 {
-            padding-left: 650px;
-          }
+        .p-l-56 {
+          padding-left: 56%;
         }
 
         .bi-lg {
-          width: calc(45% + 16px); //16px = 40px* 40%
+          width: 45%;
+          margin-left: -48px;
 
           .outline {
             padding-top: 30px;
@@ -420,10 +419,6 @@
           h4,
           .outline {
             @include display-3;
-          }
-
-          .h4 {
-            margin-left: -48px;
           }
         }
 
@@ -475,7 +470,7 @@
 
       .value-list {
         max-width: 420px;
-        margin-left: 550px;
+        margin-left: 50%;
       }
     }
 
@@ -493,7 +488,7 @@
       .feedback-item {
         flex-basis: 300px;
         min-width: 235px;
-        margin-right: 35px;
+        margin-right: 32px;
         margin-left: 40px;
 
         .item {
@@ -527,7 +522,6 @@
 
     .hr-summary {
       width: 45%;
-      text-align: right;
     }
 
     & {

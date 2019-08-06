@@ -4,65 +4,61 @@
 <partial src="./partials/_head.html" />
 
 <body class="case-page">
-  <section class="top-section pb-60">
+  <section class="section-with-bg">
     <div class="contracts-bg"></div>
 
     <!-- HEADER -->
     <partial src="./partials/_header.html" />
 
     <!-- Case -->
-    <div class="lg-hide">
-      <div class="hr-numbered left pb-30">1</div>
+    <div class="hr-numbered d-lg-none left mb-32">1</div>
+    <div class="container">
+      <div class="hr-numbered d-none d-lg-block right mb-32 ml-numbered">1</div>
     </div>
     <div class="container">
-      <div class="case-hr-lg">
-        <div class="hide lg-show">
-          <div class="hr-numbered right mb-20">1</div>
-        </div>
-      </div>
-      <div class="case-lg pb-45">
-        <h3 class="outline pt-0">Case</h3>
-        <div class="hr-patt-img row pt-45 justify-content-end hide lg-show">
+      <div class="case-lg">
+        <h3 class="outline mb-48">Case</h3>
+        <div class="hr-patt-img justify-content-end d-none d-lg-block">
           <img src="../images/patterns/patt_4.svg">
         </div>
       </div>
-      <div class="project">
+      <div class="project mb-48">
         <div class="project-wrapper">
           <div class="listheading">Project</div>
           <div class="project-caption">The Global Marketplace for trade</div>
-          <div class="kountable-logo-wrapper mt-45">
-            <div class="kountable-logo mb-20"></div>
-            <div class="body">
+          <div class="kountable-logo-wrapper">
+            <div class="kountable-logo mb-24"></div>
+            <div>
               Kountable is a startup with a mission to build a global marketplace for trade. Based in San Francisco,
               offices
               in Rwanda, Kenya and the U.S.
-              <div class="hr-patt-img row pt-45 justify-content-end d-lg-none">
-                <img src="../images/patterns/patt_4.svg">
-              </div>
             </div>
           </div>
         </div>
-        <div class="hr-patt-img row pt-45 pb-75 justify-content-end hide lg-show">
+        <div class="hr-patt-img justify-content-end d-none d-lg-block">
           <img src="../images/patterns/patt_6.svg">
         </div>
       </div>
-    </div>
-    <div class="container flex list-icon-wrapper">
-      <div class="hide lg-show">
-        <div class="hr-numbered left pb-15 pt-15"></div>
+      <div class="hr-patt-img row justify-content-end d-lg-none pr-8">
+        <img src="../images/patterns/patt_4.svg">
       </div>
+    </div>
+  </section>
+  <div class="section-under-bg container pt-0">
+    <div class="flex list-icon-wrapper">
+      <div class="hr-numbered left d-none d-lg-block"></div>
       <div>
         <ul class="list-icon">
-          <li class="align-fs mb-20 location">
+          <li class="d-flex align-items-start mb-24 location">
             <img src="../images/case/location-red.svg" alt="location" />
-            <span class="ml-20">
+            <span class="ml-24">
               <div class="listheading lh-32">Location</div>
               <div>San Francisco, USA, Rwanda, Kenya</div>
             </span>
           </li>
-          <li class="align-fs mb-20">
+          <li class="d-flex align-items-start mb-24">
             <img src="../images/case/technologies-red.svg" alt="location" />
-            <span class="ml-20">
+            <span class="ml-24">
               <div class="listheading lh-32">Technologies</div>
               <div class="flex technology-smr">
                 <div>
@@ -104,24 +100,24 @@
               </div>
             </span>
           </li>
-          <li class="align-fs mb-20 partnership">
+          <li class="d-flex align-items-start mb-24 partnership">
             <img src="../images/case/partnership-red.svg" alt="location" />
-            <span class="ml-20">
+            <span class="ml-24">
               <div class="listheading lh-32">Partnership</div>
               <div>2017 - present</div>
             </span>
           </li>
-          <li class="align-fs mb-15 dedicated">
-            <img src="../images/case/team-red.svg" alt="location" class="mr-20" />
-            <div class="caption space-between">
+          <li class="d-flex align-items-start mb-16 dedicated">
+            <img src="../images/case/team-red.svg" alt="location" class="mr-24" />
+            <div class="space-between">
               <div class="listheading lh-32">Dedicated team</div>
-              <div class="hr-patt-img red row justify-content-end d-lg-none">
+              <div class="hr-patt-img red justify-content-end d-lg-none">
                 <img src="../images/patterns/patt_4.svg">
               </div>
             </div>
           </li>
         </ul>
-        <div class="team mb-45">
+        <div class="team mb-48">
           <div class="okyriienko person"></div>
           <div class="nmarchuk person"></div>
           <div class="mtitov person"></div>
@@ -132,46 +128,44 @@
           <div class="nsokil person"></div>
           <div class="vtomkiv person"></div>
         </div>
-        <div class="hide lg-show">
-          <div class="hr-patt-img container row pr-75 justify-content-end ">
-            <img src="../images/patterns/patt_1.svg">
-          </div>
+        <div class="hr-patt-img container d-none d-lg-flex justify-content-end ">
+          <img src="../images/patterns/patt_1.svg">
         </div>
       </div>
     </div>
-    <div class="container space-between d-lg-none">
-      <div class="hr-patt-img red row">
+    <div class="space-between d-lg-none mb-80">
+      <div class="hr-patt-img red pb-0">
         <img src="../images/patterns/patt_1.svg">
       </div>
-      <img src="../images/patterns/rectangle-22.svg">
+      <div>
+        <img src="../images/patterns/rectangle-22.svg">
+      </div>
     </div>
-  </section>
+  </div>
   <!-- How It Was -->
-  <section class="how-it-was body-white pt-50">
-    <div class="lg-hide">
-      <div class="hr-numbered right mb-30">2</div>
+  <section class="how-it-was page-section body-white">
+    <div class="d-lg-none">
+      <div class="hr-numbered right">2</div>
     </div>
     <div class="container">
-      <div class="hide lg-show">
-        <div class="hr-numbered left mb-30 mt-75">2</div>
-      </div>
+      <div class="hr-numbered left d-none d-lg-inline">2</div>
+    </div>
+    <div class="container">
       <div class="how-it-was-lg">
         <div class="caption">
           <h4>How <span class="outline">it was</span></h4>
-          <div class="hr-patt-img black row hide lg-show">
+          <div class="hr-patt-img black d-none d-lg-block pb-0">
             <img src="../images/patterns/patt_4.svg">
           </div>
         </div>
         <ul>
-          <li class="mt-30">
+          <li class="mt-32">
             <div class="begin item"></div>
-            <div class="hide lg-show">
-              <div class="hr-numbered-small small-line "></div>
-            </div>
+            <div class="hr-numbered-small small-line d-none d-lg-block"></div>
             <div>
-              <div class="valigned margin-15">
-                <img src="../images/services/beginning.svg" alt="">
-                <div class="listheading ml-15">The beginning</div>
+              <div class="valigned margin-16">
+                <img src="../images/services/beginning.svg" alt="" />
+                <div class="listheading ml-16">The beginning</div>
               </div>
               <ul class="ul-red-square">
                 <li>Started with creating a simple MVP of two web apps</li>
@@ -180,15 +174,13 @@
               </ul>
             </div>
           </li>
-          <li class="mt-30">
+          <li class="mt-32">
             <div class="ds item"></div>
-            <div class="hide lg-show">
-              <div class="hr-numbered-small small-line "></div>
-            </div>
+            <div class="hr-numbered-small small-line d-none d-lg-block"></div>
             <div>
-              <div class="valigned margin-15">
-                <img src="../images/services/ds.svg" alt="">
-                <div class="listheading ml-15">The design System</div>
+              <div class="valigned margin-16">
+                <img src="../images/services/ds.svg" alt="" />
+                <div class="listheading ml-16">The design System</div>
               </div>
               <ul class="ul-red-square">
                 <li>
@@ -199,15 +191,13 @@
               </ul>
             </div>
           </li>
-          <li class="mt-30">
+          <li class="mt-32">
             <div class="insights item"></div>
-            <div class="hide lg-show">
-              <div class="hr-numbered-small small-line "></div>
-            </div>
+            <div class="hr-numbered-small small-line d-none d-lg-block"></div>
             <div>
-              <div class="valigned margin-15">
-                <img src="../images/services/insights.svg" alt="">
-                <div class="listheading ml-15">Helpful insights</div>
+              <div class="valigned margin-16">
+                <img src="../images/services/insights.svg" alt="" />
+                <div class="listheading ml-16">Helpful insights</div>
               </div>
               <ul class="ul-red-square">
                 <li>
@@ -223,15 +213,13 @@
               </ul>
             </div>
           </li>
-          <li class="mt-30">
+          <li class="mt-32">
             <div class="rescue item"></div>
-            <div class="hide lg-show">
-              <div class="hr-numbered-small small-line "></div>
-            </div>
+            <div class="hr-numbered-small small-line d-none d-lg-block"></div>
             <div>
-              <div class="valigned margin-15">
-                <img src="../images/services/product-white.svg" alt="">
-                <div class="listheading ml-15">CI/CD to the rescue</div>
+              <div class="valigned margin-16">
+                <img src="../images/services/product-white.svg" alt="" />
+                <div class="listheading ml-16">CI/CD to the rescue</div>
               </div>
               <ul class="ul-red-square">
                 <li>
@@ -245,15 +233,13 @@
               </ul>
             </div>
           </li>
-          <li class="mt-30">
+          <li class="mt-32">
             <div class="mobile item"></div>
-            <div class="hide lg-show">
-              <div class="hr-numbered-small small-line "></div>
-            </div>
+            <div class="hr-numbered-small small-line d-none d-lg-block"></div>
             <div>
-              <div class="valigned margin-15">
-                <img src="../images/services/africa.svg" alt="">
-                <div class="listheading ml-15">Mobile-first Africa</div>
+              <div class="valigned margin-16">
+                <img src="../images/services/africa.svg" alt="" />
+                <div class="listheading ml-16">Mobile-first Africa</div>
               </div>
               <ul class="ul-red-square">
                 <li>
@@ -271,32 +257,28 @@
           </li>
         </ul>
       </div>
-      <div class="hr-patt-img black row hide lg-show ">
-        <div class="pb-75">
+      <div class="hr-patt-img black row d-none d-lg-block">
+        <div>
           <img src="../images/patterns/patt_5.svg">
         </div>
       </div>
-      <div class="hr-patt-img black row d-lg-none pb-50 pt-40 justify-content-end">
-        <img src="../images/patterns/patt_6.svg">
+      <div class="hr-patt-img black row d-lg-none pt-32 justify-content-end pb-0">
+        <img src="../images/patterns/patt_5.svg">
       </div>
     </div>
   </section>
   <!-- What We Built -->
-  <section class="we-built pt-50">
+  <section class="section-with-bg we-built mt-48">
     <div class="we-built-bg">
-      <div class="lg-hide">
-        <div class="hr-numbered left mb-30">3</div>
-      </div>
+      <div class="hr-numbered left d-lg-none">3</div>
       <div class="container">
-        <div class="hide lg-show">
-          <div class="hr-numbered left mb-10 ">3</div>
-        </div>
+        <div class="hr-numbered left mb-32 d-none d-lg-block">3</div>
         <h4 class="we-built-caption"><span class="outline">What We</span> <br /> Built</h4>
       </div>
     </div>
     <div class="container">
       <div class="flex we-built-list">
-        <div class="hr-patt-img row hide lg-show pr-100">
+        <div class="hr-patt-img d-none d-lg-flex justify-content-end pt-8">
           <img src="../images/patterns/patt_7.svg">
         </div>
         <ul class="ul-red-square">
@@ -336,131 +318,120 @@
       <img class="img3" src="../images/backgrounds/project-listing.png" alt="">
     </div>
     <div class="container">
-      <div class="we-built-img-desktop hide lg-show">
+      <div class="we-built-img-desktop d-none d-lg-block">
         <img class="img1" width="574" src="../images/backgrounds/contracts-desktop.png" alt="">
         <img class="img2" width="416" src="../images/backgrounds/project-details-desktop.png" alt="">
         <img class="img3" width="160" src="../images/backgrounds/project-listing-desktop.png" alt="">
       </div>
     </div>
     <div class="container">
-      <div class="hide lg-show">
-        <div class="hr-patt-img container row justify-content-end pt-100">
-          <img src="../images/patterns/patt_9.svg">
-        </div>
+      <div class="hr-patt-img ta-right pt-100 d-none d-lg-block">
+        <img src="../images/patterns/patt_9.svg">
       </div>
-      <div class="hide lg-show">
-        <div class="hr-patt-img container row justify-content-end pt-500">
-          <img src="../images/patterns/patt_4.svg">
-        </div>
+      <div class="hr-patt-img ta-right pt-400 d-none d-lg-block">
+        <img src="../images/patterns/patt_4.svg">
       </div>
-      <div class="hr-patt-img row d-lg-none">
+      <div class="hr-patt-img d-lg-none pb-80">
         <img src="../images/patterns/patt_1.svg">
       </div>
     </div>
   </section>
   <!-- Business Impact -->
-  <section class="bi">
-    <div class="lg-hide">
-      <div class="hr-numbered right mb-40">4</div>
-    </div>
+  <section class="page-section bi pt-0 pb-0">
+    <div class="hr-numbered right d-lg-none pb-0">4</div>
     <div class="container">
+      <div class="hr-numbered d-none d-lg-inline right ml-numbered pl-48">4</div>
+    </div>
+    <div class="container pt-32">
       <div class="bi-lg">
-        <div class="hide lg-show">
-          <div class="hr-numbered right mb-20">4</div>
-        </div>
         <h4><span class="outline">Business</span> <br /> Impact</h4>
-        <div class="bi-description mt-10 mb-45"><span class="bi-description-mob">Created unique</span> intellectual
+        <div class="bi-description mt-16 mb-48"><span class="bi-description-mob">Created unique</span> intellectual
           property</div>
       </div>
       <div class="bi-list">
-        <div class="flex mb-45">
-          <div class="outline bi-col-1 mr-15">$29m</div>
+        <div class="flex mb-48">
+          <div class="outline bi-col-1 mr-16">$29m</div>
           <div class="bi-col-2">revenue growth from $7 mln to $36 mln in 2018</div>
         </div>
-        <div class="flex mb-45">
-          <div class="ta-right outline bi-col-1 mr-15">15k</div>
+        <div class="flex mb-48">
+          <div class="ta-right outline bi-col-1 mr-16">15k</div>
           <div class="bi-col-2">highest number of active users per month</div>
         </div>
-        <div class="flex mb-45">
-          <div class="ta-right outline bi-col-1 mr-15">+35%</div>
+        <div class="flex mb-48">
+          <div class="ta-right outline bi-col-1 mr-16">+35%</div>
           <div class="bi-col-2">to customer engagement and satisfaction</div>
         </div>
-        <div class="flex mb-45">
-          <div class="ta-right outline bi-col-1 mr-15">+40%</div>
+        <div class="flex mb-48">
+          <div class="ta-right outline bi-col-1 mr-16">+40%</div>
           <div class="bi-col-2">accelerated average project processing time from 5 to 2 days</div>
         </div>
       </div>
-      <div class="pl-650">
-        <div class="hr-patt-img row hide lg-show">
+      <div class="p-l-56">
+        <div class="hr-patt-img row d-none d-lg-block pb-80">
           <img src="../images/patterns/patt_9.svg">
         </div>
       </div>
-      <div class="hr-patt-img row d-lg-none">
+      <div class="hr-patt-img row d-lg-none pb-80">
         <img src="../images/patterns/patt_1.svg">
       </div>
     </div>
   </section>
   <!-- Value -->
-  <section class="value mb-75">
-    <div class="lg-hide">
-      <div class="hr-numbered left mb-30">5</div>
-    </div>
-    <div class="container mb-40">
-      <div class="hide lg-show">
-        <div class="hr-numbered left mb-10 ">5</div>
-      </div>
-      <div class="space-between">
-        <h4 class="value-caption">
+  <section class="page-section value pt-0">
+    <div class="hr-numbered left d-lg-none pb-0">5</div>
+    <div class="container">
+      <div class="hr-numbered left d-none d-lg-inline">5</div>
+      <div class="space-between mt-32">
+        <h4 class="value-caption mb-48">
           <span class="outline first">The </span>
           Value
           <span class="outline"> we delivered</span>
         </h4>
-        <div class="hr-patt-img row hide lg-show">
+        <div class="hr-patt-img d-none d-lg-block">
           <img src="../images/patterns/patt_8.svg">
         </div>
       </div>
     </div>
     <div class="container">
-      <ul class="value-list mb-100">
-        <li class="flex pb-15">
+      <ul class="value-list">
+        <li class="flex pb-16">
           <span class="listheading">1</span><span>Assembling a team of tech pros quickly</span>
         </li>
-        <li class="flex pb-15">
+        <li class="flex pb-16">
           <span class="listheading">2</span>
           <span>Delivering multiple solutions using the latest and most efficient tools in the tech stack</span>
         </li>
-        <li class="flex pb-15">
+        <li class="flex pb-16">
           <span class="listheading">3</span><span>Supporting the delivered solutions</span>
         </li>
-        <li class="flex pb-15">
+        <li class="flex pb-16">
           <span class="listheading">4</span>
           <span>Integrating seamlessly with the on-site team thanks to a shared understanding of the
             customer's values</span>
         </li>
-        <li class="flex pb-15">
+        <li class="flex pb-16">
           <span class="listheading">5</span>
           <span>Building a long-term partnership with the customer</span>
         </li>
       </ul>
-      <div class="hr-patt-img row hide lg-show ">
+    </div>
+
+    <div class="container">
+      <div class="hr-patt-img d-none d-lg-block pb-32">
         <img src="../images/patterns/patt_8.svg">
       </div>
-      <div class="hr-patt-img row d-lg-none pt-30">
+      <div class="hr-patt-img d-lg-none pt-48 pb-32">
         <img src="../images/patterns/patt_1.svg">
       </div>
     </div>
   </section>
   <!-- Client Feedback -->
-  <section class="feedback-wrapper mb-75">
-    <div class="lg-hide">
-      <div class="hr-numbered right mb-40">6</div>
-    </div>
-    <div class="container mb-40">
+  <section class="page-section feedback-wrapper pt-0">
+    <div class="hr-numbered right d-lg-none">6</div>
+    <div class="container mb-48">
+      <div class="hr-numbered d-none d-lg-inline right ml-numbered pl-48">6</div>
       <div class="feedback-lg">
-        <div class="hide lg-show">
-          <div class="hr-numbered right mb-20">6</div>
-        </div>
-        <h4>
+        <h4 class="pt-32">
           <span class="outline">Client</span> <br />
           <span>Feedback</span>
         </h4>
@@ -516,20 +487,20 @@
         </div>
       </div>
     </div>
-    <div class="container mt-40 mb-75">
-      <div class="flex mb-45 pt-25 summary">
-        <img class="main_logo-small mt-5" src="../images/logo.svg" alt="Altigee" />
-        <div class="pl-15">
+    <div class="container mt-48">
+      <div class="flex pt-24 pb-48 summary">
+        <img class="white main_logo-small mt-8" src="../images/logo.svg" alt="Altigee" />
+        <div class="pl-16">
           Two years later, we’re still passionate about the solutions we’ve developed together and
           their objectives.
         </div>
       </div>
       <div class="hr-summary">
-        <div class="hr-patt-img row justify-content-end hide lg-show">
+        <div class="hr-patt-img ta-right d-none d-lg-block pb-0">
           <img src="../images/patterns/patt_4.svg">
         </div>
       </div>
-      <div class="hr-patt-img row d-lg-none justify-content-end">
+      <div class="hr-patt-img d-lg-none ta-right pb-0">
         <img src="../images/patterns/patt_1.svg">
       </div>
     </div>

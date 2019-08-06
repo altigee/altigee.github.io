@@ -4,7 +4,7 @@
 @import '_layout.scss';
 
 .hr-numbered {
-  @extend caption;
+  @include caption-1;
   display: flex;
   align-items: center;
   width: 120px;
@@ -39,7 +39,7 @@
 }
 
 .hr-numbered-small {
-  @extend caption;
+  @include caption-1;
   display: flex;
   align-items: flex-start;
   width: 110px;
@@ -58,62 +58,6 @@
       @include line-small;
       margin-left: 55px;
     }
-  }
-}
-
-.hr-patt {
-  height: 4px;
-  border-top: 1px solid blue;
-  background-repeat: no-repeat;
-  background-origin: content-box;
-
-  &-1 {
-    min-width: 118px;
-    background-image: url('../images/patterns/patt_1.svg');
-  }
-
-  &-2 {
-    background-image: url('../images/patterns/patt_2.svg');
-  }
-
-  &-3 {
-    background-image: url('../images/patterns/patt_3.svg');
-  }
-
-  &-4 {
-    background-image: url('../images/patterns/patt_4.svg');
-  }
-
-  &-4-black {
-    background-image: url('../images/patterns/patt_4-black.svg');
-  }
-
-  &-5 {
-    background-image: url('../images/patterns/patt_5.svg');
-  }
-
-  &-6 {
-    background-image: url('../images/patterns/patt_6.svg');
-  }
-
-  &-6-black {
-    background-image: url('../images/patterns/patt_6-black.svg');
-  }
-
-  &-7 {
-    background-image: url('../images/patterns/patt_7.svg');
-  }
-
-  &-8 {
-    background-image: url('../images/patterns/patt_8.svg');
-  }
-
-  &-9 {
-    background-image: url('../images/patterns/patt_9.svg');
-  }
-
-  &.right {
-    background-position-x: 100%;
   }
 }
 
@@ -149,5 +93,35 @@ a {
   &:hover,
   &:focus {
     color: darken($white, 20);
+  }
+}
+
+// PHASES
+.phases-list {
+  .phase-item + .phase-item {
+    margin-top: 16px;
+  }
+
+  .phase-title {
+    margin-bottom: 8px;
+  }
+
+  .phase-description {
+    padding-bottom: 16px;
+  }
+
+  .phase-line {
+    position: relative;
+
+    &:after {
+      content: '';
+      position: absolute;
+      width: 1px;
+      height: 100%;
+      margin-top: 4px;
+      margin-left: 4px;
+      opacity: 0.2;
+      background: $dark-blue;
+    }
   }
 }

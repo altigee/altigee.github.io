@@ -12,7 +12,7 @@
         max-width: 500px;
 
         h3 {
-          @include display-4;
+          @include h1-d;
         }
       }
     }
@@ -41,9 +41,8 @@
     .project {
       .project-wrapper {
         .project-caption {
-          @include subheading;
-          width: 250px;
-          margin-bottom: 48px;
+          @include h3-d;
+          line-height: 32px;
           text-transform: uppercase;
         }
 
@@ -114,9 +113,12 @@
           grid-gap: 25px;
           grid-template-columns: repeat(auto-fill, 100px);
         }
-        @include rwd(601, 9999) {
-          display: none;
-        }
+            display: grid;
+            width: 225px;
+
+            grid-gap: 25px;
+            grid-template-columns: repeat(auto-fill, 100px);
+          }
       }
 
       .technology-big {
@@ -238,10 +240,8 @@
         text-align: right;
 
         h4 {
-          @include display-3;
-          width: 45%;
-          max-width: 500px;
-          margin-right: 120px;
+          @include h2-d;
+          width: 320px;
 
           span {
             display: block;
@@ -311,9 +311,9 @@
         text-align: right;
 
         @include respond-to('lg') {
-          @include display-3;
-          width: 45%;
-          margin: 20px 0 0 0;
+          @include h2-d;
+          width: 400px;
+          margin: 20px 0 0 80px;
         }
       }
     }
@@ -383,7 +383,7 @@
   // 4 - business impact
   .bi {
     .bi-description {
-      @include body-2-excessive;
+      @include subtitle-2;
 
       &-mob {
         display: block;
@@ -391,7 +391,7 @@
     }
 
     .bi-col-1 {
-      @include display-0;
+      @include h3-d;
       flex-basis: 90px;
       line-height: 32px;
       text-align: right;
@@ -418,7 +418,7 @@
 
           h4,
           .outline {
-            @include display-3;
+            @include h2-d;
           }
         }
 
@@ -443,7 +443,7 @@
           }
 
           .bi-col-1 {
-            @include display-1;
+            @include h2-m;
             flex-basis: 45px;
             text-align: left;
           }
@@ -459,7 +459,7 @@
   .value {
     @include respond-to('lg') {
       .value-caption {
-        @include display-3;
+        @include h2-d;
         width: 470px;
         text-align: right;
 
@@ -474,7 +474,7 @@
       }
     }
 
-    .listheading {
+    .subtitle-1 {
       min-width: 45px;
     }
   }
@@ -532,7 +532,7 @@
 
           h4,
           span {
-            @include display-3;
+            @include h2-d;
           }
         }
 

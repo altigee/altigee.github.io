@@ -9,6 +9,7 @@
 @import '_case-page.scss';
 @import '_about-page.scss';
 @import '_build-from-scratch.scss';
+@import '_team-extend.scss';
 
 body {
   color: $white;
@@ -35,8 +36,11 @@ body {
 
 // FOOTER
 footer {
-  @include body-caption;
   text-align: right;
+
+  .caption-1 {
+    vertical-align: middle;
+  }
 
   .hr-patt {
     min-width: 150px;

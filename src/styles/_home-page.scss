@@ -12,7 +12,7 @@
       h3 {
         @include h1-d;
         max-width: 510px;
-        margin-bottom: 20px;
+        margin-bottom: 16px;
         text-align: right;
       }
     }
@@ -59,7 +59,7 @@
 
   // OFFER TECHNOLOGIES
   .offer-technologies {
-    margin-top: 40px;
+    margin-top: 48px;
 
     @include respond-to('lg') {
       margin-top: 60px;
@@ -74,7 +74,7 @@
     }
 
     .offer-technologies-category + .offer-technologies-category {
-      margin-top: 40px;
+      margin-top: 48px;
     }
 
     .subtitle-2 {

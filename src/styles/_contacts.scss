@@ -6,6 +6,16 @@
     @include respond-to('lg') {
       @include valigned;
     }
+
+    .contacts-social > div {
+      margin-top: 48px;
+      margin-bottom: 48px;
+
+      @include respond-to('lg') {
+        margin-top: 0;
+        margin-bottom: 32px;
+      }
+    }
   }
 
   .contacts-primary {
@@ -26,7 +36,7 @@
   }
 
   li + li {
-    margin-top: 40px;
+    margin-top: 32px;
   }
 
   .caption-1 {

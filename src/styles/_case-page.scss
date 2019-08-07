@@ -545,18 +545,6 @@
     }
   }
 
-  // CONTACTS
-  .contacts-section {
-    li {
-      @include valigned;
-      margin-bottom: 40px;
-
-      img {
-        margin-right: 20px;
-      }
-    }
-  }
-
   .width-45 {
     @include respond-to('lg') {
       width: 45%;
@@ -564,6 +552,6 @@
   }
 }
 
-.contacts .hr-numbered {
+.container.contacts .hr-numbered {
   margin-left: -48px;
 }

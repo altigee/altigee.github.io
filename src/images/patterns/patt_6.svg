@@ -1,2 +1,6 @@
-<svg width="201" height="6"><path d="M1 0H0V6H1V0ZM5 0H4V6H5V0ZM8 0H9V6H8V0ZM35 0H34V6H35V0ZM121 0H122V6H121V0ZM118 0H117V6H118V0ZM200 6H201V0H200V6ZM102 6H101V0H102V6Z" fill="current-color"/>
+<svg width="49" height="6">
+<rect width="1" height="6" transform="matrix(1 0 0 -1 48 6)" fill="current-color"/>
+<rect width="1" height="6" transform="matrix(1 0 0 -1 0 6)" fill="current-color"/>
+<rect width="1" height="6" transform="matrix(1 0 0 -1 27 6)" fill="current-color"/>
+<rect width="1" height="6" transform="matrix(1 0 0 -1 31 6)" fill="current-color"/>
 </svg>

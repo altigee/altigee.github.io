@@ -211,44 +211,51 @@
   }
 
   .how-it-was-lg {
-    @include respond-to('lg') {
-      .caption {
-        @include space-between;
-        align-items: flex-end;
-        margin-top: 32px;
-        text-align: right;
+    .caption {
+      margin-bottom: 48px;
+    }
 
-        h2 {
-          @include h2-d;
-          margin-right: 110px;
+    & {
+      @include respond-to('lg') {
+        .caption {
+          @include space-between;
+          align-items: flex-end;
+          margin-top: 32px;
+          margin-bottom: 80px;
+          text-align: right;
 
-          span {
-            display: block;
+          h2 {
+            @include h2-d;
+            margin-right: 110px;
+
+            span {
+              display: block;
+            }
+          }
+
+          .hr-patt-img {
+            margin-right: auto;
           }
         }
 
-        .hr-patt-img {
-          margin-right: auto;
-        }
-      }
+        & > ul > li {
+          display: flex;
 
-      & > ul > li {
-        display: flex;
+          .margin-16 {
+            margin-top: 0;
+            margin-bottom: 0;
 
-        .margin-16 {
-          margin-top: 0;
-          margin-bottom: 0;
-
-          img {
-            padding-right: 25px;
+            img {
+              padding-right: 25px;
+            }
           }
-        }
 
-        .ul-red-square {
-          padding-left: 80px;
+          .ul-red-square {
+            padding-left: 80px;
 
-          li {
-            width: 350px;
+            li {
+              width: 350px;
+            }
           }
         }
       }

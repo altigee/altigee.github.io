@@ -21,13 +21,6 @@
     }
   }
 
-  .contacts-primary {
-    @include respond-to('lg') {
-      margin-right: 100px;
-      margin-left: 10%;
-    }
-  }
-
   li {
     @include valigned;
 

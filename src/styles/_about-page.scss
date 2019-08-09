@@ -10,17 +10,30 @@
     }
   }
 
+  .business {
+    @include respond-to('lg') {
+      @include h2-d;
+
+      .outline {
+        text-align: right;
+      }
+    }
+  }
+
   //  MAP
   .map-section {
     position: relative;
-
-    .map-bg {
-      width: 100%;
-    }
+    min-width: 360px;
 
     .location-spots {
       position: relative;
       top: 0;
+      z-index: -1;
+      text-align: center;
+
+      .map-bg {
+        width: 100%;
+      }
     }
 
     .location-spot {
@@ -32,13 +45,13 @@
       background: $white;
 
       &.location-ca {
-        top: 40%;
-        left: 2%;
+        top: 39%;
+        left: 6%;
       }
 
       &.location-ny {
-        top: 34%;
-        left: 20%;
+        top: 25%;
+        left: 22%;
       }
 
       &.location-ua {
@@ -47,7 +60,7 @@
       }
 
       &.location-bk {
-        top: 64%;
+        top: 49%;
         left: 81%;
       }
 
@@ -77,7 +90,53 @@
     }
 
     .location-description.active {
+      max-width: 300px;
+      margin: 0 auto;
+      margin-top: -45px;
       border: 1px solid $red;
+    }
+
+    & {
+      @include respond-to('lg') {
+        .location-spots {
+          margin-top: -124px;
+        }
+
+        .location-description.active {
+          margin-top: -330px;
+        }
+      }
+      @include respond-to('xl') {
+        .location-description.active {
+          margin-top: -443px;
+          margin-bottom: 130px;
+        }
+      }
+      @include rwd(576, 991) {
+        .location-description.active {
+          margin-top: -153px;
+        }
+      }
+      @include rwd(1600, 9999) {
+        .location-spots.d-xl-block {
+          display: none !important;
+        }
+
+        .extra {
+          display: block !important;
+          text-align: center;
+        }
+
+        .location-description.active {
+          margin-top: -608px;
+          margin-bottom: 180px;
+        }
+      }
+      @include rwd(2001, 9999) {
+        .extra img {
+          max-width: 2000px;
+        }
+      }
     }
   }
 
@@ -94,14 +153,28 @@
     }
 
     .pitch-facts {
-      li {
+      div {
         @include valigned;
+      }
+
+      & {
+        @include respond-to('lg') {
+          div {
+            align-items: flex-start;
+          }
+        }
       }
     }
   }
 
   // OUR TEAM
   .team-section {
+    @include respond-to('lg') {
+      h2.ta-right {
+        text-align: left;
+      }
+    }
+
     table.contacts {
       td:first-child {
         padding-right: 20px;
@@ -117,7 +190,7 @@
     }
 
     .team-member {
-      margin-bottom: 46px;
+      margin-bottom: 48px;
 
       @include respond-to('lg') {
         display: inline-flex;
@@ -134,6 +207,8 @@
       }
 
       .member-info {
+        margin-top: 16px;
+
         @include respond-to('lg') {
           display: flex;
           flex-direction: column;

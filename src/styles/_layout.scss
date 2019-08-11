@@ -96,19 +96,6 @@ $sides: (all, top, bottom, left, right);
   @include space-between;
 }
 
-@mixin flex {
-  display: flex;
-}
-
-.flex {
-  @include flex;
-}
-
-.flex-column {
-  @include flex;
-  flex-direction: column;
-}
-
 .grow {
   flex-grow: 1;
 }

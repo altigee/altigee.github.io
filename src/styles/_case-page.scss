@@ -4,23 +4,11 @@
   .section-with-bg {
     position: relative;
 
-    .case-lg {
-      @include respond-to('lg') {
-        @include space-between;
-        align-items: baseline;
-        max-width: 500px;
-
-        h3 {
-          @include h1-d;
-        }
-      }
-    }
-
     .contracts-bg {
       @include stretch-overlay;
       position: absolute;
       z-index: -1;
-      opacity: 0.45;
+      opacity: 0.3;
       background-image: url('../images/backgrounds/contracts-bg.jpg');
       background-repeat: no-repeat;
       background-position-x: 100%;
@@ -28,92 +16,34 @@
 
       @include respond-to('lg') {
         top: -20px;
-        opacity: 0.7;
         background-image: url('../images/backgrounds/contracts-bg-desktop.jpg');
         background-size: 1366px 688px;
       }
     }
-
-    .project-wrapper {
-      .kountable-logo-wrapper {
-        @include respond-to('lg') {
-          display: flex;
-          margin-bottom: 48px;
-
-          .kountable-logo {
-            margin-right: 70px;
-          }
-        }
-
-        .kountable-logo {
-          min-width: 84px;
-          height: 48px;
-          background-image: url('../images/case/kountable.jpg');
-          background-repeat: no-repeat;
-          background-size: contain;
-        }
-      }
-
-      & {
-        @include respond-to('lg') {
-          .project-caption {
-            @include h3-d;
-            width: 80%;
-          }
-        }
-      }
-    }
   }
 
-  .list-icon-wrapper {
-    .list-icon {
-      @include respond-to('lg') {
-        display: flex;
-        flex-wrap: wrap;
-
-        .partnership,
-        .location {
-          order: -1;
-          width: 225px;
-        }
-
-        .dedicated {
-          width: 500px;
-          margin-bottom: 0;
-        }
+  .section-under-bg {
+    @include respond-to('xl') {
+      .dedicated {
+        margin-left: 10.5%;
       }
 
-      .hr-patt-img {
-        padding-bottom: 8px;
+      .team {
+        margin-left: 15%;
       }
+    }
 
-      .dedicated .space-between {
-        width: 100%;
-      }
+    .dedicated .justify-content-between {
+      width: 100%;
+    }
 
-      .technology-smr {
-        @include respond-to('smr') {
-          display: grid;
-          width: 225px;
+    svg {
+      min-width: 32px;
+    }
 
-          grid-gap: 25px;
-          grid-template-columns: repeat(auto-fill, 100px);
-        }
-        @include rwd(601, 9999) {
-          display: none;
-        }
-      }
-
-      .technology-big {
-        @include rwd(601, 9999) {
-          display: grid;
-          width: 450px;
-          max-width: 1365px;
-
-          grid-gap: 0;
-          grid-template-columns: repeat(auto-fill, 150px);
-        }
-      }
+    .technologies {
+      width: 100%;
+      max-width: 600px;
     }
 
     .team {
@@ -125,9 +55,8 @@
       & {
         @include respond-to('lg') {
           max-width: 990px;
-          margin-left: 52px;
 
-          grid-gap: 25px;
+          grid-gap: 24px;
         }
       }
 
@@ -176,96 +105,49 @@
   }
 
   // how it was
-  .how-it-was {
-    .margin-16 {
-      margin-top: 16px;
-      margin-bottom: 16px;
-    }
-
-    .item {
-      height: 144px;
-      background-repeat: no-repeat;
-      background-position-x: 100%;
-      background-size: contain;
-    }
-
-    .begin {
-      background-image: url('../images/case/begin.jpg');
-    }
-
-    .ds {
-      background-image: url('../images/case/ds.jpg');
-    }
-
-    .insights {
-      background-image: url('../images/case/insights.jpg');
-    }
-
-    .rescue {
-      background-image: url('../images/case/rescue.jpg');
-    }
-
-    .mobile {
-      background-image: url('../images/case/mobile.jpg');
-    }
+  .margin-16 {
+    margin-top: 16px;
+    margin-bottom: 16px;
   }
 
   .how-it-was-lg {
-    .caption {
-      margin-bottom: 48px;
-    }
+    @include respond-to('lg') {
+      .caption {
+        margin-bottom: 32px;
+        text-align: right;
 
-    & {
-      @include respond-to('lg') {
-        .caption {
-          @include space-between;
-          align-items: flex-end;
-          margin-top: 32px;
-          margin-bottom: 80px;
-          text-align: right;
+        h2 {
+          @include h2-d;
 
-          h2 {
-            @include h2-d;
-            margin-right: 110px;
-
-            span {
-              display: block;
-            }
-          }
-
-          .hr-patt-img {
-            margin-right: auto;
-          }
-        }
-
-        & > ul > li {
-          display: flex;
-
-          .margin-16 {
-            margin-top: 0;
-            margin-bottom: 0;
-
-            img {
-              padding-right: 25px;
-            }
-          }
-
-          .ul-red-square {
-            padding-left: 80px;
-
-            li {
-              width: 350px;
-            }
+          span {
+            display: block;
           }
         }
       }
+
+      .margin-16 {
+        margin-top: 0;
+        margin-bottom: 0;
+      }
+
+      .ul-red-square {
+        padding-left: 80px;
+      }
+    }
+
+    .img {
+      width: 100%;
+      max-width: 320px;
+      max-height: 144px;
     }
   }
 
   // 3 - what we built
   .we-built {
+    padding-top: 64px;
+
     @include respond-to('lg') {
-      padding-top: 76px;
+      padding-top: 124px;
 
       .pt-400 {
         padding-top: 400px;
@@ -289,23 +171,12 @@
     }
 
     .we-built-caption {
-      width: 280px;
-      margin: 0 auto;
+      min-width: 240px;
       margin-top: 132px;
-      text-align: right;
 
       @include respond-to('lg') {
         @include h2-d;
-        width: 45%;
-        margin: 32px 0 0 0;
-      }
-    }
-
-    .we-built-list {
-      @include respond-to('lg') {
-        .hr-patt-img {
-          margin-right: 100px;
-        }
+        margin-top: 32px;
       }
     }
 
@@ -323,13 +194,12 @@
         position: absolute;
         top: -30px;
         left: 0;
-        z-index: -1;
       }
 
       .img3 {
         position: absolute;
         top: 220px;
-        left: 560px;
+        left: 570px;
         z-index: 2;
       }
     }
@@ -364,73 +234,16 @@
 
   // 4 - business impact
   .bi {
-    .bi-description {
-      @include subtitle-2;
-
-      &-mob {
-        display: block;
-      }
-    }
-
     .bi-col-1 {
       @include h3-d;
-      flex-basis: 90px;
       line-height: 32px;
       text-align: right;
       text-transform: uppercase;
-    }
 
-    .bi-col-2 {
-      flex: 1;
-    }
-
-    & {
       @include respond-to('lg') {
-        .p-l-56 {
-          padding-left: 56%;
-        }
-
-        .bi-lg {
-          margin-left: -48px;
-
-          .outline {
-            padding-top: 30px;
-          }
-
-          h4,
-          .outline {
-            @include h2-d;
-          }
-        }
-
-        .bi-description {
-          margin-left: 96px;
-
-          &-mob {
-            display: inline;
-          }
-        }
-
-        .bi-list {
-          display: flex;
-          flex-direction: row;
-          margin-bottom: 50px;
-
-          & > div {
-            display: flex;
-            flex-direction: column;
-            margin: 0 48px;
-          }
-
-          .bi-col-1 {
-            @include h2-m;
-            flex-basis: 45px;
-            text-align: left;
-          }
-        }
-      }
-      @include respond-to('xl') {
-        margin-left: -48px;
+        @include h2-m;
+        margin-bottom: 16px;
+        text-align: left;
       }
     }
   }
@@ -441,15 +254,6 @@
       .value-caption {
         @include h2-d;
         text-align: right;
-
-        .first {
-          display: block;
-        }
-      }
-
-      .value-list {
-        max-width: 420px;
-        margin-left: 50%;
       }
     }
 
@@ -460,50 +264,30 @@
 
   // 7 - client feedback
   .feedback-wrapper {
-    .feedback {
+    .crop-wrapper {
       max-width: 992px;
       margin: 0 auto;
 
       .feedback-item {
-        flex-basis: 300px;
         min-width: 235px;
-        margin-right: 32px;
-        margin-left: 40px;
-
-        .item {
-          height: 184px;
-          background-repeat: no-repeat;
-          background-size: contain;
-        }
-
-        .kolesnikov {
-          background-image: url('../images/case/feedback/kolesnikov.jpg');
-        }
-
-        .whaley {
-          background-image: url('../images/case/feedback/whaley.jpg');
-        }
 
         &-name {
           max-width: 184px;
-          margin-top: 20px;
-          margin-bottom: 10px;
+          margin: 16px 0;
         }
       }
     }
 
     .summary {
-      max-width: 360px;
-      padding-bottom: 20px;
+      max-width: 320px;
       border-top: 1px solid $red;
     }
 
     & {
       @include respond-to('lg') {
-        .feedback-lg {
+        .feedback-caption {
           margin-bottom: 32px;
 
-          h4,
           span {
             @include h2-d;
           }
@@ -511,53 +295,17 @@
 
         .crop-wrapper {
           max-width: 1140px;
-        }
 
-        .feedback {
           .feedback-item {
             min-width: 465px;
-            margin-right: 80px;
-            margin-left: 0;
 
-            .feedback-item-desktop {
-              display: flex;
-            }
-
-            .item {
-              width: 184px;
-              margin-right: 36px;
-            }
-
-            &-name span {
+            &-name div:first-child {
               display: block;
               color: $white;
             }
           }
         }
-
-        .summary {
-          margin: 76px 0;
-
-          img {
-            min-width: 40px;
-          }
-        }
-      }
-      @include respond-to('xl') {
-        .feedback-lg {
-          margin-left: -48px;
-        }
       }
     }
   }
-
-  .width-45 {
-    @include respond-to('lg') {
-      width: 45%;
-    }
-  }
-}
-
-.container.contacts .hr-numbered {
-  margin-left: -48px;
 }

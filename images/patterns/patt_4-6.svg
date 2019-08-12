@@ -1,1 +1,5 @@
-<svg width="34" height="6" fill="current-color" xmlns="http://www.w3.org/2000/svg"><path d="M33 6h1V0h-1zm-4 0h1V0h-1zM0 6h1V0H0z"/></svg>
+<svg width="34" height="6" viewBox="0 0 34 6" fill="current-color" xmlns="http://www.w3.org/2000/svg">
+<rect width="1" height="6" transform="matrix(1 0 0 -1 33 6)" fill="current-color"/>
+<rect width="1" height="6" transform="matrix(1 0 0 -1 29 6)" fill="current-color"/>
+<rect width="1" height="6" transform="matrix(1 0 0 -1 0 6)" fill="current-color"/>
+</svg>

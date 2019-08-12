@@ -4,7 +4,7 @@
 <partial src="./partials/_head.html" />
 
 <body class="page-about">
-  <section class="top-section mb-32">
+  <section class="top-section">
     <div class="about-bg"></div>
 
     <!-- HEADER -->
@@ -77,15 +77,13 @@
     </div>
   </div>
 
-  <section class="map-section mb-48">
+  <section class="map-section mb-80">
     <div class="location-spots d-lg-none text-justify">
-      <img src="../images/backgrounds/map.jpg" height="200" class="map-bg d-sm-none" alt="">
-      <!-- 576 - 991 -->
-      <img src="../images/backgrounds/map.jpg" height="350" class="map-bg d-none d-sm-block d-lg-none" alt="">
+      <div class="location-spot location-ua active"></div>
       <div class="location-spot location-ca"></div>
       <div class="location-spot location-ny"></div>
-      <div class="location-spot location-ua active"></div>
       <div class="location-spot location-bk"></div>
+      <img src="../images/backgrounds/map.jpg" class="map-bg d-lg-none map-bg-mob" alt="">
     </div>
 
     <div class="location-descriptions container d-lg-none">
@@ -95,18 +93,13 @@
     </div>
     <!-- 992 - 1200 -->
     <div class="location-spots d-none d-lg-block d-xl-none">
-      <img src="../images/backgrounds/map-lg.png" height="579" class="map-bg" alt="">
       <div class="location-spot location-ua active"></div>
+      <img src="../images/backgrounds/map-lg.svg" height="579" class="map-bg" alt="map-bg">
     </div>
-    <!-- 1200 - 1600 -->
+    <!-- 1200 - ... -->
     <div class="location-spots d-none d-xl-block">
-      <img src="../images/backgrounds/map-lg.png" height="730" class="map-bg" alt="">
       <div class="location-spot location-ua active"></div>
-    </div>
-    <!-- 1600 - .... -->
-    <div class="location-spots d-none extra">
-      <img src="../images/backgrounds/map-lg.png" height="950" class="map-bg" alt="">
-      <div class="location-spot location-ua active"></div>
+      <img src="../images/backgrounds/map-lg.svg" height="730" class="map-bg" alt="map-bg">
     </div>
 
     <div class="container">
@@ -124,17 +117,17 @@
       <div class="lviv-bg"></div>
 
       <div class="container pt-48 pb-48">
-        <h2 class="mb-16">Lviv</h2>
+        <h2 class="">Lviv</h2>
         <div class="pitch-facts offset-3 offset-lg-1 d-lg-flex">
-          <div class="flex-lg-column">
-            <span class="h3-d text-upper outline red mr-15">21k</span>
+          <div class="flex-lg-column col-lg-5 align-items-lg-start">
+            <span class="h3-d text-upper outline red mr-16">21k</span>
             <span>skilled tech professionals</span>
           </div>
-          <div class="flex-lg-column offset-lg-2">
-            <span class="h3-d text-upper outline red mr-15">317</span>
+          <div class="flex-lg-column offset-lg-2 col-lg-4 align-items-lg-start">
+            <span class="h3-d text-upper outline red mr-16">317</span>
             <span>international and local tech companies</span>
           </div>
-          <div class="d-none d-lg-block offset-lg-2">
+          <div class="d-none d-lg-block offset-lg-2 col-lg-8 align-items-lg-start">
             <ul class="ul-red-square">
               <li>Some of the best universities in Eastern Europe with strong tech degree programs </li>
               <li>Hosting IT specialists from other regions of Ukraine</li>
@@ -170,11 +163,11 @@
       <span class="outline d-lg-block">Let's</span> talk
     </h2>
 
-    <ul class="team-members offset-lg-1">
-      <li class="team-member">
+    <ul class="team-members d-flex-lg justify-content-between">
+      <li class="team-member offset-xl-1">
         <img src="../images/team/mtitov.jpg" alt="max titov">
 
-        <div class="member-info">
+        <div class="member-info d-lg-flex flex-lg-column justify-content-between">
           <div class="name-pos">
             <div class="d-flex justify-content-between">
               <div class="subtitle-1 white">Max Titov</div>
@@ -207,10 +200,10 @@
         </div>
       </li>
 
-      <li class="team-member">
+      <li class="team-member offset-lg-1 offset-xl-2">
         <img src="../images/team/dkondratovich.jpg" alt="dima kondratovych">
 
-        <div class="member-info">
+        <div class="member-info mt-16 d-lg-flex flex-lg-column justify-content-between">
           <div class="name-pos">
             <div class="d-flex justify-content-between">
               <div class="subtitle-1 white">Dima Kondratovych</div>

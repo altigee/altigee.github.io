@@ -4,6 +4,11 @@
   // TOP
   .top-section {
     position: relative;
+    margin-bottom: 32px;
+
+    @include respond-to('lg') {
+      margin-bottom: 80px;
+    }
 
     .about-bg {
       @include back-image('../images/backgrounds/about.jpg');
@@ -27,12 +32,20 @@
 
     .location-spots {
       position: relative;
-      top: 0;
+      top: 10px;
       z-index: -1;
       text-align: center;
 
       .map-bg {
         width: 100%;
+      }
+
+      .map-bg-mob {
+        height: 200px;
+
+        @include rwd(576, 991) {
+          height: 350px;
+        }
       }
     }
 
@@ -45,8 +58,8 @@
       background: $white;
 
       &.location-ca {
-        top: 39%;
-        left: 6%;
+        top: 33%;
+        left: 4%;
       }
 
       &.location-ny {
@@ -55,8 +68,19 @@
       }
 
       &.location-ua {
-        top: 25%;
+        top: 19%;
         left: 53%;
+
+        @include respond-to('lg') {
+          top: 24%;
+        }
+        @include respond-to('xl') {
+          top: 26%;
+        }
+        @include rwd(1600, 9999) {
+          top: 24%;
+          left: 53%;
+        }
       }
 
       &.location-bk {
@@ -92,7 +116,7 @@
     .location-description.active {
       max-width: 300px;
       margin: 0 auto;
-      margin-top: -45px;
+      margin-top: -48px;
       border: 1px solid $red;
     }
 
@@ -103,38 +127,23 @@
         }
 
         .location-description.active {
-          margin-top: -330px;
+          margin-top: -325px;
         }
       }
       @include respond-to('xl') {
         .location-description.active {
-          margin-top: -443px;
+          margin-top: -425px;
           margin-bottom: 130px;
         }
       }
       @include rwd(576, 991) {
         .location-description.active {
-          margin-top: -153px;
+          margin-top: -169px;
         }
       }
       @include rwd(1600, 9999) {
-        .location-spots.d-xl-block {
-          display: none !important;
-        }
-
-        .extra {
-          display: block !important;
-          text-align: center;
-        }
-
         .location-description.active {
-          margin-top: -608px;
-          margin-bottom: 180px;
-        }
-      }
-      @include rwd(2001, 9999) {
-        .extra img {
-          max-width: 2000px;
+          margin-top: -440px;
         }
       }
     }
@@ -153,16 +162,14 @@
     }
 
     .pitch-facts {
-      div {
-        @include valigned;
+      margin-top: 16px;
+
+      @include respond-to('lg') {
+        margin-top: 76px;
       }
 
-      & {
-        @include respond-to('lg') {
-          div {
-            align-items: flex-start;
-          }
-        }
+      div {
+        @include valigned;
       }
     }
   }
@@ -182,13 +189,6 @@
       }
     }
 
-    .team-members {
-      @include respond-to('lg') {
-        display: flex;
-        justify-content: space-between;
-      }
-    }
-
     .team-member {
       margin-bottom: 48px;
 
@@ -203,16 +203,6 @@
           width: 176px;
           height: 176px;
           margin-right: 48px;
-        }
-      }
-
-      .member-info {
-        margin-top: 16px;
-
-        @include respond-to('lg') {
-          display: flex;
-          flex-direction: column;
-          justify-content: space-between;
         }
       }
     }

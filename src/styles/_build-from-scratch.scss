@@ -5,9 +5,58 @@
     @include back-image($url: '../images/backgrounds/project-based.jpg');
   }
 
+  .page-section .get {
+    text-align: right;
+  }
+
   .benefits-list {
-    li + li {
-      margin-top: 32px;
+    margin-bottom: 48px;
+
+    li {
+      margin-bottom: 32px;
+
+      svg {
+        margin-bottom: 16px;
+      }
+    }
+  }
+
+  & {
+    @include respond-to('lg') {
+      .page-section {
+        &.white-bg {
+          padding-top: 124px;
+          color: $white;
+          background: $dark-blue;
+        }
+
+        h2 {
+          padding-bottom: 80px;
+        }
+
+        .get {
+          text-align: left;
+        }
+      }
+
+      .phases-list .phase-line:after {
+        opacity: 0.2;
+        background: $white;
+      }
+
+      .benefits-list {
+        margin-bottom: 76px;
+
+        li {
+          margin-bottom: 48px;
+
+          svg {
+            width: 64px;
+            height: 64px;
+            margin-bottom: 0;
+          }
+        }
+      }
     }
   }
 }

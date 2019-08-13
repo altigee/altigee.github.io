@@ -12,21 +12,25 @@
 
     <!-- SLOGAN -->
     <div class="hr-numbered left">1</div>
-    <div class="slogan container pt-32 pb-32">
-      <h1>Daring <br /> enough</h1>
-      <h3>to craft venturous software</h3>
+    <div class="slogan container mt-32 mb-32">
+      <div class="row d-flex flex-column">
+        <h1 class="col-lg-10 offset-lg-1">Daring <br /> enough</h1>
+        <h3 class="col-lg-11">to craft venturous software</h3>
+      </div>
     </div>
 
     <div class="container d-lg-none">
-      <div class="hr-patt-img row justify-content-end pb-0">
+      <div class="hr-patt-img row justify-content-end pb-32">
         <img src="../images/patterns/patt_3.svg">
       </div>
     </div>
     <!-- WHO WE ARE (desktop) -->
-    <div class="section-under-bg container">
-      <div class="top-about-section container space-between pb-80">
-        <object data="../images/patterns/patt_3.svg" type="image/svg+xml" class="ml-auto mr-80">pattern</object>
-        <div class="about-text mr-24">
+    <div class="section-under-bg container pt-0 d-none d-lg-block pb-124 mt-48">
+      <div class="row d-flex justify-content-lg-between align-items-lg-end">
+        <div class="offset-lg-4 hr-patt-img white ta-right pb-0 col-lg-6 col-xl-7">
+          <img src="../images/patterns/patt_5-6.svg">
+        </div>
+        <div class="col-lg-6 about-text">
           Altigee is a software development company fueled by ridiculously competent software development pros who are
           crazy about their job and hungry for challenges.
         </div>
@@ -37,41 +41,48 @@
 
   <!-- WHO WE ARE (mobile) -->
   <div class="section-under-bg d-lg-none container">
-    <div class="about-section d-lg-none">
-      <div class="about-text mb-48">
+    <div class="row">
+      <div class="offset-4 col-20 about-text mb-48">
         Altigee is a software development company fueled by ridiculously competent software development pros who are
         crazy about their job and hungry for challenges.
       </div>
-      <div class="caption-1 red">111 ___ XX 16</div>
+    </div>
+    <div class="row">
+      <div class="col caption-1 red">111 ___ XX 16</div>
     </div>
   </div>
 
   <!-- WHAT WE OFFER -->
   <section class="page-section">
     <div class="hr-numbered right mt-32">2</div>
-    <h2 class="container">
-      <div class="outline">What</div> we offer
-    </h2>
+    <div class="container d-lg-flex justify-content-lg-between align-items-lg-end">
+      <h2>
+        <div class="outline">What</div> we offer
+      </h2>
+      <div class="hr-patt-img d-none d-lg-block">
+        <img src="../images/patterns/patt_6-6.svg">
+      </div>
+    </div>
 
     <!-- OFFER SERVICES -->
     <div class="offer-services crop-wrapper container pr-0">
-      <ul class="crop-content">
-        <li>
+      <ul class="crop-content d-flex">
+        <li class="offset-lg-1 col-4">
           <img src="../images/illustrations/web_and_mob_dev.svg" alt="" class="mb-24" />
           <div class="subtitle-1">Web <br /> and mobile app development</div>
           <div>That helps you bring your wildest software ideas to life</div>
         </li>
-        <li>
+        <li class="offset-2 col-4">
           <img src="../images/illustrations/poc.svg" alt="" class="mb-24" />
           <div class="subtitle-1">poc <br />development</div>
           <div>That lets you test your concept carefully yet effectively</div>
         </li>
-        <li>
+        <li class="offset-2 col-4">
           <img src="../images/illustrations/app_reingeneering.svg" alt="" class="mb-24" />
           <div class="subtitle-1">Application <br /> re-engineering </div>
           <div>That breathes new life into legacy systems</div>
         </li>
-        <li>
+        <li class="offset-2 col-4">
           <img src="../images/illustrations/cloud_migration.svg" alt="" class="mb-24" />
           <div class="subtitle-1">Cloud <br /> migration</div>
           <div>That makes your tech solutions actually scalable</div>
@@ -81,12 +92,12 @@
 
     <!-- OFFER TECHNOLOGIES -->
     <div class="offer-technologies container pr-0">
-      <div class="crop-wrapper">
+      <div class="crop-wrapper col offset-lg-1">
         <div class="crop-content">
-          <div class="offer-technologies-categories">
+          <div class="offer-technologies-categories d-lg-flex flex-lg-wrap justify-content-lg-between">
             <div class="offer-technologies-category">
               <div class="subtitle-2">Backend</div>
-              <ul>
+              <ul class="d-flex">
                 <li><img src="../images/technologies/golang.png" alt="" />GoLang </li>
                 <li><img src="../images/technologies/python.png" alt="" /> Python</li>
                 <li><img src="../images/technologies/java.png" alt="" /> Java</li>
@@ -104,7 +115,7 @@
 
             <div class="offer-technologies-category">
               <div class="subtitle-2">Mobile</div>
-              <ul>
+              <ul class="d-flex">
                 <li><img src="../images/technologies/flutter.png" alt="" /> Flutter</li>
                 <li><img src="../images/technologies/dart.png" alt="" /> Dart</li>
                 <li><img src="../images/technologies/android.png" alt="" /> Android</li>
@@ -114,7 +125,7 @@
 
             <div class="offer-technologies-category">
               <div class="subtitle-2">Frontend</div>
-              <ul>
+              <ul class="d-flex">
                 <li><img src="../images/technologies/js.png" alt="" /> JavaScript</li>
                 <li><img src="../images/technologies/react.png" alt="" /> React</li>
                 <li><img src="../images/technologies/vue.png" alt="" /> VueJS</li>
@@ -124,7 +135,7 @@
 
             <div class="offer-technologies-category">
               <div class="subtitle-2">Infrastructure</div>
-              <ul>
+              <ul class="d-flex">
                 <li><img src="../images/technologies/aws.png" alt="" /> <span>Amazon <br /> WebServices</li>
                 <li><img src="../images/technologies/jenkins.png" alt="" /> Jenkins</li>
                 <li><img src="../images/technologies/docker.png" alt="" /> Docker</li>
@@ -133,18 +144,26 @@
           </div>
         </div>
       </div>
+      <div class="hr-patt-img d-none d-lg-block col offset-lg-1 mt-124">
+        <img src="../images/patterns/patt_6-6.svg">
+      </div>
     </div>
   </section>
 
   <!-- HOW (types of partnership) -->
-  <section class="page-section pt-32 pb-32">
+  <section class="page-section how-section pt-32 pb-32">
     <div class="hr-numbered left">3</div>
-    <h2 class="container ta-right">
-      <div class="outline">How</div> we work
-    </h2>
-    <div class="how-section">
-      <ul class="container">
-        <li class="mb-48">
+    <div class="container d-lg-flex justify-content-lg-between align-items-lg-end">
+      <h2 class="offset-lg-3">
+        <div class="outline">How we </div>work
+      </h2>
+      <div class="hr-patt-img d-none d-lg-block">
+        <img src="../images/patterns/patt_6-6.svg">
+      </div>
+    </div>
+    <div>
+      <ul class="container how-work-list d-flex flex-wrap justify-content-between">
+        <li class="col-14 col-md-10 mb-32">
           <div class="valigned mb-16">
             <img src="../images/illustrations/build_product.svg" alt="build application" class="mr-16" />
             <div class="subtitle-1">build a product <br /> from scratch</div>
@@ -154,7 +173,7 @@
             help you get the best of it</div>
           <a href="/build-from-scratch.html" class="display-link">learn more</a>
         </li>
-        <li class="mb-48">
+        <li class="col-14 col-md-10 mb-32">
           <div class="valigned mb-16">
             <img src="../images/illustrations/extend_team.svg" alt="extend team" class="mr-16" />
             <div class="subtitle-1">extend your team</div>
@@ -167,30 +186,33 @@
       </ul>
     </div>
     <div class="container">
-      <div class="hr-patt-img row">
+      <div class="hr-patt-img d-lg-none">
         <img src="../images/patterns/patt_1.svg">
+      </div>
+      <div class="hr-patt-img d-none d-lg-block">
+        <img src="../images/patterns/patt_6-6.svg">
       </div>
     </div>
   </section>
 
   <!-- VALUES -->
-  <section class="page-section pt-0 pb-32">
+  <section class="page-section values-section pt-0 pb-32">
     <div class="hr-numbered right">4</div>
     <h2 class="container">
       <div class="outline">Our</div> values
     </h2>
-    <div class="values-section container pr-0 mb-48">
+    <div class="container pr-0 mb-48">
       <div class="crop-wrapper">
-        <ul class="crop-content">
-          <li>
+        <ul class="crop-content d-flex justify-content-lg-between">
+          <li class="offset-lg-6 col-5 col-xl-4">
             <div class="subtitle-1">will to win</div>
             <div>We’re ready to go beyond boundaries and take risk</div>
           </li>
-          <li>
+          <li class="col-5 col-xl-4">
             <div class="subtitle-1">partnership</div>
             <div>We always treat customers the way we’d like to be treated</div>
           </li>
-          <li>
+          <li class="col-5 col-xl-4">
             <div class="subtitle-1">ship it</div>
             <div>Commitment and responsibility are the pillars of our work</div>
           </li>
@@ -198,16 +220,23 @@
       </div>
     </div>
     <div class="container">
-      <div class="hr-patt-img row justify-content-end">
-        <img src="../images/patterns/patt_2.svg">
+      <div class="hr-patt-img row justify-content-end d-lg-none">
+        <img src="../images/patterns/patt_1.svg">
+      </div>
+      <div class="d-none row d-lg-flex">
+        <div class="hr-patt-img">
+          <img src="../images/patterns/patt_6-6.svg">
+        </div>
+        <div class="hr-patt-img offset-lg-12">
+          <img src="../images/patterns/patt_2-6.svg">
+        </div>
       </div>
     </div>
   </section>
 
   <!-- CONTACTS -->
-  <div class="hr-numbered left mb-24">5</div>
+  <div class="hr-numbered left mb-32">5</div>
   <partial src="./partials/_contacts.html" />
-
 
   <!-- FOOTER -->
   <partial src="./partials/_footer.html" />

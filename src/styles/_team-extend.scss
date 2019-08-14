@@ -5,9 +5,58 @@
     @include back-image($url: '../images/backgrounds/team-extend.jpg', $opacity: 0.3);
   }
 
-  .benefits-list {
-    li + li {
-      margin-top: 32px;
+  h1 {
+    text-align: left;
+  }
+
+  .what-you-get {
+    h2 {
+      text-align: right;
+    }
+
+    .benefits-list {
+      margin-bottom: 48px;
+
+      li {
+        margin-bottom: 32px;
+
+        svg {
+          margin-bottom: 16px;
+        }
+      }
+    }
+  }
+
+  & {
+    @include respond-to('lg') {
+      .page-section {
+        padding-top: 124px;
+        padding-bottom: 124px;
+      }
+
+      h2 {
+        padding-bottom: 80px;
+      }
+
+      .what-you-get {
+        h2 {
+          text-align: left;
+        }
+
+        .benefits-list {
+          margin-bottom: 76px;
+
+          li {
+            margin-bottom: 48px;
+
+            svg {
+              width: 64px;
+              height: 64px;
+              margin-bottom: 0;
+            }
+          }
+        }
+      }
     }
   }
 }

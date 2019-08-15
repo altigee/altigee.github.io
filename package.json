@@ -11,7 +11,9 @@
     "start": "npm run watch",
     "watch": "gulp watch",
     "build": "NODE_ENV=production gulp",
-    "deploy": "gh-pages -d dist -b dist"
+    "deploy": "gh-pages -d dist -b dist",
+    "version": "npm run build && npm run deploy",
+    "postversion": "git push && git push --tags"
   },
   "devDependencies": {
     "browser-sync": "2.26.3",

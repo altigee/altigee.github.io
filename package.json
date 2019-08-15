@@ -1,6 +1,6 @@
 {
   "name": "altigee.github.io",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "Altigee website",
   "main": "index.html",
   "repository": "git@github.com:altigee/altigee.github.io.git",
@@ -11,7 +11,9 @@
     "start": "npm run watch",
     "watch": "gulp watch",
     "build": "NODE_ENV=production gulp",
-    "deploy": "gh-pages -d dist -b dist"
+    "deploy": "gh-pages -d dist -b master",
+    "version": "npm run build && npm run deploy",
+    "postversion": "git push && git push --tags"
   },
   "devDependencies": {
     "browser-sync": "2.26.3",

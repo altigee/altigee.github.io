@@ -8,13 +8,18 @@
   }
 
   .team-bg {
-    @include back-image('../images/backgrounds/team.jpg');
-    z-index: -1;
-    opacity: 0.25;
+    @include back-image('../images/backgrounds/team.jpg', $opacity: 0.25);
 
     @include respond-to('lg') {
-      @include back-image('../images/backgrounds/team-desktop.jpg');
-      opacity: 0.25;
+      @include back-image('../images/backgrounds/team-desktop.jpg', $opacity: 0.25);
+    }
+  }
+
+  .section-under-bg {
+    margin-top: 48px;
+
+    @include respond-to('xl') {
+      margin-top: 76px;
     }
   }
 

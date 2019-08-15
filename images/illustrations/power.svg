@@ -1,10 +1,1 @@
-<svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M33 37V42H17V38C17 38 14.2267 35.3333 13 34V21V15L16 11L19 13L22 10L25 13L28 10L31 13L33 11L36 13V34L33 37Z" stroke="#FF0033" stroke-width="2"/>
-<path d="M13 30.2894V25.326L24 23.2106V28.174L13 30.2894Z" stroke="#FF0033" stroke-width="2"/>
-<path d="M31 13V24H35.5013" stroke="#FF0033" stroke-width="2"/>
-<path d="M25 12.5V26H31" stroke="#FF0033" stroke-width="2"/>
-<path d="M19 12.5V25" stroke="#FF0033" stroke-width="2"/>
-<path d="M16 42L34 42" stroke="white" stroke-width="2"/>
-<path d="M4 9L7 12L5 14L8 17" stroke="white" stroke-width="2"/>
-<path d="M45 9L42 12L44 14L41 17" stroke="white" stroke-width="2"/>
-</svg>
+<svg width="48" height="48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M33 37v5H17v-4s-2.773-2.667-4-4V15l3-4 3 2 3-3 3 3 3-3 3 3 2-2 3 2v21l-3 3z" stroke="#F03" stroke-width="2"/><path d="M13 30.29v-4.964l11-2.115v4.963l-11 2.115zM31 13v11h4.501M25 12.5V26h6M19 12.5V25" stroke="#F03" stroke-width="2"/><path d="M16 42h18M4 9l3 3-2 2 3 3m37-8l-3 3 2 2-3 3" stroke="#fff" stroke-width="2"/></svg>

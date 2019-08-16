@@ -29,7 +29,7 @@
       }
 
       .team {
-        margin-left: 15%;
+        margin-left: 10.5%;
       }
     }
 
@@ -54,9 +54,9 @@
 
       & {
         @include respond-to('lg') {
-          max-width: 990px;
+          max-width: 995px;
 
-          grid-gap: 24px;
+          grid-gap: 17px;
         }
       }
 
@@ -64,6 +64,10 @@
         height: 84px;
         background-repeat: no-repeat;
         background-size: contain;
+      }
+
+      .dkondratovych {
+        background-image: url('../images/team/small/dkondratovych.jpg');
       }
 
       .okyriienko {

@@ -2,7 +2,11 @@
 
 .page-build-from-scratch {
   .project-bg {
-    @include back-image($url: '../images/backgrounds/project-based.jpg');
+    @include back-image($url: '../images/backgrounds/project-based.jpg', $opacity: 0.7);
+
+    @include respond-to('lg') {
+      @include back-image($url: '../images/backgrounds/project-based-desktop.jpg', $opacity: 0.7);
+    }
   }
 
   .page-section .get {

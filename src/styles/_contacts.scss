@@ -25,6 +25,7 @@
     @include valigned;
 
     svg {
+      min-width: 32px;
       margin-right: 20px;
 
       stroke: $red;

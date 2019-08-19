@@ -1,5 +1,5 @@
 /*!
- * altigee.github.io v2.1.1
+ * altigee.github.io v2.1.2
  * Altigee website
  * (c) 2019 
  * MIT License

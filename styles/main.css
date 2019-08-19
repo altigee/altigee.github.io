@@ -1,5 +1,5 @@
 /*!
- * altigee.github.io v2.1.0
+ * altigee.github.io v2.1.1
  * Altigee website
  * (c) 2019 
  * MIT License
@@ -53774,17 +53774,18 @@ a:hover, a:focus {
 
 /* line 27, src/styles/_contacts.scss */
 .contacts-section li svg {
+  min-width: 32px;
   margin-right: 20px;
   stroke: #ff0033;
 }
 
-/* line 34, src/styles/_contacts.scss */
+/* line 35, src/styles/_contacts.scss */
 .contacts-section li + li {
   margin-top: 32px;
 }
 
 @media (min-width: 992px) {
-  /* line 38, src/styles/_contacts.scss */
+  /* line 39, src/styles/_contacts.scss */
   .contacts-section .caption-1 {
     font-family: Orbitron;
     font-size: 14px;
@@ -81356,7 +81357,7 @@ a:hover, a:focus {
   }
   /* line 31, src/styles/_case-page.scss */
   .case-page .section-under-bg .team {
-    margin-left: 15%;
+    margin-left: 10.5%;
   }
 }
 
@@ -81386,8 +81387,8 @@ a:hover, a:focus {
 @media (min-width: 992px) {
   /* line 55, src/styles/_case-page.scss */
   .case-page .section-under-bg .team {
-    max-width: 990px;
-    grid-gap: 24px;
+    max-width: 995px;
+    grid-gap: 17px;
   }
 }
 
@@ -81399,63 +81400,68 @@ a:hover, a:focus {
 }
 
 /* line 69, src/styles/_case-page.scss */
+.case-page .section-under-bg .team .dkondratovych {
+  background-image: url("../images/team/small/dkondratovych.jpg");
+}
+
+/* line 73, src/styles/_case-page.scss */
 .case-page .section-under-bg .team .okyriienko {
   background-image: url("../images/team/small/okyriienko.jpg");
 }
 
-/* line 73, src/styles/_case-page.scss */
+/* line 77, src/styles/_case-page.scss */
 .case-page .section-under-bg .team .nmarchuk {
   background-image: url("../images/team/small/nmarchuk.jpg");
 }
 
-/* line 77, src/styles/_case-page.scss */
+/* line 81, src/styles/_case-page.scss */
 .case-page .section-under-bg .team .mtitov {
   background-image: url("../images/team/small/mtitov.jpg");
 }
 
-/* line 81, src/styles/_case-page.scss */
+/* line 85, src/styles/_case-page.scss */
 .case-page .section-under-bg .team .mpetrushenko {
   background-image: url("../images/team/small/mpetrushenko.jpg");
 }
 
-/* line 85, src/styles/_case-page.scss */
+/* line 89, src/styles/_case-page.scss */
 .case-page .section-under-bg .team .vsokol {
   background-image: url("../images/team/small/vsokol.jpg");
 }
 
-/* line 89, src/styles/_case-page.scss */
+/* line 93, src/styles/_case-page.scss */
 .case-page .section-under-bg .team .mholyk {
   background-image: url("../images/team/small/mholyk.jpg");
 }
 
-/* line 93, src/styles/_case-page.scss */
+/* line 97, src/styles/_case-page.scss */
 .case-page .section-under-bg .team .tkharuk {
   background-image: url("../images/team/small/tkharuk.jpg");
 }
 
-/* line 97, src/styles/_case-page.scss */
+/* line 101, src/styles/_case-page.scss */
 .case-page .section-under-bg .team .nsokil {
   background-image: url("../images/team/small/nsokil.jpg");
 }
 
-/* line 101, src/styles/_case-page.scss */
+/* line 105, src/styles/_case-page.scss */
 .case-page .section-under-bg .team .vtomkiv {
   background-image: url("../images/team/small/vtomkiv.jpg");
 }
 
-/* line 108, src/styles/_case-page.scss */
+/* line 112, src/styles/_case-page.scss */
 .case-page .margin-16 {
   margin-top: 16px;
   margin-bottom: 16px;
 }
 
 @media (min-width: 992px) {
-  /* line 115, src/styles/_case-page.scss */
+  /* line 119, src/styles/_case-page.scss */
   .case-page .how-it-was-lg .caption {
     margin-bottom: 32px;
     text-align: right;
   }
-  /* line 119, src/styles/_case-page.scss */
+  /* line 123, src/styles/_case-page.scss */
   .case-page .how-it-was-lg .caption h2, .case-page .how-it-was-lg .caption .main-navigation-mobile .menu-list li a, .main-navigation-mobile .menu-list li .case-page .how-it-was-lg .caption a {
     font-family: Montserrat;
     font-size: 56px;
@@ -81463,22 +81469,22 @@ a:hover, a:focus {
     line-height: 1;
     letter-spacing: 8.4px;
   }
-  /* line 122, src/styles/_case-page.scss */
+  /* line 126, src/styles/_case-page.scss */
   .case-page .how-it-was-lg .caption h2 span, .case-page .how-it-was-lg .caption .main-navigation-mobile .menu-list li a span, .main-navigation-mobile .menu-list li .case-page .how-it-was-lg .caption a span {
     display: block;
   }
-  /* line 128, src/styles/_case-page.scss */
+  /* line 132, src/styles/_case-page.scss */
   .case-page .how-it-was-lg .margin-16 {
     margin-top: 0;
     margin-bottom: 0;
   }
-  /* line 133, src/styles/_case-page.scss */
+  /* line 137, src/styles/_case-page.scss */
   .case-page .how-it-was-lg .ul-red-square {
     padding-left: 80px;
   }
 }
 
-/* line 138, src/styles/_case-page.scss */
+/* line 142, src/styles/_case-page.scss */
 .case-page .how-it-was-lg .img {
   width: 100%;
   max-width: 320px;
@@ -81486,23 +81492,23 @@ a:hover, a:focus {
   padding: 0;
 }
 
-/* line 147, src/styles/_case-page.scss */
+/* line 151, src/styles/_case-page.scss */
 .case-page .we-built {
   padding-top: 64px;
 }
 
 @media (min-width: 992px) {
-  /* line 147, src/styles/_case-page.scss */
+  /* line 151, src/styles/_case-page.scss */
   .case-page .we-built {
     padding-top: 124px;
   }
-  /* line 153, src/styles/_case-page.scss */
+  /* line 157, src/styles/_case-page.scss */
   .case-page .we-built .pt-400 {
     padding-top: 400px;
   }
 }
 
-/* line 158, src/styles/_case-page.scss */
+/* line 162, src/styles/_case-page.scss */
 .case-page .we-built-bg {
   z-index: -1;
   height: 236px;
@@ -81513,7 +81519,7 @@ a:hover, a:focus {
 }
 
 @media (min-width: 992px) {
-  /* line 158, src/styles/_case-page.scss */
+  /* line 162, src/styles/_case-page.scss */
   .case-page .we-built-bg {
     height: 300px;
     background-image: url("../images/backgrounds/we-built-desktop.jpg");
@@ -81522,14 +81528,14 @@ a:hover, a:focus {
   }
 }
 
-/* line 174, src/styles/_case-page.scss */
+/* line 178, src/styles/_case-page.scss */
 .case-page .we-built .we-built-caption {
   min-width: 240px;
   margin-top: 132px;
 }
 
 @media (min-width: 992px) {
-  /* line 174, src/styles/_case-page.scss */
+  /* line 178, src/styles/_case-page.scss */
   .case-page .we-built .we-built-caption {
     font-family: Montserrat;
     font-size: 56px;
@@ -81540,12 +81546,12 @@ a:hover, a:focus {
   }
 }
 
-/* line 184, src/styles/_case-page.scss */
+/* line 188, src/styles/_case-page.scss */
 .case-page .we-built .we-built-img-desktop {
   position: relative;
 }
 
-/* line 187, src/styles/_case-page.scss */
+/* line 191, src/styles/_case-page.scss */
 .case-page .we-built .we-built-img-desktop .img1 {
   position: absolute;
   top: 130px;
@@ -81553,14 +81559,14 @@ a:hover, a:focus {
   z-index: 1;
 }
 
-/* line 194, src/styles/_case-page.scss */
+/* line 198, src/styles/_case-page.scss */
 .case-page .we-built .we-built-img-desktop .img2 {
   position: absolute;
   top: -30px;
   left: 0;
 }
 
-/* line 200, src/styles/_case-page.scss */
+/* line 204, src/styles/_case-page.scss */
 .case-page .we-built .we-built-img-desktop .img3 {
   position: absolute;
   top: 220px;
@@ -81568,7 +81574,7 @@ a:hover, a:focus {
   z-index: 2;
 }
 
-/* line 208, src/styles/_case-page.scss */
+/* line 212, src/styles/_case-page.scss */
 .case-page .we-built .we-built-img {
   position: relative;
   max-width: 480px;
@@ -81577,14 +81583,14 @@ a:hover, a:focus {
   text-align: right;
 }
 
-/* line 215, src/styles/_case-page.scss */
+/* line 219, src/styles/_case-page.scss */
 .case-page .we-built .we-built-img .img1 {
   position: absolute;
   top: 20px;
   right: 0;
 }
 
-/* line 221, src/styles/_case-page.scss */
+/* line 225, src/styles/_case-page.scss */
 .case-page .we-built .we-built-img .img2 {
   position: absolute;
   top: 270px;
@@ -81592,14 +81598,14 @@ a:hover, a:focus {
   z-index: -1;
 }
 
-/* line 228, src/styles/_case-page.scss */
+/* line 232, src/styles/_case-page.scss */
 .case-page .we-built .we-built-img .img3 {
   position: absolute;
   top: 250px;
   right: 0;
 }
 
-/* line 238, src/styles/_case-page.scss */
+/* line 242, src/styles/_case-page.scss */
 .case-page .bi .bi-col-1 {
   font-family: Montserrat;
   font-size: 24px;
@@ -81611,7 +81617,7 @@ a:hover, a:focus {
 }
 
 @media (min-width: 992px) {
-  /* line 238, src/styles/_case-page.scss */
+  /* line 242, src/styles/_case-page.scss */
   .case-page .bi .bi-col-1 {
     font-family: Montserrat;
     font-size: 32px;
@@ -81624,7 +81630,7 @@ a:hover, a:focus {
 }
 
 @media (min-width: 992px) {
-  /* line 255, src/styles/_case-page.scss */
+  /* line 259, src/styles/_case-page.scss */
   .case-page .value .value-caption {
     font-family: Montserrat;
     font-size: 56px;
@@ -81635,40 +81641,40 @@ a:hover, a:focus {
   }
 }
 
-/* line 261, src/styles/_case-page.scss */
+/* line 265, src/styles/_case-page.scss */
 .case-page .value .subtitle-1 {
   min-width: 45px;
 }
 
-/* line 268, src/styles/_case-page.scss */
+/* line 272, src/styles/_case-page.scss */
 .case-page .feedback-wrapper .crop-wrapper {
   max-width: 992px;
   margin: 0 auto;
 }
 
-/* line 272, src/styles/_case-page.scss */
+/* line 276, src/styles/_case-page.scss */
 .case-page .feedback-wrapper .crop-wrapper .feedback-item {
   min-width: 235px;
 }
 
-/* line 275, src/styles/_case-page.scss */
+/* line 279, src/styles/_case-page.scss */
 .case-page .feedback-wrapper .crop-wrapper .feedback-item-name {
   max-width: 184px;
   margin: 16px 0;
 }
 
-/* line 282, src/styles/_case-page.scss */
+/* line 286, src/styles/_case-page.scss */
 .case-page .feedback-wrapper .summary {
   max-width: 320px;
   border-top: 1px solid #ff0033;
 }
 
 @media (min-width: 992px) {
-  /* line 289, src/styles/_case-page.scss */
+  /* line 293, src/styles/_case-page.scss */
   .case-page .feedback-wrapper .feedback-caption {
     margin-bottom: 32px;
   }
-  /* line 292, src/styles/_case-page.scss */
+  /* line 296, src/styles/_case-page.scss */
   .case-page .feedback-wrapper .feedback-caption span {
     font-family: Montserrat;
     font-size: 56px;
@@ -81676,15 +81682,15 @@ a:hover, a:focus {
     line-height: 1;
     letter-spacing: 8.4px;
   }
-  /* line 297, src/styles/_case-page.scss */
+  /* line 301, src/styles/_case-page.scss */
   .case-page .feedback-wrapper .crop-wrapper {
     max-width: 1140px;
   }
-  /* line 300, src/styles/_case-page.scss */
+  /* line 304, src/styles/_case-page.scss */
   .case-page .feedback-wrapper .crop-wrapper .feedback-item {
     min-width: 465px;
   }
-  /* line 303, src/styles/_case-page.scss */
+  /* line 307, src/styles/_case-page.scss */
   .case-page .feedback-wrapper .crop-wrapper .feedback-item-name div:first-child {
     display: block;
     color: #ffffff;
@@ -95367,14 +95373,7 @@ a:hover, a:focus {
   margin-bottom: 32px;
 }
 
-@media (min-width: 992px) {
-  /* line 5, src/styles/_about-page.scss */
-  .page-about .top-section {
-    margin-bottom: 80px;
-  }
-}
-
-/* line 13, src/styles/_about-page.scss */
+/* line 9, src/styles/_about-page.scss */
 .page-about .top-section .about-bg {
   top: 0;
   right: 0;
@@ -95382,7 +95381,7 @@ a:hover, a:focus {
   left: 0;
   position: absolute;
   z-index: -1;
-  opacity: 1;
+  opacity: 0.9;
   background-image: url("../images/backgrounds/about.jpg");
   background-repeat: no-repeat;
   background-position: 50% 50%;
@@ -95392,7 +95391,30 @@ a:hover, a:focus {
 }
 
 @media (min-width: 992px) {
-  /* line 18, src/styles/_about-page.scss */
+  /* line 13, src/styles/_about-page.scss */
+  .page-about .top-section {
+    margin-bottom: 80px;
+  }
+  /* line 17, src/styles/_about-page.scss */
+  .page-about .top-section .about-bg {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    z-index: -1;
+    opacity: 0.9;
+    background-image: url("../images/backgrounds/about-desktop.jpg");
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: cover;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+}
+
+@media (min-width: 992px) {
+  /* line 24, src/styles/_about-page.scss */
   .page-about .business {
     font-family: Montserrat;
     font-size: 56px;
@@ -95400,19 +95422,19 @@ a:hover, a:focus {
     line-height: 1;
     letter-spacing: 8.4px;
   }
-  /* line 22, src/styles/_about-page.scss */
+  /* line 28, src/styles/_about-page.scss */
   .page-about .business .outline {
     text-align: right;
   }
 }
 
-/* line 29, src/styles/_about-page.scss */
+/* line 35, src/styles/_about-page.scss */
 .page-about .map-section {
   position: relative;
-  min-width: 360px;
+  min-width: 320px;
 }
 
-/* line 33, src/styles/_about-page.scss */
+/* line 39, src/styles/_about-page.scss */
 .page-about .map-section .location-spots {
   position: relative;
   top: 10px;
@@ -95420,24 +95442,31 @@ a:hover, a:focus {
   text-align: center;
 }
 
-/* line 39, src/styles/_about-page.scss */
+/* line 45, src/styles/_about-page.scss */
 .page-about .map-section .location-spots .map-bg {
   width: 100%;
 }
 
-/* line 43, src/styles/_about-page.scss */
+@media (min-width: 1200px) {
+  /* line 45, src/styles/_about-page.scss */
+  .page-about .map-section .location-spots .map-bg {
+    height: 730px;
+  }
+}
+
+/* line 53, src/styles/_about-page.scss */
 .page-about .map-section .location-spots .map-bg-mob {
   height: 200px;
 }
 
 @media (min-width: 576px) and (max-width: 991px) {
-  /* line 43, src/styles/_about-page.scss */
+  /* line 53, src/styles/_about-page.scss */
   .page-about .map-section .location-spots .map-bg-mob {
     height: 350px;
   }
 }
 
-/* line 52, src/styles/_about-page.scss */
+/* line 62, src/styles/_about-page.scss */
 .page-about .map-section .location-spot {
   position: absolute;
   width: 5px;
@@ -95447,53 +95476,53 @@ a:hover, a:focus {
   background: #ffffff;
 }
 
-/* line 60, src/styles/_about-page.scss */
+/* line 70, src/styles/_about-page.scss */
 .page-about .map-section .location-spot.location-ca {
-  top: 33%;
-  left: 4%;
+  top: 30%;
+  left: 3%;
 }
 
-/* line 65, src/styles/_about-page.scss */
+/* line 75, src/styles/_about-page.scss */
 .page-about .map-section .location-spot.location-ny {
   top: 25%;
-  left: 22%;
+  left: 21%;
 }
 
-/* line 70, src/styles/_about-page.scss */
+/* line 80, src/styles/_about-page.scss */
 .page-about .map-section .location-spot.location-ua {
   top: 19%;
   left: 53%;
 }
 
 @media (min-width: 992px) {
-  /* line 70, src/styles/_about-page.scss */
+  /* line 80, src/styles/_about-page.scss */
   .page-about .map-section .location-spot.location-ua {
     top: 24%;
   }
 }
 
 @media (min-width: 1200px) {
-  /* line 70, src/styles/_about-page.scss */
+  /* line 80, src/styles/_about-page.scss */
   .page-about .map-section .location-spot.location-ua {
     top: 26%;
   }
 }
 
 @media (min-width: 1600px) and (max-width: 9999px) {
-  /* line 70, src/styles/_about-page.scss */
+  /* line 80, src/styles/_about-page.scss */
   .page-about .map-section .location-spot.location-ua {
     top: 24%;
     left: 53%;
   }
 }
 
-/* line 86, src/styles/_about-page.scss */
+/* line 96, src/styles/_about-page.scss */
 .page-about .map-section .location-spot.location-bk {
-  top: 49%;
+  top: 47%;
   left: 81%;
 }
 
-/* line 91, src/styles/_about-page.scss */
+/* line 101, src/styles/_about-page.scss */
 .page-about .map-section .location-spot.active {
   width: 11px;
   height: 11px;
@@ -95501,7 +95530,7 @@ a:hover, a:focus {
   background: #ff0033;
 }
 
-/* line 97, src/styles/_about-page.scss */
+/* line 107, src/styles/_about-page.scss */
 .page-about .map-section .location-spot.active:after {
   content: '';
   position: absolute;
@@ -95512,7 +95541,7 @@ a:hover, a:focus {
   background: #ff0033;
 }
 
-/* line 109, src/styles/_about-page.scss */
+/* line 119, src/styles/_about-page.scss */
 .page-about .map-section .location-descriptions {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -95528,7 +95557,7 @@ a:hover, a:focus {
   max-width: 100%;
 }
 
-/* line 116, src/styles/_about-page.scss */
+/* line 126, src/styles/_about-page.scss */
 .page-about .map-section .location-description.active {
   max-width: 300px;
   margin: 0 auto;
@@ -95537,18 +95566,18 @@ a:hover, a:focus {
 }
 
 @media (min-width: 992px) {
-  /* line 125, src/styles/_about-page.scss */
+  /* line 135, src/styles/_about-page.scss */
   .page-about .map-section .location-spots {
     margin-top: -124px;
   }
-  /* line 129, src/styles/_about-page.scss */
+  /* line 139, src/styles/_about-page.scss */
   .page-about .map-section .location-description.active {
     margin-top: -325px;
   }
 }
 
 @media (min-width: 1200px) {
-  /* line 134, src/styles/_about-page.scss */
+  /* line 144, src/styles/_about-page.scss */
   .page-about .map-section .location-description.active {
     margin-top: -425px;
     margin-bottom: 130px;
@@ -95556,30 +95585,30 @@ a:hover, a:focus {
 }
 
 @media (min-width: 576px) and (max-width: 991px) {
-  /* line 140, src/styles/_about-page.scss */
+  /* line 150, src/styles/_about-page.scss */
   .page-about .map-section .location-description.active {
     margin-top: -169px;
   }
 }
 
 @media (min-width: 1600px) and (max-width: 9999px) {
-  /* line 145, src/styles/_about-page.scss */
+  /* line 155, src/styles/_about-page.scss */
   .page-about .map-section .location-description.active {
     margin-top: -440px;
   }
 }
 
-/* line 153, src/styles/_about-page.scss */
+/* line 163, src/styles/_about-page.scss */
 .page-about .development-center-section {
   position: relative;
 }
 
-/* line 156, src/styles/_about-page.scss */
+/* line 166, src/styles/_about-page.scss */
 .page-about .development-center-section .top-section {
   position: relative;
 }
 
-/* line 160, src/styles/_about-page.scss */
+/* line 170, src/styles/_about-page.scss */
 .page-about .development-center-section .lviv-bg {
   top: 0;
   right: 0;
@@ -95588,7 +95617,7 @@ a:hover, a:focus {
   position: absolute;
   z-index: -1;
   opacity: 1;
-  background-image: url("../images/backgrounds/lviv.jpg");
+  background-image: url("../images/backgrounds/lviv.png");
   background-repeat: no-repeat;
   background-position: 50% 50%;
   background-size: cover;
@@ -95596,19 +95625,38 @@ a:hover, a:focus {
      object-fit: cover;
 }
 
-/* line 164, src/styles/_about-page.scss */
+@media (min-width: 992px) {
+  /* line 170, src/styles/_about-page.scss */
+  .page-about .development-center-section .lviv-bg {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    z-index: -1;
+    opacity: 1;
+    background-image: url("../images/backgrounds/lviv-desktop.jpg");
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: cover;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+}
+
+/* line 178, src/styles/_about-page.scss */
 .page-about .development-center-section .pitch-facts {
   margin-top: 16px;
 }
 
 @media (min-width: 992px) {
-  /* line 164, src/styles/_about-page.scss */
+  /* line 178, src/styles/_about-page.scss */
   .page-about .development-center-section .pitch-facts {
     margin-top: 76px;
   }
 }
 
-/* line 171, src/styles/_about-page.scss */
+/* line 185, src/styles/_about-page.scss */
 .page-about .development-center-section .pitch-facts div {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -95619,39 +95667,45 @@ a:hover, a:focus {
 }
 
 @media (min-width: 992px) {
-  /* line 180, src/styles/_about-page.scss */
+  /* line 194, src/styles/_about-page.scss */
   .page-about .team-section h2.ta-right, .page-about .team-section .main-navigation-mobile .menu-list li a.ta-right, .main-navigation-mobile .menu-list li .page-about .team-section a.ta-right {
     text-align: left;
   }
 }
 
-/* line 186, src/styles/_about-page.scss */
+/* line 200, src/styles/_about-page.scss */
 .page-about .team-section table.contacts td:first-child {
   padding-right: 20px;
   color: #ff0033;
 }
 
-/* line 192, src/styles/_about-page.scss */
+/* line 206, src/styles/_about-page.scss */
 .page-about .team-section .team-member {
   margin-bottom: 48px;
 }
 
-@media (min-width: 992px) {
-  /* line 192, src/styles/_about-page.scss */
-  .page-about .team-section .team-member {
-    display: -webkit-inline-box;
-    display: -ms-inline-flexbox;
-    display: inline-flex;
-  }
+/* line 209, src/styles/_about-page.scss */
+.page-about .team-section .team-member .member-info {
+  margin-top: 16px;
 }
 
-/* line 199, src/styles/_about-page.scss */
+/* line 213, src/styles/_about-page.scss */
 .page-about .team-section .team-member img {
   width: 132px;
 }
 
 @media (min-width: 992px) {
-  /* line 199, src/styles/_about-page.scss */
+  /* line 217, src/styles/_about-page.scss */
+  .page-about .team-section .team-member {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+  }
+  /* line 221, src/styles/_about-page.scss */
+  .page-about .team-section .team-member .member-info {
+    margin-top: 0;
+  }
+  /* line 225, src/styles/_about-page.scss */
   .page-about .team-section .team-member img {
     width: 176px;
     height: 176px;
@@ -109337,7 +109391,7 @@ a:hover, a:focus {
   left: 0;
   position: absolute;
   z-index: -1;
-  opacity: 1;
+  opacity: 0.7;
   background-image: url("../images/backgrounds/project-based.jpg");
   background-repeat: no-repeat;
   background-position: 50% 50%;
@@ -109346,55 +109400,91 @@ a:hover, a:focus {
      object-fit: cover;
 }
 
-/* line 8, src/styles/_build-from-scratch.scss */
+@media (min-width: 992px) {
+  /* line 4, src/styles/_build-from-scratch.scss */
+  .page-build-from-scratch .project-bg {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    z-index: -1;
+    opacity: 0.7;
+    background-image: url("../images/backgrounds/project-based-desktop.jpg");
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: cover;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 359px) {
+  /* line 12, src/styles/_build-from-scratch.scss */
+  .page-build-from-scratch .project-based {
+    padding: 0;
+  }
+  /* line 16, src/styles/_build-from-scratch.scss */
+  .page-build-from-scratch .project-based .row {
+    margin: 0;
+    padding: 0;
+  }
+  /* line 21, src/styles/_build-from-scratch.scss */
+  .page-build-from-scratch .project-based .col-lg-17 {
+    margin: 0;
+    padding: 4px;
+  }
+}
+
+/* line 28, src/styles/_build-from-scratch.scss */
 .page-build-from-scratch .page-section .get {
   text-align: right;
 }
 
-/* line 12, src/styles/_build-from-scratch.scss */
+/* line 32, src/styles/_build-from-scratch.scss */
 .page-build-from-scratch .benefits-list {
   margin-bottom: 48px;
 }
 
-/* line 15, src/styles/_build-from-scratch.scss */
+/* line 35, src/styles/_build-from-scratch.scss */
 .page-build-from-scratch .benefits-list li {
   margin-bottom: 32px;
 }
 
-/* line 18, src/styles/_build-from-scratch.scss */
+/* line 38, src/styles/_build-from-scratch.scss */
 .page-build-from-scratch .benefits-list li svg {
   margin-bottom: 16px;
 }
 
 @media (min-width: 992px) {
-  /* line 27, src/styles/_build-from-scratch.scss */
+  /* line 47, src/styles/_build-from-scratch.scss */
   .page-build-from-scratch .page-section.white-bg {
     padding-top: 124px;
     color: #ffffff;
     background: #030322;
   }
-  /* line 33, src/styles/_build-from-scratch.scss */
+  /* line 53, src/styles/_build-from-scratch.scss */
   .page-build-from-scratch .page-section h2, .page-build-from-scratch .page-section .main-navigation-mobile .menu-list li a, .main-navigation-mobile .menu-list li .page-build-from-scratch .page-section a {
     padding-bottom: 80px;
   }
-  /* line 37, src/styles/_build-from-scratch.scss */
+  /* line 57, src/styles/_build-from-scratch.scss */
   .page-build-from-scratch .page-section .get {
     text-align: left;
   }
-  /* line 42, src/styles/_build-from-scratch.scss */
+  /* line 62, src/styles/_build-from-scratch.scss */
   .page-build-from-scratch .phases-list .phase-line:after {
     opacity: 0.2;
     background: #ffffff;
   }
-  /* line 47, src/styles/_build-from-scratch.scss */
+  /* line 67, src/styles/_build-from-scratch.scss */
   .page-build-from-scratch .benefits-list {
     margin-bottom: 76px;
   }
-  /* line 50, src/styles/_build-from-scratch.scss */
+  /* line 70, src/styles/_build-from-scratch.scss */
   .page-build-from-scratch .benefits-list li {
     margin-bottom: 48px;
   }
-  /* line 53, src/styles/_build-from-scratch.scss */
+  /* line 73, src/styles/_build-from-scratch.scss */
   .page-build-from-scratch .benefits-list li svg {
     width: 64px;
     height: 64px;
@@ -123080,7 +123170,7 @@ a:hover, a:focus {
   left: 0;
   position: absolute;
   z-index: -1;
-  opacity: 0.3;
+  opacity: 0.9;
   background-image: url("../images/backgrounds/team-extend.jpg");
   background-repeat: no-repeat;
   background-position: 50% 50%;
@@ -123089,54 +123179,73 @@ a:hover, a:focus {
      object-fit: cover;
 }
 
-/* line 8, src/styles/_team-extend.scss */
+@media (min-width: 992px) {
+  /* line 4, src/styles/_team-extend.scss */
+  .page-team-extend .extend-bg {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    z-index: -1;
+    opacity: 0.9;
+    background-image: url("../images/backgrounds/team-extend-desktop.jpg");
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: cover;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+}
+
+/* line 12, src/styles/_team-extend.scss */
 .page-team-extend h1 {
   text-align: left;
 }
 
-/* line 13, src/styles/_team-extend.scss */
+/* line 17, src/styles/_team-extend.scss */
 .page-team-extend .what-you-get h2, .page-team-extend .what-you-get .main-navigation-mobile .menu-list li a, .main-navigation-mobile .menu-list li .page-team-extend .what-you-get a {
   text-align: right;
 }
 
-/* line 17, src/styles/_team-extend.scss */
+/* line 21, src/styles/_team-extend.scss */
 .page-team-extend .what-you-get .benefits-list {
   margin-bottom: 48px;
 }
 
-/* line 20, src/styles/_team-extend.scss */
+/* line 24, src/styles/_team-extend.scss */
 .page-team-extend .what-you-get .benefits-list li {
   margin-bottom: 32px;
 }
 
-/* line 23, src/styles/_team-extend.scss */
+/* line 27, src/styles/_team-extend.scss */
 .page-team-extend .what-you-get .benefits-list li svg {
   margin-bottom: 16px;
 }
 
 @media (min-width: 992px) {
-  /* line 32, src/styles/_team-extend.scss */
+  /* line 36, src/styles/_team-extend.scss */
   .page-team-extend .page-section {
     padding-top: 124px;
     padding-bottom: 124px;
   }
-  /* line 37, src/styles/_team-extend.scss */
+  /* line 41, src/styles/_team-extend.scss */
   .page-team-extend h2, .page-team-extend .main-navigation-mobile .menu-list li a, .main-navigation-mobile .menu-list li .page-team-extend a {
     padding-bottom: 80px;
   }
-  /* line 42, src/styles/_team-extend.scss */
+  /* line 46, src/styles/_team-extend.scss */
   .page-team-extend .what-you-get h2, .page-team-extend .what-you-get .main-navigation-mobile .menu-list li a, .main-navigation-mobile .menu-list li .page-team-extend .what-you-get a {
     text-align: left;
   }
-  /* line 46, src/styles/_team-extend.scss */
+  /* line 50, src/styles/_team-extend.scss */
   .page-team-extend .what-you-get .benefits-list {
     margin-bottom: 76px;
   }
-  /* line 49, src/styles/_team-extend.scss */
+  /* line 53, src/styles/_team-extend.scss */
   .page-team-extend .what-you-get .benefits-list li {
     margin-bottom: 48px;
   }
-  /* line 52, src/styles/_team-extend.scss */
+  /* line 56, src/styles/_team-extend.scss */
   .page-team-extend .what-you-get .benefits-list li svg {
     width: 64px;
     height: 64px;

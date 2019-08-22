@@ -168,7 +168,7 @@
     }
 
     .lviv-bg {
-      @include back-image('../images/backgrounds/lviv.png');
+      @include back-image('../images/backgrounds/lviv.jpg');
 
       @include respond-to('lg') {
         @include back-image('../images/backgrounds/lviv-desktop.jpg');

@@ -90,7 +90,11 @@ a {
 
   &:hover,
   &:focus {
-    color: darken($white, 20);
+    color: $red;
+  }
+
+  &:active {
+    color: darken($red, 20);
   }
 }
 

@@ -1,5 +1,5 @@
 /*!
- * altigee.github.io v2.1.4
+ * altigee.github.io v2.1.5
  * Altigee website
  * (c) 2019 
  * MIT License
@@ -95652,7 +95652,7 @@ a:active {
   position: absolute;
   z-index: -1;
   opacity: 1;
-  background-image: url("../images/backgrounds/lviv.png");
+  background-image: url("../images/backgrounds/lviv.jpg");
   background-repeat: no-repeat;
   background-position: 50% 50%;
   background-size: cover;

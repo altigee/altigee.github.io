@@ -107,6 +107,8 @@
       text-align: left;
 
       .how-work-list {
+        @include from-left;
+        @include from-right;
         margin-bottom: 76px;
 
         li {

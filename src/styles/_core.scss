@@ -128,3 +128,7 @@ a {
     }
   }
 }
+
+@include scroll-rotate;
+@include phase-steps;
+@include phase-consistent;

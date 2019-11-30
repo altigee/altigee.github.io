@@ -1,0 +1,29 @@
+@mixin keyframe ($fadein) {
+  @-webkit-keyframes fadein {
+    @content;
+  }
+
+  @-moz-keyframes fadein {
+    @content;
+  }
+
+  @-o-keyframes fadein {
+    @content;
+  }
+
+  @keyframes fadein {
+    @content;
+  }
+}
+
+@mixin fadein($op) {
+  @include keyframe(fadein) {
+    0% {
+      opacity: 0;
+    }
+
+    100% {
+      opacity: op;
+    }
+  }
+}

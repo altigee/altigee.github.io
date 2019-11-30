@@ -19,6 +19,15 @@
         background-image: url('../images/backgrounds/contracts-bg-desktop.jpg');
         background-size: 1366px 688px;
       }
+
+      &.animate-bg-fade-in {
+        @include fadein(0.3);
+        -webkit-animation: fadein 2s;
+           -moz-animation: fadein 2s;
+             -o-animation: fadein 2s;
+                animation: fadein 2s;
+        opacity: 0.3;
+      }
     }
   }
 

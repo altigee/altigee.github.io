@@ -2,10 +2,19 @@
 
 .page-build-from-scratch {
   .project-bg {
-    @include back-image($url: '../images/backgrounds/project-based.jpg', $opacity: 0.7);
+    @include back-image($url: '../images/backgrounds/project-based.jpg', $opacity: 0.0);
 
     @include respond-to('lg') {
-      @include back-image($url: '../images/backgrounds/project-based-desktop.jpg', $opacity: 0.7);
+      @include back-image($url: '../images/backgrounds/project-based-desktop.jpg', $opacity: 0.0);
+    }
+
+    &.animate-bg-fade-in {
+      @include fadein(0.7);
+      -webkit-animation: fadein 2s;
+         -moz-animation: fadein 2s;
+           -o-animation: fadein 2s;
+              animation: fadein 2s;
+      opacity: 0.7;
     }
   }
 

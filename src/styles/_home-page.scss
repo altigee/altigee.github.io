@@ -8,131 +8,142 @@
   }
 
   .team-bg {
-    @include back-image('../images/backgrounds/team.jpg', $opacity: 0.25);
+    @include back-image('../images/backgrounds/team.jpg', $opacity: 0.0);
 
     @include respond-to('lg') {
-      @include back-image('../images/backgrounds/team-desktop.jpg', $opacity: 0.25);
+      @include back-image('../images/backgrounds/team-desktop.jpg', $opacity: 0.0);
+    }
+
+    &.animate-bg-fade-in {
+      @include fadein(0.25);
+      -webkit-animation: fadein 2s;
+         -moz-animation: fadein 2s;
+           -o-animation: fadein 2s;
+              animation: fadein 2s;
+      opacity: 0.25;
     }
   }
+}
 
-  .section-under-bg {
+.section-under-bg {
+  margin-top: 48px;
+
+  @include respond-to('xl') {
+    margin-top: 76px;
+  }
+}
+
+.slogan {
+  @include respond-to('lg') {
+    text-align: right;
+
+    h1 {
+      margin-bottom: 24px;
+    }
+  }
+}
+
+// ABOUT altigee in top area (when large screen)
+.about-text {
+  max-width: 420px;
+}
+
+// OFFER SERVICES
+.offer-services {
+  li {
+    min-width: 184px;
+
+    .subtitle-1 {
+      margin-bottom: 16px;
+    }
+  }
+}
+
+// OFFER TECHNOLOGIES
+.offer-technologies {
+  margin-top: 48px;
+
+  @include respond-to('lg') {
+    margin-top: 60px;
+  }
+
+  .offer-technologies-category + .offer-technologies-category {
     margin-top: 48px;
+  }
 
-    @include respond-to('xl') {
-      margin-top: 76px;
+  .subtitle-2 {
+    margin-bottom: 8px;
+  }
+
+  li {
+    @include caption-1;
+    flex: 1 0 48px;
+    max-width: 60px;
+    text-align: center;
+
+    img {
+      height: 48px;
     }
   }
 
-  .slogan {
+  li + li {
+    margin-left: 30px;
+  }
+}
+
+// HOW we work
+.how-section {
+  h2 {
+    text-align: right;
+  }
+
+  li {
+    min-width: 260px;
+    margin-right: 24px;
+  }
+
+  & {
     @include respond-to('lg') {
-      text-align: right;
+      text-align: left;
 
-      h1 {
-        margin-bottom: 24px;
-      }
-    }
-  }
+      .how-work-list {
+        @include from-left;
+        @include from-right;
+        margin-bottom: 76px;
 
-  // ABOUT altigee in top area (when large screen)
-  .about-text {
-    max-width: 420px;
-  }
+        li {
+          margin-bottom: 48px;
 
-  // OFFER SERVICES
-  .offer-services {
-    li {
-      min-width: 184px;
-
-      .subtitle-1 {
-        margin-bottom: 16px;
-      }
-    }
-  }
-
-  // OFFER TECHNOLOGIES
-  .offer-technologies {
-    margin-top: 48px;
-
-    @include respond-to('lg') {
-      margin-top: 60px;
-    }
-
-    .offer-technologies-category + .offer-technologies-category {
-      margin-top: 48px;
-    }
-
-    .subtitle-2 {
-      margin-bottom: 8px;
-    }
-
-    li {
-      @include caption-1;
-      flex: 1 0 48px;
-      max-width: 60px;
-      text-align: center;
-
-      img {
-        height: 48px;
-      }
-    }
-
-    li + li {
-      margin-left: 30px;
-    }
-  }
-
-  // HOW we work
-  .how-section {
-    h2 {
-      text-align: right;
-    }
-
-    li {
-      min-width: 260px;
-      margin-right: 24px;
-    }
-
-    & {
-      @include respond-to('lg') {
-        text-align: left;
-
-        .how-work-list {
-          margin-bottom: 76px;
-
-          li {
-            margin-bottom: 48px;
-
-            svg {
-              width: 64px;
-              height: 64px;
-              margin-bottom: 0;
-            }
+          svg {
+            width: 64px;
+            height: 64px;
+            margin-bottom: 0;
           }
         }
       }
     }
   }
+}
 
-  // VALUES
-  .values-section {
-    li {
-      min-width: 220px;
-      margin-right: 24px;
-    }
+// VALUES
+.values-section {
+  li {
+    min-width: 220px;
+    margin-right: 24px;
+  }
+}
+
+.display-link {
+  @include button-1;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: $red;
+
+  &:hover {
+    color: darken($color: $red, $amount: 15);
   }
 
-  .display-link {
-    @include button-1;
-    text-decoration: none;
-    text-transform: uppercase;
-    color: $red;
-
-    &:hover {
-      color: darken($color: $red, $amount: 15);
-    }
-
-    &:active {
-      color: darken($color: $red, $amount: 30);
-    }
+  &:active {
+    color: darken($color: $red, $amount: 30);
   }
 }
